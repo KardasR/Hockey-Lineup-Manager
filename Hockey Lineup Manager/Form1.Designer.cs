@@ -37,17 +37,25 @@ namespace Hockey_Lineup_Manager
             // 
             // LW1tb
             // 
+            this.LW1tb.AllowDrop = true;
             this.LW1tb.Location = new System.Drawing.Point(70, 103);
             this.LW1tb.Name = "LW1tb";
             this.LW1tb.Size = new System.Drawing.Size(100, 20);
             this.LW1tb.TabIndex = 0;
+            this.LW1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.LW1tb_DragDrop);
+            this.LW1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.LW1tb_DragEnter);
+            this.LW1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LW1tb_MouseDown);
             // 
             // C1TB
             // 
+            this.C1TB.AllowDrop = true;
             this.C1TB.Location = new System.Drawing.Point(252, 103);
             this.C1TB.Name = "C1TB";
             this.C1TB.Size = new System.Drawing.Size(100, 20);
             this.C1TB.TabIndex = 1;
+            this.C1TB.DragDrop += new System.Windows.Forms.DragEventHandler(this.C1TB_DragDrop);
+            this.C1TB.DragEnter += new System.Windows.Forms.DragEventHandler(this.C1TB_DragEnter);
+            this.C1TB.MouseDown += new System.Windows.Forms.MouseEventHandler(this.C1TB_MouseDown);
             // 
             // label1
             // 
