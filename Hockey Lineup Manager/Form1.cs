@@ -101,8 +101,15 @@ namespace Hockey_Lineup_Manager
 
         //--------------------------------------------  Right Wing  --------------------------------------------
 
-
-        
-
+        /// <summary>
+        /// Show user powerplay lineup
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 pp = new Form2();
+            pp.Show();
+        }
     }
 }

@@ -105,6 +105,9 @@ namespace Hockey_Lineup_Manager
             this.PPC1tb.Name = "PPC1tb";
             this.PPC1tb.Size = new System.Drawing.Size(100, 20);
             this.PPC1tb.TabIndex = 45;
+            this.PPC1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPC1tb_DragDrop);
+            this.PPC1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPC1tb_DragEnter);
+            this.PPC1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPC1tb_MouseDown);
             // 
             // PPLW1tb
             // 
@@ -113,6 +116,9 @@ namespace Hockey_Lineup_Manager
             this.PPLW1tb.Name = "PPLW1tb";
             this.PPLW1tb.Size = new System.Drawing.Size(100, 20);
             this.PPLW1tb.TabIndex = 44;
+            this.PPLW1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPLW1tb_DragDrop);
+            this.PPLW1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPLW1tb_DragEnter);
+            this.PPLW1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPLW1tb_MouseDown);
             // 
             // label16
             // 

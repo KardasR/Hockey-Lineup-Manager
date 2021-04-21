@@ -80,6 +80,7 @@ namespace Hockey_Lineup_Manager
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LW1tb
@@ -507,11 +508,23 @@ namespace Hockey_Lineup_Manager
             this.label26.TabIndex = 55;
             this.label26.Text = "RW";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(618, 88);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(129, 31);
+            this.button1.TabIndex = 56;
+            this.button1.Text = "Powerplay";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 717);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label24);
@@ -623,6 +636,7 @@ namespace Hockey_Lineup_Manager
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Button button1;
     }
 }
 
