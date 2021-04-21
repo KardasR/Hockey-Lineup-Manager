@@ -132,6 +132,9 @@ namespace Hockey_Lineup_Manager
             this.RW1tb.Name = "RW1tb";
             this.RW1tb.Size = new System.Drawing.Size(100, 20);
             this.RW1tb.TabIndex = 4;
+            this.RW1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.RW1tb_DragDrop);
+            this.RW1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.RW1tb_DragEnter);
+            this.RW1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RW1tb_MouseDown);
             // 
             // label3
             // 
@@ -149,6 +152,9 @@ namespace Hockey_Lineup_Manager
             this.C2tb.Name = "C2tb";
             this.C2tb.Size = new System.Drawing.Size(100, 20);
             this.C2tb.TabIndex = 7;
+            this.C2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.C2tb_DragDrop);
+            this.C2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.C2tb_DragEnter);
+            this.C2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.C2tb_MouseDown);
             // 
             // label4
             // 
@@ -165,6 +171,9 @@ namespace Hockey_Lineup_Manager
             this.RW2tb.Name = "RW2tb";
             this.RW2tb.Size = new System.Drawing.Size(100, 20);
             this.RW2tb.TabIndex = 9;
+            this.RW2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.RW2tb_DragDrop);
+            this.RW2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.RW2tb_DragEnter);
+            this.RW2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RW2tb_MouseDown);
             // 
             // LW2tb
             // 
@@ -172,6 +181,9 @@ namespace Hockey_Lineup_Manager
             this.LW2tb.Name = "LW2tb";
             this.LW2tb.Size = new System.Drawing.Size(100, 20);
             this.LW2tb.TabIndex = 10;
+            this.LW2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.LW2tb_DragDrop);
+            this.LW2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.LW2tb_DragEnter);
+            this.LW2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LW2tb_MouseDown);
             // 
             // label5
             // 
