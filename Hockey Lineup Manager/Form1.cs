@@ -70,7 +70,7 @@ namespace Hockey_Lineup_Manager
         {
             // When the user selects the textbox with the right mouse button, start the drag drop
             if (e.Button == MouseButtons.Right)
-                C1TB.DoDragDrop(C1TB.Text, DragDropEffects.Copy);
+                C1tb.DoDragDrop(C1tb.Text, DragDropEffects.Copy);
         }
 
         /// <summary>
@@ -96,10 +96,13 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void C1TB_DragDrop(object sender, DragEventArgs e)
         {
-            C1TB.Text = (string)e.Data.GetData(DataFormats.Text);
+            C1tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
 
         //--------------------------------------------  Right Wing  --------------------------------------------
+
+
+        
 
     }
 }
