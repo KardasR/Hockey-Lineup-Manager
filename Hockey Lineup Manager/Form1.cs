@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hockey_Lineup_Manager
 {
-    public partial class Form1 : Form
+    public partial class ESform : Form
     {
-        public Form1()
+        public ESform()
         {
             InitializeComponent();
         }
@@ -108,7 +108,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 pp = new Form2();
+            PPform pp = new PPform();
             pp.Show();
         }
     }

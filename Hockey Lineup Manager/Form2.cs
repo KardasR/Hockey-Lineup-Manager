@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hockey_Lineup_Manager
 {
-    public partial class Form2 : Form
+    public partial class PPform : Form
     {
-        public Form2()
+        public PPform()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace Hockey_Lineup_Manager
         //--------------------------------------------  Left Wing  --------------------------------------------
 
         /// <summary>
-        /// Initiate the drag drop for the 1st Unit left wing when the user right clicks on the textbox.
+        /// Initiate the drag drop for the 1st unit left wing when the user right clicks on the textbox.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -33,6 +33,11 @@ namespace Hockey_Lineup_Manager
                 PPLW1tb.DoDragDrop(PPLW1tb.Text, DragDropEffects.Copy);
         }
 
+        /// <summary>
+        /// Check the given data to make sure it is a correct format and has the copy effect.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PPLW1tb_DragEnter(object sender, DragEventArgs e)
         {
             // Make sure the data recieved is in the correct format.
@@ -44,6 +49,11 @@ namespace Hockey_Lineup_Manager
                 e.Effect = DragDropEffects.None;
         }
 
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 1st unit left wing.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PPLW1tb_DragDrop(object sender, DragEventArgs e)
         {
             PPLW1tb.Text = (string)e.Data.GetData(DataFormats.Text);
@@ -51,6 +61,11 @@ namespace Hockey_Lineup_Manager
 
         //--------------------------------------------  Center  --------------------------------------------
 
+        /// <summary>
+        /// Initiate the drag drop for the 1st unit center when the user right clicks on the textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PPC1tb_MouseDown(object sender, MouseEventArgs e)
         {
             // When the user selects the textbox with the right mouse button, start the drag drop
@@ -58,6 +73,11 @@ namespace Hockey_Lineup_Manager
                 PPC1tb.DoDragDrop(PPC1tb.Text, DragDropEffects.Copy);
         }
 
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 1st unit center textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PPC1tb_DragEnter(object sender, DragEventArgs e)
         {
             // Make sure the data recieved is in the correct format.
@@ -69,6 +89,11 @@ namespace Hockey_Lineup_Manager
                 e.Effect = DragDropEffects.None;
         }
 
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 1st unit center.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PPC1tb_DragDrop(object sender, DragEventArgs e)
         {
             PPC1tb.Text = (string)e.Data.GetData(DataFormats.Text);

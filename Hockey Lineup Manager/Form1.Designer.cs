@@ -1,7 +1,7 @@
 ﻿
 namespace Hockey_Lineup_Manager
 {
-    partial class Form1
+    partial class ESform
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace Hockey_Lineup_Manager
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ESform));
             this.LW1tb = new System.Windows.Forms.TextBox();
             this.C1tb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -80,7 +81,7 @@ namespace Hockey_Lineup_Manager
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.PPbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LW1tb
@@ -508,23 +509,23 @@ namespace Hockey_Lineup_Manager
             this.label26.TabIndex = 55;
             this.label26.Text = "RW";
             // 
-            // button1
+            // PPbtn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(618, 88);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 31);
-            this.button1.TabIndex = 56;
-            this.button1.Text = "Powerplay";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.PPbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PPbtn.Location = new System.Drawing.Point(618, 88);
+            this.PPbtn.Name = "PPbtn";
+            this.PPbtn.Size = new System.Drawing.Size(129, 31);
+            this.PPbtn.TabIndex = 56;
+            this.PPbtn.Text = "Powerplay";
+            this.PPbtn.UseVisualStyleBackColor = true;
+            this.PPbtn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // ESform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 717);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.PPbtn);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label24);
@@ -576,7 +577,8 @@ namespace Hockey_Lineup_Manager
             this.Controls.Add(this.label1);
             this.Controls.Add(this.C1tb);
             this.Controls.Add(this.LW1tb);
-            this.Name = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "ESform";
             this.Text = "Even Strength";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -636,7 +638,7 @@ namespace Hockey_Lineup_Manager
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button PPbtn;
     }
 }
 

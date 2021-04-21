@@ -1,7 +1,7 @@
 ﻿
 namespace Hockey_Lineup_Manager
 {
-    partial class Form2
+    partial class PPform
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace Hockey_Lineup_Manager
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PPform));
             this.label21 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.PPRW1tb = new System.Windows.Forms.TextBox();
@@ -236,11 +237,11 @@ namespace Hockey_Lineup_Manager
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 55;
             // 
-            // Form2
+            // PPform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 455);
+            this.ClientSize = new System.Drawing.Size(783, 455);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox1);
@@ -262,7 +263,8 @@ namespace Hockey_Lineup_Manager
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PPC1tb);
             this.Controls.Add(this.PPLW1tb);
-            this.Name = "Form2";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "PPform";
             this.Text = "Powerplay";
             this.ResumeLayout(false);
             this.PerformLayout();
