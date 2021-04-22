@@ -271,9 +271,13 @@ namespace Hockey_Lineup_Manager
             pp.Show();
         }
 
+        /// <summary>
+        /// Save user lines to Roster folder in root project folder
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SLbtn_Click(object sender, EventArgs e)
         {
-            // TODO: SAVE LINES THROUGH JSON SERIALIZATION
             List<Player> playerList = new List<Player>();       // Hold the list of players to save information
             Player player = new Player();                       // Create a player object
 
@@ -292,15 +296,136 @@ namespace Hockey_Lineup_Manager
 
             string output = JsonConvert.SerializeObject(playerList);
 
-            string savePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Hockey League Manager\\Rosters\\";
-            // E:\Programming\C#\Hockey Lineup Manager\Hockey Lineup Manager\Rosters\
-
             JsonSerializer serializer = new JsonSerializer();
 
+            string teamName = "Test Team 1";
             using (StreamWriter sw = new StreamWriter(Path.Combine("..\\..\\Rosters\\", "Test Team 1.txt")))
             using (JsonWriter writer = new JsonTextWriter(sw))
             {
                 serializer.Serialize(writer, playerList);
+            }
+        }
+
+        /// <summary>
+        /// Load user lines from Roster folder in root project folder
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LoadLinesbtn_Click(object sender, EventArgs e)
+        {
+            string teamName = "Test Team 1";        // This will eventually be something that the user can change.
+            string fileContent = File.ReadAllText(Path.Combine("..\\..\\Rosters\\", (teamName + ".txt")));
+            var roster = JsonConvert.DeserializeObject<List<Player>>(fileContent);
+
+            // Go through each player in the list and place their information in the correct locations
+            foreach (Player player in roster)
+            {
+                // Figure out what line they are on, find the position
+                int line = player.ESL[0];
+                int pos = player.ESL[1];
+                switch (line)   // Find the line the player is on
+                {
+                    case 1:                                     // First Line -- First Pairing
+                        switch(pos)
+                        {
+                            case 1:                             // Left Wing
+                                LW1tb.Text = player.Name;
+                                break;
+                            case 2:                             // Center
+                                C1tb.Text = player.Name;
+                                break;
+                            case 3:                             // Right Wing
+                                RW1tb.Text = player.Name;
+                                break;
+                            case 4:                             // Left Defence
+                                LD1tb.Text = player.Name;
+                                break;
+                            case 5:                             // Right Defence
+                                RD1tb.Text = player.Name;
+                                break;
+                        }
+                        break;
+                    case 2:                                     // Second Line -- Second Pairing
+                        switch (pos)
+                        {
+                            case 1:                             // Left Wing
+                                LW2tb.Text = player.Name;
+                                break;
+                            case 2:                             // Center
+                                C2tb.Text = player.Name;
+                                break;
+                            case 3:                             // Right Wing
+                                RW2tb.Text = player.Name;
+                                break;
+                            case 4:                             // Left Defence
+                                LD2tb.Text = player.Name;
+                                break;
+                            case 5:                             // Right Defence
+                                RD2tb.Text = player.Name;
+                                break;
+                        }
+                        break;
+                    case 3:                                     // Third Line -- Third Pairing
+                        switch (pos)
+                        {
+                            case 1:                             // Left Wing
+                                LW3tb.Text = player.Name;
+                                break;
+                            case 2:                             // Center
+                                C3tb.Text = player.Name;
+                                break;
+                            case 3:                             // Right Wing
+                                RW3tb.Text = player.Name;
+                                break;
+                            case 4:                             // Left Defence
+                                LD3tb.Text = player.Name;
+                                break;
+                            case 5:                             // Right Defence
+                                RD3tb.Text = player.Name;
+                                break;
+                        }
+                        break;
+                    case 4:                                     // Forth Line and Goalies
+                        switch (pos)
+                        {
+                            case 1:                             // Left Wing
+                                LW4tb.Text = player.Name;
+                                break;
+                            case 2:                             // Center
+                                C4tb.Text = player.Name;
+                                break;
+                            case 3:                             // Right Wing
+                                RW4tb.Text = player.Name;
+                                break;
+                            case 4:                             // Starter
+                                G1tb.Text = player.Name;
+                                break;
+                            case 5:                             // Backup
+                                G2tb.Text = player.Name;
+                                break;
+                        }
+                        break;
+                    case 5:                                     // Scratched Forwards and Defence
+                        switch(pos)
+                        {
+                            case 1:                             // Left Wing
+                                LW5tb.Text = player.Name;
+                                break;
+                            case 2:                             // Center
+                                C5tb.Text = player.Name;
+                                break;
+                            case 3:                             // Right Wing
+                                RW5tb.Text = player.Name;
+                                break;
+                            case 4:                             // Left Defence
+                                LD4tb.Text = player.Name;
+                                break;
+                            case 5:                             // Right Defence
+                                RD4tb.Text = player.Name;
+                                break;
+                        }
+                        break;
+                }
             }
         }
     }
@@ -309,7 +434,14 @@ namespace Hockey_Lineup_Manager
         public string   Name;                   // Name of player
         public int      Overall;                // Overall of player
         public string   Potential;              // Potential of player
-        public int[]    ESL = new int[2];       // Even Strength line player is on and their position (1 = Left Wing or Starter, 2 = Center or Backup, 3 = Right Wing or 3rd String, 4 = Left Defence, 5 = Right Defence)
+        public int[]    ESL = new int[2];       // Even Strength line player is on and their position (1 = Left Wing, 2 = Center, 3 = Right Wing or 3rd String, 4 = Left Defence or Starter, 5 = Right Defence or Backup)
         public int[]    PPL = new int[2];       // Powerplay unit player is on and their position
+    }
+    public class Team
+    {
+        public string           TeamName;       // Name of team 
+        public string           Year;           // Year of team
+        public bool             League;         // Which league the team is in (1 = NHL, 0 = AHL)
+        public List<Player>     Roster;         // List of players
     }
 }

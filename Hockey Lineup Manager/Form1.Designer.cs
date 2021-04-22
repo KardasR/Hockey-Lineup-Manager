@@ -82,7 +82,8 @@ namespace Hockey_Lineup_Manager
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.PPbtn = new System.Windows.Forms.Button();
-            this.SLbtn = new System.Windows.Forms.Button();
+            this.SaveLinesbtn = new System.Windows.Forms.Button();
+            this.LoadLinesbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LW1tb
@@ -533,23 +534,35 @@ namespace Hockey_Lineup_Manager
             this.PPbtn.UseVisualStyleBackColor = true;
             this.PPbtn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // SLbtn
+            // SaveLinesbtn
             // 
-            this.SLbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SLbtn.Location = new System.Drawing.Point(618, 503);
-            this.SLbtn.Name = "SLbtn";
-            this.SLbtn.Size = new System.Drawing.Size(109, 37);
-            this.SLbtn.TabIndex = 57;
-            this.SLbtn.Text = "Save Lines";
-            this.SLbtn.UseVisualStyleBackColor = true;
-            this.SLbtn.Click += new System.EventHandler(this.SLbtn_Click);
+            this.SaveLinesbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveLinesbtn.Location = new System.Drawing.Point(679, 668);
+            this.SaveLinesbtn.Name = "SaveLinesbtn";
+            this.SaveLinesbtn.Size = new System.Drawing.Size(109, 37);
+            this.SaveLinesbtn.TabIndex = 57;
+            this.SaveLinesbtn.Text = "Save Lines";
+            this.SaveLinesbtn.UseVisualStyleBackColor = true;
+            this.SaveLinesbtn.Click += new System.EventHandler(this.SLbtn_Click);
+            // 
+            // LoadLinesbtn
+            // 
+            this.LoadLinesbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadLinesbtn.Location = new System.Drawing.Point(679, 623);
+            this.LoadLinesbtn.Name = "LoadLinesbtn";
+            this.LoadLinesbtn.Size = new System.Drawing.Size(109, 37);
+            this.LoadLinesbtn.TabIndex = 58;
+            this.LoadLinesbtn.Text = "Load Lines";
+            this.LoadLinesbtn.UseVisualStyleBackColor = true;
+            this.LoadLinesbtn.Click += new System.EventHandler(this.LoadLinesbtn_Click);
             // 
             // ESform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 717);
-            this.Controls.Add(this.SLbtn);
+            this.Controls.Add(this.LoadLinesbtn);
+            this.Controls.Add(this.SaveLinesbtn);
             this.Controls.Add(this.PPbtn);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
@@ -664,7 +677,8 @@ namespace Hockey_Lineup_Manager
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button PPbtn;
-        private System.Windows.Forms.Button SLbtn;
+        private System.Windows.Forms.Button SaveLinesbtn;
+        private System.Windows.Forms.Button LoadLinesbtn;
     }
 }
 
