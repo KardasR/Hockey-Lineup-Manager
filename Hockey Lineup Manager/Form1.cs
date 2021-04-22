@@ -16,7 +16,7 @@ namespace Hockey_Lineup_Manager
 
         //--------------------------------------------  Drag and Drop Functionallity  --------------------------------------------
 
-        //--------------------------------------------  1st Line  --------------------------------------------
+        //--------------------------------------------  1st Line / 1st Pair --------------------------------------------
 
         //--------------------------------------------  Left Wing  --------------------------------------------
 
@@ -138,7 +138,55 @@ namespace Hockey_Lineup_Manager
             RW1tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
 
-        //--------------------------------------------  2nd Line  --------------------------------------------
+        //--------------------------------------------  Left Defence  --------------------------------------------
+
+        private void LD1tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag and drop.
+            if (e.Button == MouseButtons.Right)
+                LD1tb.DoDragDrop(LD1tb.Text, DragDropEffects.Copy);
+        }
+
+        private void LD1tb_DragEnter(object sender, DragEventArgs e)
+        {
+            // Make sure the data recieved is in the correct format.
+            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                // Allow the text to be copied.
+                e.Effect = DragDropEffects.Copy;
+            else
+                // Don't allow the text to be copied.
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void LD1tb_DragDrop(object sender, DragEventArgs e)
+        {
+            LD1tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Defence  --------------------------------------------
+
+        private void RD1tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            RD1tb.DoDragDrop(RD1tb.Text, DragDropEffects.Copy);
+        }
+
+        private void RD1tb_DragEnter(object sender, DragEventArgs e)
+        {
+            // Make sure the data recieved is in the correct format.
+            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                // Allow the text to be copied.
+                e.Effect = DragDropEffects.Copy;
+            else
+                // Don't allow the text to be copied.
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void RD1tb_DragDrop(object sender, DragEventArgs e)
+        {
+            RD1tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  2nd Line / 2nd Pair --------------------------------------------
 
         //--------------------------------------------  Left Wing  --------------------------------------------
 
@@ -260,21 +308,437 @@ namespace Hockey_Lineup_Manager
             RW2tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        //--------------------------------------------  Left Defence  --------------------------------------------
+
+        private void LD2tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                LD2tb.DoDragDrop(LD2tb.Text, DragDropEffects.Copy);
+        }
+
+        private void LD2tb_DragEnter(object sender, DragEventArgs e)
+        {
+            // Make sure the data recieved is in the correct format.
+            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                // Allow the text to be copied.
+                e.Effect = DragDropEffects.Copy;
+            else
+                // Don't allow the text to be copied.
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void LD2tb_DragDrop(object sender, DragEventArgs e)
+        {
+            LD2tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Defence  --------------------------------------------
+
+        private void RD2tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                RD2tb.DoDragDrop(RD2tb.Text, DragDropEffects.Copy);
+        }
+
+        private void RD2tb_DragEnter(object sender, DragEventArgs e)
+        {
+            // Make sure the data recieved is in the correct format.
+            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                // Allow the text to be copied.
+                e.Effect = DragDropEffects.Copy;
+            else
+                // Don't allow the text to be copied.
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void RD2tb_DragDrop(object sender, DragEventArgs e)
+        {
+            RD2tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Third Line / Third Pair --------------------------------------------
+
+        //--------------------------------------------  Left Wing  --------------------------------------------
+
+        private void LW3tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                LW3tb.DoDragDrop(LW3tb.Text, DragDropEffects.Copy);
+        }
+
+        private void LW3tb_DragEnter(object sender, DragEventArgs e)
+        {
+            // Make sure the data recieved is in the correct format.
+            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                // Allow the text to be copied.
+                e.Effect = DragDropEffects.Copy;
+            else
+                // Don't allow the text to be copied.
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void LW3tb_DragDrop(object sender, DragEventArgs e)
+        {
+            LW3tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Center  --------------------------------------------
+
+        private void C3tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                C3tb.DoDragDrop(C3tb.Text, DragDropEffects.Copy);
+        }
+
+        private void C3tb_DragEnter(object sender, DragEventArgs e)
+        {
+            // Make sure the data recieved is in the correct format.
+            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                // Allow the text to be copied.
+                e.Effect = DragDropEffects.Copy;
+            else
+                // Don't allow the text to be copied.
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void C3tb_DragDrop(object sender, DragEventArgs e)
+        {
+            C3tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Wing  --------------------------------------------
+
+        private void RW3tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                RW3tb.DoDragDrop(RW3tb.Text, DragDropEffects.Copy);
+        }
+
+        private void RW3tb_DragEnter(object sender, DragEventArgs e)
+        {
+            // Make sure the data recieved is in the correct format.
+            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                // Allow the text to be copied.
+                e.Effect = DragDropEffects.Copy;
+            else
+                // Don't allow the text to be copied.
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void RW3tb_DragDrop(object sender, DragEventArgs e)
+        {
+            RW3tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Left Defence  --------------------------------------------
+
+        private void LD3tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                LD3tb.DoDragDrop(LD3tb.Text, DragDropEffects.Copy);
+        }
+
+        private void LD3tb_DragEnter(object sender, DragEventArgs e)
+        {
+            // Make sure the data recieved is in the correct format.
+            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                // Allow the text to be copied.
+                e.Effect = DragDropEffects.Copy;
+            else
+                // Don't allow the text to be copied.
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void LD3tb_DragDrop(object sender, DragEventArgs e)
+        {
+            LD3tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Defence  --------------------------------------------
+
+        private void RD3tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                RD3tb.DoDragDrop(RD3tb.Text, DragDropEffects.Copy);
+        }
+
+        private void RD3tb_DragEnter(object sender, DragEventArgs e)
+        {
+            // Make sure the data recieved is in the correct format.
+            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                // Allow the text to be copied.
+                e.Effect = DragDropEffects.Copy;
+            else
+                // Don't allow the text to be copied.
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void RD3tb_DragDrop(object sender, DragEventArgs e)
+        {
+            RD3tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  4th Line / Goalies  --------------------------------------------
+
+        //--------------------------------------------  Left Wing  --------------------------------------------
+
+        private void LW4tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                LW4tb.DoDragDrop(LW4tb.Text, DragDropEffects.Copy);
+        }
+
+        private void LW4tb_DragEnter(object sender, DragEventArgs e)
+        {
+            // Make sure the data recieved is in the correct format.
+            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                // Allow the text to be copied.
+                e.Effect = DragDropEffects.Copy;
+            else
+                // Don't allow the text to be copied.
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void LW4tb_DragDrop(object sender, DragEventArgs e)
+        {
+            LW4tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Center  --------------------------------------------
+
+        private void C4tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                C4tb.DoDragDrop(C4tb.Text, DragDropEffects.Copy);
+        }
+
+        private void C4tb_DragEnter(object sender, DragEventArgs e)
+        {
+            // Make sure the data recieved is in the correct format.
+            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                // Allow the text to be copied.
+                e.Effect = DragDropEffects.Copy;
+            else
+                // Don't allow the text to be copied.
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void C4tb_DragDrop(object sender, DragEventArgs e)
+        {
+            C4tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Wing  --------------------------------------------
+
+        private void RW4tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                RW4tb.DoDragDrop(RW4tb.Text, DragDropEffects.Copy);
+        }
+
+        private void RW4tb_DragEnter(object sender, DragEventArgs e)
+        {
+            // Make sure the data recieved is in the correct format.
+            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                // Allow the text to be copied.
+                e.Effect = DragDropEffects.Copy;
+            else
+                // Don't allow the text to be copied.
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void RW4tb_DragDrop(object sender, DragEventArgs e)
+        {
+            RW4tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Starter  --------------------------------------------
+
+        private void G1tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                G1tb.DoDragDrop(G1tb.Text, DragDropEffects.Copy);
+        }
+
+        private void G1tb_DragEnter(object sender, DragEventArgs e)
+        {
+            // Make sure the data recieved is in the correct format.
+            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                // Allow the text to be copied.
+                e.Effect = DragDropEffects.Copy;
+            else
+                // Don't allow the text to be copied.
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void G1tb_DragDrop(object sender, DragEventArgs e)
+        {
+            G1tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Backup  --------------------------------------------
+
+        private void G2tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                G2tb.DoDragDrop(G2tb.Text, DragDropEffects.Copy);
+        }
+
+        private void G2tb_DragEnter(object sender, DragEventArgs e)
+        {
+            // Make sure the data recieved is in the correct format.
+            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                // Allow the text to be copied.
+                e.Effect = DragDropEffects.Copy;
+            else
+                // Don't allow the text to be copied.
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void G2tb_DragDrop(object sender, DragEventArgs e)
+        {
+            G2tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Scratched  --------------------------------------------
+
+        //--------------------------------------------  Left Wing  --------------------------------------------
+
+        private void LW5tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                LW5tb.DoDragDrop(LW5tb.Text, DragDropEffects.Copy);
+        }
+
+        private void LW5tb_DragEnter(object sender, DragEventArgs e)
+        {
+            // Make sure the data recieved is in the correct format.
+            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                // Allow the text to be copied.
+                e.Effect = DragDropEffects.Copy;
+            else
+                // Don't allow the text to be copied.
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void LW5tb_DragDrop(object sender, DragEventArgs e)
+        {
+            LW5tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Center  --------------------------------------------
+
+        private void C5tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                C5tb.DoDragDrop(C5tb.Text, DragDropEffects.Copy);
+        }
+
+        private void C5tb_DragEnter(object sender, DragEventArgs e)
+        {
+            // Make sure the data recieved is in the correct format.
+            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                // Allow the text to be copied.
+                e.Effect = DragDropEffects.Copy;
+            else
+                // Don't allow the text to be copied.
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void C5tb_DragDrop(object sender, DragEventArgs e)
+        {
+            C5tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Wing  --------------------------------------------
+
+        private void RW5tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                RW5tb.DoDragDrop(RW5tb.Text, DragDropEffects.Copy);
+        }
+
+        private void RW5tb_DragEnter(object sender, DragEventArgs e)
+        {
+            // Make sure the data recieved is in the correct format.
+            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                // Allow the text to be copied.
+                e.Effect = DragDropEffects.Copy;
+            else
+                // Don't allow the text to be copied.
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void RW5tb_DragDrop(object sender, DragEventArgs e)
+        {
+            RW5tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Left Defence  --------------------------------------------
+
+        private void LD4tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                LD4tb.DoDragDrop(LD4tb.Text, DragDropEffects.Copy);
+        }
+
+        private void LD4tb_DragEnter(object sender, DragEventArgs e)
+        {
+            // Make sure the data recieved is in the correct format.
+            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                // Allow the text to be copied.
+                e.Effect = DragDropEffects.Copy;
+            else
+                // Don't allow the text to be copied.
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void LD4tb_DragDrop(object sender, DragEventArgs e)
+        {
+            LD4tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Defence  --------------------------------------------
+
+        private void RD4tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                RD4tb.DoDragDrop(RD4tb.Text, DragDropEffects.Copy);
+        }
+
+        private void RD4tb_DragEnter(object sender, DragEventArgs e)
+        {
+            // Make sure the data recieved is in the correct format.
+            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
+                // Allow the text to be copied.
+                e.Effect = DragDropEffects.Copy;
+            else
+                // Don't allow the text to be copied.
+                e.Effect = DragDropEffects.None;
+        }
+
+        private void RD4tb_DragDrop(object sender, DragEventArgs e)
+        {
+            RD4tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
         //--------------------------------------------  Misc  --------------------------------------------
 
         /// <summary>
@@ -611,6 +1075,8 @@ namespace Hockey_Lineup_Manager
                 }
             }
         }
+
+        
     }
     public class Player
     {
