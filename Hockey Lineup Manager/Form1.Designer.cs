@@ -169,6 +169,7 @@ namespace Hockey_Lineup_Manager
             // 
             // RW2tb
             // 
+            this.RW2tb.AllowDrop = true;
             this.RW2tb.Location = new System.Drawing.Point(441, 149);
             this.RW2tb.Name = "RW2tb";
             this.RW2tb.Size = new System.Drawing.Size(100, 20);
@@ -179,6 +180,7 @@ namespace Hockey_Lineup_Manager
             // 
             // LW2tb
             // 
+            this.LW2tb.AllowDrop = true;
             this.LW2tb.Location = new System.Drawing.Point(79, 149);
             this.LW2tb.Name = "LW2tb";
             this.LW2tb.Size = new System.Drawing.Size(100, 20);
@@ -532,7 +534,7 @@ namespace Hockey_Lineup_Manager
             this.PPbtn.TabIndex = 56;
             this.PPbtn.Text = "Powerplay";
             this.PPbtn.UseVisualStyleBackColor = true;
-            this.PPbtn.Click += new System.EventHandler(this.button1_Click);
+            this.PPbtn.Click += new System.EventHandler(this.PPbtn_Click);
             // 
             // SaveLinesbtn
             // 
@@ -543,7 +545,7 @@ namespace Hockey_Lineup_Manager
             this.SaveLinesbtn.TabIndex = 57;
             this.SaveLinesbtn.Text = "Save Lines";
             this.SaveLinesbtn.UseVisualStyleBackColor = true;
-            this.SaveLinesbtn.Click += new System.EventHandler(this.SLbtn_Click);
+            this.SaveLinesbtn.Click += new System.EventHandler(this.SaveLinesbtn_Click);
             // 
             // LoadLinesbtn
             // 

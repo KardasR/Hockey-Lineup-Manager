@@ -14,6 +14,8 @@ namespace Hockey_Lineup_Manager
             InitializeComponent();
         }
 
+        //--------------------------------------------  Drag and Drop Functionallity  --------------------------------------------
+
         //--------------------------------------------  1st Line  --------------------------------------------
 
         //--------------------------------------------  Left Wing  --------------------------------------------
@@ -258,6 +260,21 @@ namespace Hockey_Lineup_Manager
             RW2tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         //--------------------------------------------  Misc  --------------------------------------------
 
         /// <summary>
@@ -265,7 +282,7 @@ namespace Hockey_Lineup_Manager
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
+        private void PPbtn_Click(object sender, EventArgs e)
         {
             PPform pp = new PPform();
             pp.Show();
@@ -276,11 +293,12 @@ namespace Hockey_Lineup_Manager
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void SLbtn_Click(object sender, EventArgs e)
+        private void SaveLinesbtn_Click(object sender, EventArgs e)
         {
             List<Player> playerList = new List<Player>();       // Hold the list of players to save information
             Player player = new Player();                       // Create a player object
 
+            //--------------------------------------------  1st Line / 1st Pairing  --------------------------------------------
             // Save 1st line left wing
             player.Name = LW1tb.Text;
             player.ESL = new int[] { 1, 1 };    // First line, left wing
@@ -291,6 +309,171 @@ namespace Hockey_Lineup_Manager
             player = new Player();
             player.Name = C1tb.Text;
             player.ESL = new int[] { 1, 2 };    // First line, center
+
+            playerList.Add(player);
+
+            // Save 1st line right wing
+            player = new Player();
+            player.Name = RW1tb.Text;
+            player.ESL = new int[] { 1, 3 };    // First line, right wing
+
+            playerList.Add(player);
+
+            // Save 1st pair left defence
+            player = new Player();
+            player.Name = LD1tb.Text;
+            player.ESL = new int[] { 1, 4 };    // First pair, left defence
+
+            playerList.Add(player);
+
+            // Save 1st pair right defence
+            player = new Player();
+            player.Name = RD1tb.Text;
+            player.ESL = new int[] { 1, 5 };    // First pair, right defence
+
+            playerList.Add(player);
+
+            //--------------------------------------------  2nd Line / 2nd Pairing  --------------------------------------------
+            // Save 2nd line left wing
+            player = new Player();
+            player.Name = LW2tb.Text;
+            player.ESL = new int[] { 2, 1 };    // Second line, left wing
+
+            playerList.Add(player);
+
+            // Save 2nd line center
+            player = new Player();
+            player.Name = C2tb.Text;
+            player.ESL = new int[] { 2, 2 };    // Second line, center
+
+            playerList.Add(player);
+
+            // Save 2nd line right wing
+            player = new Player();
+            player.Name = RW2tb.Text;
+            player.ESL = new int[] { 2, 3 };    // Second line, right wing
+
+            playerList.Add(player);
+
+            // Save 2nd pair left defence
+            player = new Player();
+            player.Name = LD2tb.Text;
+            player.ESL = new int[] { 2, 4 };    // Second pair, left defence
+
+            playerList.Add(player);
+
+            // Save 2nd pair right defence
+            player = new Player();
+            player.Name = RD2tb.Text;
+            player.ESL = new int[] { 2, 5 };    // Second pair, right defence
+
+            playerList.Add(player);
+
+            //--------------------------------------------  3rd Line / 3rd Pairing  --------------------------------------------
+            // Save 3rd line left wing
+            player = new Player();
+            player.Name = LW3tb.Text;
+            player.ESL = new int[] { 3, 1 };    // Third line, left wing
+
+            playerList.Add(player);
+
+            // Save 3rd line center
+            player = new Player();
+            player.Name = C3tb.Text;
+            player.ESL = new int[] { 3, 2 };    // Third line, center
+
+            playerList.Add(player);
+
+            // Save 3rd line right wing
+            player = new Player();
+            player.Name = RW3tb.Text;
+            player.ESL = new int[] { 3, 3 };    // Third line, right wing
+
+            playerList.Add(player);
+
+            // Save 3rd pair left defence
+            player = new Player();
+            player.Name = LD3tb.Text;
+            player.ESL = new int[] { 3, 4 };    // Third pair, left defence
+
+            playerList.Add(player);
+
+            // Save 3rd pair right defence
+            player = new Player();
+            player.Name = RD3tb.Text;
+            player.ESL = new int[] { 3, 5 };    // Third pair, right defence
+
+            playerList.Add(player);
+
+            //--------------------------------------------  4th Line / Goalies  --------------------------------------------
+            // Save 4th line left wing
+            player = new Player();
+            player.Name = LW4tb.Text;
+            player.ESL = new int[] { 4, 1 };    // Fourth line, left wing
+
+            playerList.Add(player);
+
+            // Save 4th line center
+            player = new Player();
+            player.Name = C4tb.Text;
+            player.ESL = new int[] { 4, 2 };    // Fourth line, center
+
+            playerList.Add(player);
+
+            // Save 4th line right wing
+            player = new Player();
+            player.Name = RW4tb.Text;
+            player.ESL = new int[] { 4, 3 };    // Fourth line, right wing
+
+            playerList.Add(player);
+
+            // Save starting goalie
+            player = new Player();
+            player.Name = G1tb.Text;
+            player.ESL = new int[] { 4, 4 };    // Starting Goalie
+
+            playerList.Add(player);
+
+            // Save backup goalie
+            player = new Player();
+            player.Name = G2tb.Text;
+            player.ESL = new int[] { 4, 5 };    // Backup Goalie
+
+            playerList.Add(player);
+
+            //--------------------------------------------  Scratched  --------------------------------------------
+            // Save scratched left wing
+            player = new Player();
+            player.Name = LW5tb.Text;
+            player.ESL = new int[] { 5, 1 };    // Scratched, left wing
+
+            playerList.Add(player);
+
+            // Save scratched center
+            player = new Player();
+            player.Name = C5tb.Text;
+            player.ESL = new int[] { 5, 2 };    // Scratched, center
+
+            playerList.Add(player);
+
+            // Save scratched right wing
+            player = new Player();
+            player.Name = RW5tb.Text;
+            player.ESL = new int[] { 5, 3 };    // Scratched, right wing
+
+            playerList.Add(player);
+
+            // Save scratched left defence
+            player = new Player();
+            player.Name = LD4tb.Text;
+            player.ESL = new int[] { 5, 4 };    // Scratched, left defence
+
+            playerList.Add(player);
+
+            // Save scratched right defence
+            player = new Player();
+            player.Name = RD4tb.Text;
+            player.ESL = new int[] { 5, 5 };    // Scratched, right defence
 
             playerList.Add(player);
 
