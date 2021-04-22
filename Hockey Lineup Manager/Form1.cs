@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace Hockey_Lineup_Manager
@@ -267,6 +271,45 @@ namespace Hockey_Lineup_Manager
             pp.Show();
         }
 
-        
+        private void SLbtn_Click(object sender, EventArgs e)
+        {
+            // TODO: SAVE LINES THROUGH JSON SERIALIZATION
+            List<Player> playerList = new List<Player>();       // Hold the list of players to save information
+            Player player = new Player();                       // Create a player object
+
+            // Save 1st line left wing
+            player.Name = LW1tb.Text;
+            player.ESL = new int[] { 1, 1 };    // First line, left wing
+
+            playerList.Add(player);
+
+            // Save 1st line center
+            player = new Player();
+            player.Name = C1tb.Text;
+            player.ESL = new int[] { 1, 2 };    // First line, center
+
+            playerList.Add(player);
+
+            string output = JsonConvert.SerializeObject(playerList);
+
+            string savePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Hockey League Manager\\Rosters\\";
+            // E:\Programming\C#\Hockey Lineup Manager\Hockey Lineup Manager\Rosters\
+
+            JsonSerializer serializer = new JsonSerializer();
+
+            using (StreamWriter sw = new StreamWriter(Path.Combine("..\\..\\Rosters\\", "Test Team 1.txt")))
+            using (JsonWriter writer = new JsonTextWriter(sw))
+            {
+                serializer.Serialize(writer, playerList);
+            }
+        }
+    }
+    public class Player
+    {
+        public string   Name;                   // Name of player
+        public int      Overall;                // Overall of player
+        public string   Potential;              // Potential of player
+        public int[]    ESL = new int[2];       // Even Strength line player is on and their position (1 = Left Wing or Starter, 2 = Center or Backup, 3 = Right Wing or 3rd String, 4 = Left Defence, 5 = Right Defence)
+        public int[]    PPL = new int[2];       // Powerplay unit player is on and their position
     }
 }

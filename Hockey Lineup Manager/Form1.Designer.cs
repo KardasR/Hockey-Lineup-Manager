@@ -82,6 +82,7 @@ namespace Hockey_Lineup_Manager
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.PPbtn = new System.Windows.Forms.Button();
+            this.SLbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LW1tb
@@ -532,11 +533,23 @@ namespace Hockey_Lineup_Manager
             this.PPbtn.UseVisualStyleBackColor = true;
             this.PPbtn.Click += new System.EventHandler(this.button1_Click);
             // 
+            // SLbtn
+            // 
+            this.SLbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SLbtn.Location = new System.Drawing.Point(618, 503);
+            this.SLbtn.Name = "SLbtn";
+            this.SLbtn.Size = new System.Drawing.Size(109, 37);
+            this.SLbtn.TabIndex = 57;
+            this.SLbtn.Text = "Save Lines";
+            this.SLbtn.UseVisualStyleBackColor = true;
+            this.SLbtn.Click += new System.EventHandler(this.SLbtn_Click);
+            // 
             // ESform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 717);
+            this.Controls.Add(this.SLbtn);
             this.Controls.Add(this.PPbtn);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
@@ -651,6 +664,7 @@ namespace Hockey_Lineup_Manager
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button PPbtn;
+        private System.Windows.Forms.Button SLbtn;
     }
 }
 
