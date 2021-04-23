@@ -769,6 +769,7 @@ namespace Hockey_Lineup_Manager
             //--------------------------------------------  1st Line / 1st Pairing  --------------------------------------------
             // Save 1st line left wing
             player.Name = LW1tb.Text;
+            player.Overall = int.Parse(LW1OVRtb.Text);
             player.ESL = new int[] { 1, 1 };    // First line, left wing
 
             playerList.Add(player);
@@ -776,6 +777,7 @@ namespace Hockey_Lineup_Manager
             // Save 1st line center
             player = new Player();
             player.Name = C1tb.Text;
+            player.Overall = int.Parse(C1OVRtb.Text);
             player.ESL = new int[] { 1, 2 };    // First line, center
 
             playerList.Add(player);
@@ -783,6 +785,7 @@ namespace Hockey_Lineup_Manager
             // Save 1st line right wing
             player = new Player();
             player.Name = RW1tb.Text;
+            player.Overall = int.Parse(RW1OVRtb.Text);
             player.ESL = new int[] { 1, 3 };    // First line, right wing
 
             playerList.Add(player);
@@ -790,6 +793,7 @@ namespace Hockey_Lineup_Manager
             // Save 1st pair left defence
             player = new Player();
             player.Name = LD1tb.Text;
+            player.Overall = int.Parse(LD1OVRtb.Text);
             player.ESL = new int[] { 1, 4 };    // First pair, left defence
 
             playerList.Add(player);
@@ -797,6 +801,7 @@ namespace Hockey_Lineup_Manager
             // Save 1st pair right defence
             player = new Player();
             player.Name = RD1tb.Text;
+            player.Overall = int.Parse(RD1OVRtb.Text);
             player.ESL = new int[] { 1, 5 };    // First pair, right defence
 
             playerList.Add(player);
@@ -805,6 +810,7 @@ namespace Hockey_Lineup_Manager
             // Save 2nd line left wing
             player = new Player();
             player.Name = LW2tb.Text;
+            player.Overall = int.Parse(LW2OVRtb.Text);
             player.ESL = new int[] { 2, 1 };    // Second line, left wing
 
             playerList.Add(player);
@@ -812,6 +818,7 @@ namespace Hockey_Lineup_Manager
             // Save 2nd line center
             player = new Player();
             player.Name = C2tb.Text;
+            player.Overall = int.Parse(C2OVRtb.Text);
             player.ESL = new int[] { 2, 2 };    // Second line, center
 
             playerList.Add(player);
@@ -819,6 +826,7 @@ namespace Hockey_Lineup_Manager
             // Save 2nd line right wing
             player = new Player();
             player.Name = RW2tb.Text;
+            player.Overall = int.Parse(RW2OVRtb.Text);
             player.ESL = new int[] { 2, 3 };    // Second line, right wing
 
             playerList.Add(player);
@@ -826,6 +834,7 @@ namespace Hockey_Lineup_Manager
             // Save 2nd pair left defence
             player = new Player();
             player.Name = LD2tb.Text;
+            player.Overall = int.Parse(LD2OVRtb.Text);
             player.ESL = new int[] { 2, 4 };    // Second pair, left defence
 
             playerList.Add(player);
@@ -833,6 +842,7 @@ namespace Hockey_Lineup_Manager
             // Save 2nd pair right defence
             player = new Player();
             player.Name = RD2tb.Text;
+            player.Overall = int.Parse(RD2OVRtb.Text);
             player.ESL = new int[] { 2, 5 };    // Second pair, right defence
 
             playerList.Add(player);
@@ -841,6 +851,7 @@ namespace Hockey_Lineup_Manager
             // Save 3rd line left wing
             player = new Player();
             player.Name = LW3tb.Text;
+            player.Overall = int.Parse(LW3OVRtb.Text);
             player.ESL = new int[] { 3, 1 };    // Third line, left wing
 
             playerList.Add(player);
@@ -848,6 +859,7 @@ namespace Hockey_Lineup_Manager
             // Save 3rd line center
             player = new Player();
             player.Name = C3tb.Text;
+            player.Overall = int.Parse(C3OVRtb.Text);
             player.ESL = new int[] { 3, 2 };    // Third line, center
 
             playerList.Add(player);
@@ -855,6 +867,7 @@ namespace Hockey_Lineup_Manager
             // Save 3rd line right wing
             player = new Player();
             player.Name = RW3tb.Text;
+            player.Overall = int.Parse(RW3OVRtb.Text);
             player.ESL = new int[] { 3, 3 };    // Third line, right wing
 
             playerList.Add(player);
@@ -862,6 +875,7 @@ namespace Hockey_Lineup_Manager
             // Save 3rd pair left defence
             player = new Player();
             player.Name = LD3tb.Text;
+            player.Overall = int.Parse(LD3OVRtb.Text);
             player.ESL = new int[] { 3, 4 };    // Third pair, left defence
 
             playerList.Add(player);
@@ -869,6 +883,7 @@ namespace Hockey_Lineup_Manager
             // Save 3rd pair right defence
             player = new Player();
             player.Name = RD3tb.Text;
+            player.Overall = int.Parse(RD3OVRtb.Text);
             player.ESL = new int[] { 3, 5 };    // Third pair, right defence
 
             playerList.Add(player);
@@ -877,6 +892,7 @@ namespace Hockey_Lineup_Manager
             // Save 4th line left wing
             player = new Player();
             player.Name = LW4tb.Text;
+            player.Overall = int.Parse(LW4OVRtb.Text);
             player.ESL = new int[] { 4, 1 };    // Fourth line, left wing
 
             playerList.Add(player);
@@ -884,6 +900,7 @@ namespace Hockey_Lineup_Manager
             // Save 4th line center
             player = new Player();
             player.Name = C4tb.Text;
+            player.Overall = int.Parse(C4OVRtb.Text);
             player.ESL = new int[] { 4, 2 };    // Fourth line, center
 
             playerList.Add(player);
@@ -891,6 +908,7 @@ namespace Hockey_Lineup_Manager
             // Save 4th line right wing
             player = new Player();
             player.Name = RW4tb.Text;
+            player.Overall = int.Parse(RW4OVRtb.Text);
             player.ESL = new int[] { 4, 3 };    // Fourth line, right wing
 
             playerList.Add(player);
@@ -898,6 +916,7 @@ namespace Hockey_Lineup_Manager
             // Save starting goalie
             player = new Player();
             player.Name = G1tb.Text;
+            player.Overall = int.Parse(G1OVRtb.Text);
             player.ESL = new int[] { 4, 4 };    // Starting Goalie
 
             playerList.Add(player);
@@ -905,6 +924,7 @@ namespace Hockey_Lineup_Manager
             // Save backup goalie
             player = new Player();
             player.Name = G2tb.Text;
+            player.Overall = int.Parse(G2OVRtb.Text);
             player.ESL = new int[] { 4, 5 };    // Backup Goalie
 
             playerList.Add(player);
@@ -913,6 +933,7 @@ namespace Hockey_Lineup_Manager
             // Save scratched left wing
             player = new Player();
             player.Name = LW5tb.Text;
+            player.Overall = int.Parse(LW5OVRtb.Text);
             player.ESL = new int[] { 5, 1 };    // Scratched, left wing
 
             playerList.Add(player);
@@ -920,6 +941,7 @@ namespace Hockey_Lineup_Manager
             // Save scratched center
             player = new Player();
             player.Name = C5tb.Text;
+            player.Overall = int.Parse(C5OVRtb.Text);
             player.ESL = new int[] { 5, 2 };    // Scratched, center
 
             playerList.Add(player);
@@ -927,6 +949,7 @@ namespace Hockey_Lineup_Manager
             // Save scratched right wing
             player = new Player();
             player.Name = RW5tb.Text;
+            player.Overall = int.Parse(RW5OVRtb.Text);
             player.ESL = new int[] { 5, 3 };    // Scratched, right wing
 
             playerList.Add(player);
@@ -934,6 +957,7 @@ namespace Hockey_Lineup_Manager
             // Save scratched left defence
             player = new Player();
             player.Name = LD4tb.Text;
+            player.Overall = int.Parse(LD4OVRtb.Text);
             player.ESL = new int[] { 5, 4 };    // Scratched, left defence
 
             playerList.Add(player);
@@ -941,6 +965,7 @@ namespace Hockey_Lineup_Manager
             // Save scratched right defence
             player = new Player();
             player.Name = RD4tb.Text;
+            player.Overall = int.Parse(RD4OVRtb.Text);
             player.ESL = new int[] { 5, 5 };    // Scratched, right defence
 
             playerList.Add(player);
@@ -972,6 +997,9 @@ namespace Hockey_Lineup_Manager
 
             TeamNametb.Text = team.Name;
             // TeamYearlb.SelectedItem = team.Year; Need to think about this more as I need to also add in other years to the listbox
+
+            // for each loop to add each year to the 
+
             NHLrb.Checked = team.League ? true : false;
             AHLrb.Checked = team.League ? false : true;
 
@@ -988,18 +1016,23 @@ namespace Hockey_Lineup_Manager
                         {
                             case 1:                             // Left Wing
                                 LW1tb.Text = player.Name;
+                                LW1OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 2:                             // Center
                                 C1tb.Text = player.Name;
+                                C1OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 3:                             // Right Wing
                                 RW1tb.Text = player.Name;
+                                RW1OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 4:                             // Left Defence
                                 LD1tb.Text = player.Name;
+                                LD1OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 5:                             // Right Defence
                                 RD1tb.Text = player.Name;
+                                RD1OVRtb.Text = player.Overall.ToString();
                                 break;
                         }
                         break;
@@ -1008,18 +1041,23 @@ namespace Hockey_Lineup_Manager
                         {
                             case 1:                             // Left Wing
                                 LW2tb.Text = player.Name;
+                                LW2OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 2:                             // Center
                                 C2tb.Text = player.Name;
+                                C2OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 3:                             // Right Wing
                                 RW2tb.Text = player.Name;
+                                RW2OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 4:                             // Left Defence
                                 LD2tb.Text = player.Name;
+                                LD2OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 5:                             // Right Defence
                                 RD2tb.Text = player.Name;
+                                RD2OVRtb.Text = player.Overall.ToString();
                                 break;
                         }
                         break;
@@ -1028,18 +1066,23 @@ namespace Hockey_Lineup_Manager
                         {
                             case 1:                             // Left Wing
                                 LW3tb.Text = player.Name;
+                                LW3OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 2:                             // Center
                                 C3tb.Text = player.Name;
+                                C3OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 3:                             // Right Wing
                                 RW3tb.Text = player.Name;
+                                RW3OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 4:                             // Left Defence
                                 LD3tb.Text = player.Name;
+                                LD3OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 5:                             // Right Defence
                                 RD3tb.Text = player.Name;
+                                RD3OVRtb.Text = player.Overall.ToString();
                                 break;
                         }
                         break;
@@ -1048,18 +1091,23 @@ namespace Hockey_Lineup_Manager
                         {
                             case 1:                             // Left Wing
                                 LW4tb.Text = player.Name;
+                                LW4OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 2:                             // Center
                                 C4tb.Text = player.Name;
+                                C4OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 3:                             // Right Wing
                                 RW4tb.Text = player.Name;
+                                RW4OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 4:                             // Starter
                                 G1tb.Text = player.Name;
+                                G1OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 5:                             // Backup
                                 G2tb.Text = player.Name;
+                                G2OVRtb.Text = player.Overall.ToString();
                                 break;
                         }
                         break;
@@ -1068,18 +1116,23 @@ namespace Hockey_Lineup_Manager
                         {
                             case 1:                             // Left Wing
                                 LW5tb.Text = player.Name;
+                                LW5OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 2:                             // Center
                                 C5tb.Text = player.Name;
+                                C5OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 3:                             // Right Wing
                                 RW5tb.Text = player.Name;
+                                RW5OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 4:                             // Left Defence
                                 LD4tb.Text = player.Name;
+                                LD4OVRtb.Text = player.Overall.ToString();
                                 break;
                             case 5:                             // Right Defence
                                 RD4tb.Text = player.Name;
+                                RD4OVRtb.Text = player.Overall.ToString();
                                 break;
                         }
                         break;
@@ -1094,11 +1147,11 @@ namespace Hockey_Lineup_Manager
     }
     public class Player
     {
-        public string   Name;                   // Name of player
-        public int      Overall;                // Overall of player
-        public string   Potential;              // Potential of player
-        public int[]    ESL = new int[2];       // Even Strength line player is on and their position (1 = Left Wing, 2 = Center, 3 = Right Wing or 3rd String, 4 = Left Defence or Starter, 5 = Right Defence or Backup)
-        public int[]    PPL = new int[2];       // Powerplay unit player is on and their position
+        public string Name;                   // Name of player
+        public int Overall;                // Overall of player
+        public string Potential;              // Potential of player
+        public int[] ESL = new int[2];       // Even Strength line player is on and their position (1 = Left Wing, 2 = Center, 3 = Right Wing or 3rd String, 4 = Left Defence or Starter, 5 = Right Defence or Backup)
+        public int[] PPL = new int[2];       // Powerplay unit player is on and their position
     }
     public class Team
     {

@@ -43,14 +43,14 @@ namespace Hockey_Lineup_Manager
             this.PPLD1tb = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.PPRD2tb = new System.Windows.Forms.TextBox();
+            this.PPLD2tb = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.PPRW2tb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.PPC2tb = new System.Windows.Forms.TextBox();
+            this.PPLW2tb = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label21
@@ -79,6 +79,9 @@ namespace Hockey_Lineup_Manager
             this.PPRW1tb.Name = "PPRW1tb";
             this.PPRW1tb.Size = new System.Drawing.Size(100, 20);
             this.PPRW1tb.TabIndex = 48;
+            this.PPRW1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPRW1tb_DragDrop);
+            this.PPRW1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPRW1tb_DragEnter);
+            this.PPRW1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPRW1tb_MouseDown);
             // 
             // label2
             // 
@@ -141,17 +144,25 @@ namespace Hockey_Lineup_Manager
             // 
             // PPRD1tb
             // 
+            this.PPRD1tb.AllowDrop = true;
             this.PPRD1tb.Location = new System.Drawing.Point(356, 186);
             this.PPRD1tb.Name = "PPRD1tb";
             this.PPRD1tb.Size = new System.Drawing.Size(100, 20);
             this.PPRD1tb.TabIndex = 52;
+            this.PPRD1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPRD1tb_DragDrop);
+            this.PPRD1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPRD1tb_DragEnter);
+            this.PPRD1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPRD1tb_MouseDown);
             // 
             // PPLD1tb
             // 
+            this.PPLD1tb.AllowDrop = true;
             this.PPLD1tb.Location = new System.Drawing.Point(143, 186);
             this.PPLD1tb.Name = "PPLD1tb";
             this.PPLD1tb.Size = new System.Drawing.Size(100, 20);
             this.PPLD1tb.TabIndex = 51;
+            this.PPLD1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPLD1tb_DragDrop);
+            this.PPLD1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPLD1tb_DragEnter);
+            this.PPLD1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPLD1tb_MouseDown);
             // 
             // label4
             // 
@@ -171,19 +182,27 @@ namespace Hockey_Lineup_Manager
             this.label5.TabIndex = 63;
             this.label5.Text = "LD";
             // 
-            // textBox1
+            // PPRD2tb
             // 
-            this.textBox1.Location = new System.Drawing.Point(356, 379);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 62;
+            this.PPRD2tb.AllowDrop = true;
+            this.PPRD2tb.Location = new System.Drawing.Point(356, 379);
+            this.PPRD2tb.Name = "PPRD2tb";
+            this.PPRD2tb.Size = new System.Drawing.Size(100, 20);
+            this.PPRD2tb.TabIndex = 62;
+            this.PPRD2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPRD2tb_DragDrop);
+            this.PPRD2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPRD2tb_DragEnter);
+            this.PPRD2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPRD2tb_MouseDown);
             // 
-            // textBox2
+            // PPLD2tb
             // 
-            this.textBox2.Location = new System.Drawing.Point(143, 379);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 61;
+            this.PPLD2tb.AllowDrop = true;
+            this.PPLD2tb.Location = new System.Drawing.Point(143, 379);
+            this.PPLD2tb.Name = "PPLD2tb";
+            this.PPLD2tb.Size = new System.Drawing.Size(100, 20);
+            this.PPLD2tb.TabIndex = 61;
+            this.PPLD2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPLD2tb_DragDrop);
+            this.PPLD2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPLD2tb_DragEnter);
+            this.PPLD2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPLD2tb_MouseDown);
             // 
             // label6
             // 
@@ -194,13 +213,16 @@ namespace Hockey_Lineup_Manager
             this.label6.TabIndex = 60;
             this.label6.Text = "RW";
             // 
-            // textBox3
+            // PPRW2tb
             // 
-            this.textBox3.AllowDrop = true;
-            this.textBox3.Location = new System.Drawing.Point(438, 314);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 59;
+            this.PPRW2tb.AllowDrop = true;
+            this.PPRW2tb.Location = new System.Drawing.Point(438, 314);
+            this.PPRW2tb.Name = "PPRW2tb";
+            this.PPRW2tb.Size = new System.Drawing.Size(100, 20);
+            this.PPRW2tb.TabIndex = 59;
+            this.PPRW2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPRW2tb_DragDrop);
+            this.PPRW2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPRW2tb_DragEnter);
+            this.PPRW2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPRW2tb_MouseDown);
             // 
             // label7
             // 
@@ -221,37 +243,43 @@ namespace Hockey_Lineup_Manager
             this.label8.TabIndex = 57;
             this.label8.Text = "LW";
             // 
-            // textBox4
+            // PPC2tb
             // 
-            this.textBox4.AllowDrop = true;
-            this.textBox4.Location = new System.Drawing.Point(258, 314);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 56;
+            this.PPC2tb.AllowDrop = true;
+            this.PPC2tb.Location = new System.Drawing.Point(258, 314);
+            this.PPC2tb.Name = "PPC2tb";
+            this.PPC2tb.Size = new System.Drawing.Size(100, 20);
+            this.PPC2tb.TabIndex = 56;
+            this.PPC2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPC2tb_DragDrop);
+            this.PPC2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPC2tb_DragEnter);
+            this.PPC2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPC2tb_MouseDown);
             // 
-            // textBox5
+            // PPLW2tb
             // 
-            this.textBox5.AllowDrop = true;
-            this.textBox5.Location = new System.Drawing.Point(76, 314);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 55;
+            this.PPLW2tb.AllowDrop = true;
+            this.PPLW2tb.Location = new System.Drawing.Point(76, 314);
+            this.PPLW2tb.Name = "PPLW2tb";
+            this.PPLW2tb.Size = new System.Drawing.Size(100, 20);
+            this.PPLW2tb.TabIndex = 55;
+            this.PPLW2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPLW2tb_DragDrop);
+            this.PPLW2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPLW2tb_DragEnter);
+            this.PPLW2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPLW2tb_MouseDown);
             // 
             // PPform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 455);
+            this.ClientSize = new System.Drawing.Size(640, 455);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.PPRD2tb);
+            this.Controls.Add(this.PPLD2tb);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.PPRW2tb);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.PPC2tb);
+            this.Controls.Add(this.PPLW2tb);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.PPRD1tb);
@@ -266,6 +294,7 @@ namespace Hockey_Lineup_Manager
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PPform";
             this.Text = "Powerplay";
+            this.Load += new System.EventHandler(this.PPform_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,13 +315,13 @@ namespace Hockey_Lineup_Manager
         private System.Windows.Forms.TextBox PPLD1tb;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox PPRD2tb;
+        private System.Windows.Forms.TextBox PPLD2tb;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox PPRW2tb;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox PPC2tb;
+        private System.Windows.Forms.TextBox PPLW2tb;
     }
 }

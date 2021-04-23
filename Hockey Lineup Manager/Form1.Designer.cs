@@ -88,8 +88,33 @@ namespace Hockey_Lineup_Manager
             this.AHLrb = new System.Windows.Forms.RadioButton();
             this.NHLrb = new System.Windows.Forms.RadioButton();
             this.TeamNametb = new System.Windows.Forms.TextBox();
-            this.TeamYearlb = new System.Windows.Forms.ListBox();
             this.AddYearbtn = new System.Windows.Forms.Button();
+            this.TeamYearlb = new System.Windows.Forms.ListBox();
+            this.LW1OVRtb = new System.Windows.Forms.TextBox();
+            this.C1OVRtb = new System.Windows.Forms.TextBox();
+            this.RW1OVRtb = new System.Windows.Forms.TextBox();
+            this.LW2OVRtb = new System.Windows.Forms.TextBox();
+            this.LW3OVRtb = new System.Windows.Forms.TextBox();
+            this.LW4OVRtb = new System.Windows.Forms.TextBox();
+            this.LW5OVRtb = new System.Windows.Forms.TextBox();
+            this.C2OVRtb = new System.Windows.Forms.TextBox();
+            this.C3OVRtb = new System.Windows.Forms.TextBox();
+            this.C4OVRtb = new System.Windows.Forms.TextBox();
+            this.C5OVRtb = new System.Windows.Forms.TextBox();
+            this.RW2OVRtb = new System.Windows.Forms.TextBox();
+            this.RW3OVRtb = new System.Windows.Forms.TextBox();
+            this.RW4OVRtb = new System.Windows.Forms.TextBox();
+            this.RW5OVRtb = new System.Windows.Forms.TextBox();
+            this.LD1OVRtb = new System.Windows.Forms.TextBox();
+            this.LD2OVRtb = new System.Windows.Forms.TextBox();
+            this.LD3OVRtb = new System.Windows.Forms.TextBox();
+            this.LD4OVRtb = new System.Windows.Forms.TextBox();
+            this.RD1OVRtb = new System.Windows.Forms.TextBox();
+            this.RD2OVRtb = new System.Windows.Forms.TextBox();
+            this.RD3OVRtb = new System.Windows.Forms.TextBox();
+            this.RD4OVRtb = new System.Windows.Forms.TextBox();
+            this.G1OVRtb = new System.Windows.Forms.TextBox();
+            this.G2OVRtb = new System.Windows.Forms.TextBox();
             this.Leaguegb.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -684,18 +709,6 @@ namespace Hockey_Lineup_Manager
             this.TeamNametb.Text = "Team Name";
             this.TeamNametb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // TeamYearlb
-            // 
-            this.TeamYearlb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TeamYearlb.FormattingEnabled = true;
-            this.TeamYearlb.ItemHeight = 18;
-            this.TeamYearlb.Items.AddRange(new object[] {
-            "2020-2021"});
-            this.TeamYearlb.Location = new System.Drawing.Point(679, 626);
-            this.TeamYearlb.Name = "TeamYearlb";
-            this.TeamYearlb.Size = new System.Drawing.Size(109, 112);
-            this.TeamYearlb.TabIndex = 61;
-            // 
             // AddYearbtn
             // 
             this.AddYearbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -707,13 +720,300 @@ namespace Hockey_Lineup_Manager
             this.AddYearbtn.UseVisualStyleBackColor = true;
             this.AddYearbtn.Click += new System.EventHandler(this.AddYearbtn_Click);
             // 
+            // TeamYearlb
+            // 
+            this.TeamYearlb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TeamYearlb.FormattingEnabled = true;
+            this.TeamYearlb.ItemHeight = 18;
+            this.TeamYearlb.Items.AddRange(new object[] {
+            "2020-2021"});
+            this.TeamYearlb.Location = new System.Drawing.Point(679, 618);
+            this.TeamYearlb.Name = "TeamYearlb";
+            this.TeamYearlb.Size = new System.Drawing.Size(109, 112);
+            this.TeamYearlb.TabIndex = 63;
+            // 
+            // LW1OVRtb
+            // 
+            this.LW1OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.LW1OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LW1OVRtb.Location = new System.Drawing.Point(182, 127);
+            this.LW1OVRtb.Name = "LW1OVRtb";
+            this.LW1OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.LW1OVRtb.TabIndex = 64;
+            this.LW1OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // C1OVRtb
+            // 
+            this.C1OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.C1OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C1OVRtb.Location = new System.Drawing.Point(364, 127);
+            this.C1OVRtb.Name = "C1OVRtb";
+            this.C1OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.C1OVRtb.TabIndex = 65;
+            this.C1OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // RW1OVRtb
+            // 
+            this.RW1OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.RW1OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RW1OVRtb.Location = new System.Drawing.Point(544, 127);
+            this.RW1OVRtb.Name = "RW1OVRtb";
+            this.RW1OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.RW1OVRtb.TabIndex = 66;
+            this.RW1OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LW2OVRtb
+            // 
+            this.LW2OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.LW2OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LW2OVRtb.Location = new System.Drawing.Point(182, 181);
+            this.LW2OVRtb.Name = "LW2OVRtb";
+            this.LW2OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.LW2OVRtb.TabIndex = 67;
+            this.LW2OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LW3OVRtb
+            // 
+            this.LW3OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.LW3OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LW3OVRtb.Location = new System.Drawing.Point(182, 237);
+            this.LW3OVRtb.Name = "LW3OVRtb";
+            this.LW3OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.LW3OVRtb.TabIndex = 68;
+            this.LW3OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LW4OVRtb
+            // 
+            this.LW4OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.LW4OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LW4OVRtb.Location = new System.Drawing.Point(182, 292);
+            this.LW4OVRtb.Name = "LW4OVRtb";
+            this.LW4OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.LW4OVRtb.TabIndex = 69;
+            this.LW4OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LW5OVRtb
+            // 
+            this.LW5OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.LW5OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LW5OVRtb.Location = new System.Drawing.Point(182, 347);
+            this.LW5OVRtb.Name = "LW5OVRtb";
+            this.LW5OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.LW5OVRtb.TabIndex = 70;
+            this.LW5OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // C2OVRtb
+            // 
+            this.C2OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.C2OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C2OVRtb.Location = new System.Drawing.Point(364, 182);
+            this.C2OVRtb.Name = "C2OVRtb";
+            this.C2OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.C2OVRtb.TabIndex = 71;
+            this.C2OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // C3OVRtb
+            // 
+            this.C3OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.C3OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C3OVRtb.Location = new System.Drawing.Point(364, 237);
+            this.C3OVRtb.Name = "C3OVRtb";
+            this.C3OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.C3OVRtb.TabIndex = 72;
+            this.C3OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // C4OVRtb
+            // 
+            this.C4OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.C4OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C4OVRtb.Location = new System.Drawing.Point(364, 292);
+            this.C4OVRtb.Name = "C4OVRtb";
+            this.C4OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.C4OVRtb.TabIndex = 73;
+            this.C4OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // C5OVRtb
+            // 
+            this.C5OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.C5OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C5OVRtb.Location = new System.Drawing.Point(364, 347);
+            this.C5OVRtb.Name = "C5OVRtb";
+            this.C5OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.C5OVRtb.TabIndex = 74;
+            this.C5OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // RW2OVRtb
+            // 
+            this.RW2OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.RW2OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RW2OVRtb.Location = new System.Drawing.Point(544, 182);
+            this.RW2OVRtb.Name = "RW2OVRtb";
+            this.RW2OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.RW2OVRtb.TabIndex = 75;
+            this.RW2OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // RW3OVRtb
+            // 
+            this.RW3OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.RW3OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RW3OVRtb.Location = new System.Drawing.Point(544, 237);
+            this.RW3OVRtb.Name = "RW3OVRtb";
+            this.RW3OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.RW3OVRtb.TabIndex = 76;
+            this.RW3OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // RW4OVRtb
+            // 
+            this.RW4OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.RW4OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RW4OVRtb.Location = new System.Drawing.Point(544, 292);
+            this.RW4OVRtb.Name = "RW4OVRtb";
+            this.RW4OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.RW4OVRtb.TabIndex = 77;
+            this.RW4OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // RW5OVRtb
+            // 
+            this.RW5OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.RW5OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RW5OVRtb.Location = new System.Drawing.Point(544, 347);
+            this.RW5OVRtb.Name = "RW5OVRtb";
+            this.RW5OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.RW5OVRtb.TabIndex = 78;
+            this.RW5OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LD1OVRtb
+            // 
+            this.LD1OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.LD1OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LD1OVRtb.Location = new System.Drawing.Point(258, 430);
+            this.LD1OVRtb.Name = "LD1OVRtb";
+            this.LD1OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.LD1OVRtb.TabIndex = 79;
+            this.LD1OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LD2OVRtb
+            // 
+            this.LD2OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.LD2OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LD2OVRtb.Location = new System.Drawing.Point(258, 482);
+            this.LD2OVRtb.Name = "LD2OVRtb";
+            this.LD2OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.LD2OVRtb.TabIndex = 80;
+            this.LD2OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LD3OVRtb
+            // 
+            this.LD3OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.LD3OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LD3OVRtb.Location = new System.Drawing.Point(258, 536);
+            this.LD3OVRtb.Name = "LD3OVRtb";
+            this.LD3OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.LD3OVRtb.TabIndex = 81;
+            this.LD3OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // LD4OVRtb
+            // 
+            this.LD4OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.LD4OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LD4OVRtb.Location = new System.Drawing.Point(258, 589);
+            this.LD4OVRtb.Name = "LD4OVRtb";
+            this.LD4OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.LD4OVRtb.TabIndex = 82;
+            this.LD4OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // RD1OVRtb
+            // 
+            this.RD1OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.RD1OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RD1OVRtb.Location = new System.Drawing.Point(471, 430);
+            this.RD1OVRtb.Name = "RD1OVRtb";
+            this.RD1OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.RD1OVRtb.TabIndex = 83;
+            this.RD1OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // RD2OVRtb
+            // 
+            this.RD2OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.RD2OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RD2OVRtb.Location = new System.Drawing.Point(471, 483);
+            this.RD2OVRtb.Name = "RD2OVRtb";
+            this.RD2OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.RD2OVRtb.TabIndex = 84;
+            this.RD2OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // RD3OVRtb
+            // 
+            this.RD3OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.RD3OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RD3OVRtb.Location = new System.Drawing.Point(471, 536);
+            this.RD3OVRtb.Name = "RD3OVRtb";
+            this.RD3OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.RD3OVRtb.TabIndex = 85;
+            this.RD3OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // RD4OVRtb
+            // 
+            this.RD4OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.RD4OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RD4OVRtb.Location = new System.Drawing.Point(471, 588);
+            this.RD4OVRtb.Name = "RD4OVRtb";
+            this.RD4OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.RD4OVRtb.TabIndex = 86;
+            this.RD4OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // G1OVRtb
+            // 
+            this.G1OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.G1OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G1OVRtb.Location = new System.Drawing.Point(364, 664);
+            this.G1OVRtb.Name = "G1OVRtb";
+            this.G1OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.G1OVRtb.TabIndex = 87;
+            this.G1OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // G2OVRtb
+            // 
+            this.G2OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.G2OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2OVRtb.Location = new System.Drawing.Point(364, 717);
+            this.G2OVRtb.Name = "G2OVRtb";
+            this.G2OVRtb.Size = new System.Drawing.Size(23, 21);
+            this.G2OVRtb.TabIndex = 88;
+            this.G2OVRtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // ESform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 750);
-            this.Controls.Add(this.AddYearbtn);
+            this.Controls.Add(this.G2OVRtb);
+            this.Controls.Add(this.G1OVRtb);
+            this.Controls.Add(this.RD4OVRtb);
+            this.Controls.Add(this.RD3OVRtb);
+            this.Controls.Add(this.RD2OVRtb);
+            this.Controls.Add(this.RD1OVRtb);
+            this.Controls.Add(this.LD4OVRtb);
+            this.Controls.Add(this.LD3OVRtb);
+            this.Controls.Add(this.LD2OVRtb);
+            this.Controls.Add(this.LD1OVRtb);
+            this.Controls.Add(this.RW5OVRtb);
+            this.Controls.Add(this.RW4OVRtb);
+            this.Controls.Add(this.RW3OVRtb);
+            this.Controls.Add(this.RW2OVRtb);
+            this.Controls.Add(this.C5OVRtb);
+            this.Controls.Add(this.C4OVRtb);
+            this.Controls.Add(this.C3OVRtb);
+            this.Controls.Add(this.C2OVRtb);
+            this.Controls.Add(this.LW5OVRtb);
+            this.Controls.Add(this.LW4OVRtb);
+            this.Controls.Add(this.LW3OVRtb);
+            this.Controls.Add(this.LW2OVRtb);
+            this.Controls.Add(this.RW1OVRtb);
+            this.Controls.Add(this.C1OVRtb);
+            this.Controls.Add(this.LW1OVRtb);
             this.Controls.Add(this.TeamYearlb);
+            this.Controls.Add(this.AddYearbtn);
             this.Controls.Add(this.TeamNametb);
             this.Controls.Add(this.Leaguegb);
             this.Controls.Add(this.LoadLinesbtn);
@@ -840,8 +1140,33 @@ namespace Hockey_Lineup_Manager
         private System.Windows.Forms.RadioButton AHLrb;
         private System.Windows.Forms.RadioButton NHLrb;
         private System.Windows.Forms.TextBox TeamNametb;
-        private System.Windows.Forms.ListBox TeamYearlb;
         private System.Windows.Forms.Button AddYearbtn;
+        private System.Windows.Forms.ListBox TeamYearlb;
+        private System.Windows.Forms.TextBox LW1OVRtb;
+        private System.Windows.Forms.TextBox C1OVRtb;
+        private System.Windows.Forms.TextBox RW1OVRtb;
+        private System.Windows.Forms.TextBox LW2OVRtb;
+        private System.Windows.Forms.TextBox LW3OVRtb;
+        private System.Windows.Forms.TextBox LW4OVRtb;
+        private System.Windows.Forms.TextBox LW5OVRtb;
+        private System.Windows.Forms.TextBox C2OVRtb;
+        private System.Windows.Forms.TextBox C3OVRtb;
+        private System.Windows.Forms.TextBox C4OVRtb;
+        private System.Windows.Forms.TextBox C5OVRtb;
+        private System.Windows.Forms.TextBox RW2OVRtb;
+        private System.Windows.Forms.TextBox RW3OVRtb;
+        private System.Windows.Forms.TextBox RW4OVRtb;
+        private System.Windows.Forms.TextBox RW5OVRtb;
+        private System.Windows.Forms.TextBox LD1OVRtb;
+        private System.Windows.Forms.TextBox LD2OVRtb;
+        private System.Windows.Forms.TextBox LD3OVRtb;
+        private System.Windows.Forms.TextBox LD4OVRtb;
+        private System.Windows.Forms.TextBox RD1OVRtb;
+        private System.Windows.Forms.TextBox RD2OVRtb;
+        private System.Windows.Forms.TextBox RD3OVRtb;
+        private System.Windows.Forms.TextBox RD4OVRtb;
+        private System.Windows.Forms.TextBox G1OVRtb;
+        private System.Windows.Forms.TextBox G2OVRtb;
     }
 }
 
