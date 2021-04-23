@@ -14,7 +14,11 @@ namespace Hockey_Lineup_Manager
             InitializeComponent();
         }
 
+        //------------------------------------------------------------------------------------------------------------------------------------
+        //
         //--------------------------------------------  Drag and Drop Functionallity  --------------------------------------------
+        //
+        //------------------------------------------------------------------------------------------------------------------------------------
 
         //--------------------------------------------  1st Line / 1st Pair --------------------------------------------
 
@@ -941,15 +945,17 @@ namespace Hockey_Lineup_Manager
 
             playerList.Add(player);
 
-            string output = JsonConvert.SerializeObject(playerList);
+            Team team = new Team();
+            team.Name = TeamNametb.Text;
+            team.Year = TeamYearlb.SelectedItem.ToString();
+            team.League = NHLrb.Checked ? true : false;
+            team.Roster = playerList;
 
-            JsonSerializer serializer = new JsonSerializer();
-
-            string teamName = "Test Team 1";
-            using (StreamWriter sw = new StreamWriter(Path.Combine("..\\..\\Rosters\\", "Test Team 1.txt")))
-            using (JsonWriter writer = new JsonTextWriter(sw))
+            // Save the setup
+            using (StreamWriter file = File.CreateText(Path.Combine("..\\..\\Rosters\\", (team.Name + ".txt"))))
             {
-                serializer.Serialize(writer, playerList);
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, team);
             }
         }
 
@@ -960,12 +966,17 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void LoadLinesbtn_Click(object sender, EventArgs e)
         {
-            string teamName = "Test Team 1";        // This will eventually be something that the user can change.
+            string teamName = TeamNametb.Text;
             string fileContent = File.ReadAllText(Path.Combine("..\\..\\Rosters\\", (teamName + ".txt")));
-            var roster = JsonConvert.DeserializeObject<List<Player>>(fileContent);
+            Team team = JsonConvert.DeserializeObject<Team>(fileContent);
 
-            // Go through each player in the list and place their information in the correct locations
-            foreach (Player player in roster)
+            TeamNametb.Text = team.Name;
+            // TeamYearlb.SelectedItem = team.Year; Need to think about this more as I need to also add in other years to the listbox
+            NHLrb.Checked = team.League ? true : false;
+            AHLrb.Checked = team.League ? false : true;
+
+            // Go through each player in the roster and place the players in the correct locations
+            foreach (Player player in team.Roster)
             {
                 // Figure out what line they are on, find the position
                 int line = player.ESL[0];
@@ -1076,7 +1087,10 @@ namespace Hockey_Lineup_Manager
             }
         }
 
-        
+        private void AddYearbtn_Click(object sender, EventArgs e)
+        {
+            //TODO: Make this button add a year to the listbox
+        }
     }
     public class Player
     {
@@ -1088,9 +1102,11 @@ namespace Hockey_Lineup_Manager
     }
     public class Team
     {
-        public string           TeamName;       // Name of team 
+        public string           Name;           // Name of team 
         public string           Year;           // Year of team
         public bool             League;         // Which league the team is in (1 = NHL, 0 = AHL)
         public List<Player>     Roster;         // List of players
+        public string           Record;         // Record of the team
+        public string           Playoff;        // How far the team made it in the playoffs and who eliminated them
     }
 }
