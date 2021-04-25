@@ -43,6 +43,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void PKLW1tb_MouseDown(object sender, MouseEventArgs e)
         {
+            // When the user selects the textbox with the right mouse button, start the drag drop
             if (e.Button == MouseButtons.Right)
                 PKLW1tb.DoDragDrop(PKLW1tb.Text, DragDropEffects.Copy);
         }
@@ -68,6 +69,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void PKC1tb_MouseDown(object sender, MouseEventArgs e)
         {
+            // When the user selects the textbox with the right mouse button, start the drag drop
             if (e.Button == MouseButtons.Right)
                 PKC1tb.DoDragDrop(PKC1tb.Text, DragDropEffects.Copy);
         }
@@ -145,7 +147,9 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void PKLW2tb_MouseDown(object sender, MouseEventArgs e)
         {
-            PKLW2tb.DoDragDrop(PKLW2tb.Text, DragDropEffects.Copy);
+            // When the user selects the textbox with the right mouse button, start the drag drop
+            if (e.Button == MouseButtons.Right)
+                PKLW2tb.DoDragDrop(PKLW2tb.Text, DragDropEffects.Copy);
         }
 
         /// <summary>
@@ -193,6 +197,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void PKLD2tb_MouseDown(object sender, MouseEventArgs e)
         {
+            // When the user selects the textbox with the right mouse button, start the drag drop
             if (e.Button == MouseButtons.Right)
                 PKLD2tb.DoDragDrop(PKLD2tb.Text, DragDropEffects.Copy);
         }
@@ -216,6 +221,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void PKRD2tb_MouseDown(object sender, MouseEventArgs e)
         {
+            // When the user selects the textbox with the right mouse button, start the drag drop
             if (e.Button == MouseButtons.Right)
                 PKRD2tb.DoDragDrop(PKRD2tb.Text, DragDropEffects.Copy);
         }
