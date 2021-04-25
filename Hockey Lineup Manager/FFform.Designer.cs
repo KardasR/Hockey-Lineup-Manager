@@ -1,7 +1,7 @@
 ﻿
 namespace Hockey_Lineup_Manager
 {
-    partial class _4on4
+    partial class FFform
     {
         /// <summary>
         /// Required designer variable.
@@ -309,7 +309,7 @@ namespace Hockey_Lineup_Manager
             this.FourRD3tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
             this.FourRD3tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FourRD3tb_MouseDown);
             // 
-            // _4on4
+            // FFform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -339,8 +339,8 @@ namespace Hockey_Lineup_Manager
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "_4on4";
-            this.Text = "_4on4";
+            this.Name = "FFform";
+            this.Text = "FFform";
             this.ResumeLayout(false);
             this.PerformLayout();
 

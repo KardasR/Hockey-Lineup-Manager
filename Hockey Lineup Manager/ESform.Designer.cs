@@ -116,7 +116,7 @@ namespace Hockey_Lineup_Manager
             this.G1OVRtb = new System.Windows.Forms.TextBox();
             this.G2OVRtb = new System.Windows.Forms.TextBox();
             this.PKbtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.FFbtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Leaguegb.SuspendLayout();
@@ -997,15 +997,16 @@ namespace Hockey_Lineup_Manager
             this.PKbtn.UseVisualStyleBackColor = true;
             this.PKbtn.Click += new System.EventHandler(this.PKbtn_Click);
             // 
-            // button2
+            // FFbtn
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(659, 213);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(129, 31);
-            this.button2.TabIndex = 91;
-            this.button2.Text = "4 on 4";
-            this.button2.UseVisualStyleBackColor = true;
+            this.FFbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FFbtn.Location = new System.Drawing.Point(659, 213);
+            this.FFbtn.Name = "FFbtn";
+            this.FFbtn.Size = new System.Drawing.Size(129, 31);
+            this.FFbtn.TabIndex = 91;
+            this.FFbtn.Text = "4 on 4";
+            this.FFbtn.UseVisualStyleBackColor = true;
+            this.FFbtn.Click += new System.EventHandler(this.FFbtn_Click);
             // 
             // button3
             // 
@@ -1034,7 +1035,7 @@ namespace Hockey_Lineup_Manager
             this.ClientSize = new System.Drawing.Size(800, 750);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.FFbtn);
             this.Controls.Add(this.PKbtn);
             this.Controls.Add(this.G2OVRtb);
             this.Controls.Add(this.G1OVRtb);
@@ -1217,7 +1218,7 @@ namespace Hockey_Lineup_Manager
         private System.Windows.Forms.TextBox G1OVRtb;
         private System.Windows.Forms.TextBox G2OVRtb;
         private System.Windows.Forms.Button PKbtn;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button FFbtn;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
     }

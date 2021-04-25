@@ -49,18 +49,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FFform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFform.Designer.cs">
+      <DependentUpon>FFform.cs</DependentUpon>
+    </Compile>
     <Compile Include="Methods.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="ESform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ESform.Designer.cs">
+      <DependentUpon>ESform.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="PPform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="PPform.Designer.cs">
+      <DependentUpon>PPform.cs</DependentUpon>
     </Compile>
     <Compile Include="PKform.cs">
       <SubType>Form</SubType>
@@ -70,11 +76,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FFform.resx">
+      <DependentUpon>FFform.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="ESform.resx">
+      <DependentUpon>ESform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPform.resx">
+      <DependentUpon>PPform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PKform.resx">
       <DependentUpon>PKform.cs</DependentUpon>

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hockey_Lineup_Manager
 {
-    public partial class _4on4 : Form
+    public partial class FFform : Form
     {
-        public _4on4()
+        public FFform()
         {
             InitializeComponent();
         }

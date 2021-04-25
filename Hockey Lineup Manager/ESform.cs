@@ -864,7 +864,16 @@ namespace Hockey_Lineup_Manager
             pKform.Show();
         }
 
-
+        /// <summary>
+        /// Show user 4 on 4 lineup
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FFbtn_Click(object sender, EventArgs e)
+        {
+            FFform ffform = new FFform();
+            ffform.Show();
+        }
     }
     public class Player
     {
