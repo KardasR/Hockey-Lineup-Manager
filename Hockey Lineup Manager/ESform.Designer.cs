@@ -117,8 +117,8 @@ namespace Hockey_Lineup_Manager
             this.G2OVRtb = new System.Windows.Forms.TextBox();
             this.PKbtn = new System.Windows.Forms.Button();
             this.FFbtn = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.TTbtn = new System.Windows.Forms.Button();
+            this.SOEAbtn = new System.Windows.Forms.Button();
             this.Leaguegb.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1008,33 +1008,34 @@ namespace Hockey_Lineup_Manager
             this.FFbtn.UseVisualStyleBackColor = true;
             this.FFbtn.Click += new System.EventHandler(this.FFbtn_Click);
             // 
-            // button3
+            // TTbtn
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(659, 260);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(129, 31);
-            this.button3.TabIndex = 92;
-            this.button3.Text = "3 on 3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.TTbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TTbtn.Location = new System.Drawing.Point(659, 260);
+            this.TTbtn.Name = "TTbtn";
+            this.TTbtn.Size = new System.Drawing.Size(129, 31);
+            this.TTbtn.TabIndex = 92;
+            this.TTbtn.Text = "3 on 3";
+            this.TTbtn.UseVisualStyleBackColor = true;
+            this.TTbtn.Click += new System.EventHandler(this.TTbtn_Click);
             // 
-            // button1
+            // SOEAbtn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(659, 307);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 31);
-            this.button1.TabIndex = 93;
-            this.button1.Text = "Shootout / EA";
-            this.button1.UseVisualStyleBackColor = true;
+            this.SOEAbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SOEAbtn.Location = new System.Drawing.Point(659, 307);
+            this.SOEAbtn.Name = "SOEAbtn";
+            this.SOEAbtn.Size = new System.Drawing.Size(129, 31);
+            this.SOEAbtn.TabIndex = 93;
+            this.SOEAbtn.Text = "Shootout / EA";
+            this.SOEAbtn.UseVisualStyleBackColor = true;
             // 
             // ESform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 750);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.SOEAbtn);
+            this.Controls.Add(this.TTbtn);
             this.Controls.Add(this.FFbtn);
             this.Controls.Add(this.PKbtn);
             this.Controls.Add(this.G2OVRtb);
@@ -1219,8 +1220,8 @@ namespace Hockey_Lineup_Manager
         private System.Windows.Forms.TextBox G2OVRtb;
         private System.Windows.Forms.Button PKbtn;
         private System.Windows.Forms.Button FFbtn;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button TTbtn;
+        private System.Windows.Forms.Button SOEAbtn;
     }
 }
 

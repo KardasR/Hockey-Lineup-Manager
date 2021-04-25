@@ -874,6 +874,17 @@ namespace Hockey_Lineup_Manager
             FFform ffform = new FFform();
             ffform.Show();
         }
+
+        /// <summary>
+        /// Show user 3 on 3 lineup
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TTbtn_Click(object sender, EventArgs e)
+        {
+            TTform ttform = new TTform();
+            ttform.Show();
+        }
     }
     public class Player
     {

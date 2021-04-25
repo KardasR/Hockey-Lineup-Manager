@@ -171,7 +171,7 @@ namespace Hockey_Lineup_Manager
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(116, 24);
+            this.label21.Location = new System.Drawing.Point(156, 24);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(113, 37);
             this.label21.TabIndex = 96;
@@ -313,7 +313,7 @@ namespace Hockey_Lineup_Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 545);
+            this.ClientSize = new System.Drawing.Size(579, 482);
             this.Controls.Add(this.FourRD3tb);
             this.Controls.Add(this.FourLD3tb);
             this.Controls.Add(this.FourC3tb);
