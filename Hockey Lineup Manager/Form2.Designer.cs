@@ -80,7 +80,7 @@ namespace Hockey_Lineup_Manager
             this.PPRW1tb.Size = new System.Drawing.Size(100, 20);
             this.PPRW1tb.TabIndex = 48;
             this.PPRW1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPRW1tb_DragDrop);
-            this.PPRW1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPRW1tb_DragEnter);
+            this.PPRW1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
             this.PPRW1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPRW1tb_MouseDown);
             // 
             // label2
@@ -110,7 +110,7 @@ namespace Hockey_Lineup_Manager
             this.PPC1tb.Size = new System.Drawing.Size(100, 20);
             this.PPC1tb.TabIndex = 45;
             this.PPC1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPC1tb_DragDrop);
-            this.PPC1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPC1tb_DragEnter);
+            this.PPC1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
             this.PPC1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPC1tb_MouseDown);
             // 
             // PPLW1tb
@@ -121,7 +121,7 @@ namespace Hockey_Lineup_Manager
             this.PPLW1tb.Size = new System.Drawing.Size(100, 20);
             this.PPLW1tb.TabIndex = 44;
             this.PPLW1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPLW1tb_DragDrop);
-            this.PPLW1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPLW1tb_DragEnter);
+            this.PPLW1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
             this.PPLW1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPLW1tb_MouseDown);
             // 
             // label16
@@ -150,7 +150,7 @@ namespace Hockey_Lineup_Manager
             this.PPRD1tb.Size = new System.Drawing.Size(100, 20);
             this.PPRD1tb.TabIndex = 52;
             this.PPRD1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPRD1tb_DragDrop);
-            this.PPRD1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPRD1tb_DragEnter);
+            this.PPRD1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
             this.PPRD1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPRD1tb_MouseDown);
             // 
             // PPLD1tb
@@ -161,7 +161,7 @@ namespace Hockey_Lineup_Manager
             this.PPLD1tb.Size = new System.Drawing.Size(100, 20);
             this.PPLD1tb.TabIndex = 51;
             this.PPLD1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPLD1tb_DragDrop);
-            this.PPLD1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPLD1tb_DragEnter);
+            this.PPLD1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
             this.PPLD1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPLD1tb_MouseDown);
             // 
             // label4
@@ -190,7 +190,7 @@ namespace Hockey_Lineup_Manager
             this.PPRD2tb.Size = new System.Drawing.Size(100, 20);
             this.PPRD2tb.TabIndex = 62;
             this.PPRD2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPRD2tb_DragDrop);
-            this.PPRD2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPRD2tb_DragEnter);
+            this.PPRD2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
             this.PPRD2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPRD2tb_MouseDown);
             // 
             // PPLD2tb
@@ -201,7 +201,7 @@ namespace Hockey_Lineup_Manager
             this.PPLD2tb.Size = new System.Drawing.Size(100, 20);
             this.PPLD2tb.TabIndex = 61;
             this.PPLD2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPLD2tb_DragDrop);
-            this.PPLD2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPLD2tb_DragEnter);
+            this.PPLD2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
             this.PPLD2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPLD2tb_MouseDown);
             // 
             // label6
@@ -221,7 +221,7 @@ namespace Hockey_Lineup_Manager
             this.PPRW2tb.Size = new System.Drawing.Size(100, 20);
             this.PPRW2tb.TabIndex = 59;
             this.PPRW2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPRW2tb_DragDrop);
-            this.PPRW2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPRW2tb_DragEnter);
+            this.PPRW2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
             this.PPRW2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPRW2tb_MouseDown);
             // 
             // label7
@@ -251,7 +251,7 @@ namespace Hockey_Lineup_Manager
             this.PPC2tb.Size = new System.Drawing.Size(100, 20);
             this.PPC2tb.TabIndex = 56;
             this.PPC2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPC2tb_DragDrop);
-            this.PPC2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPC2tb_DragEnter);
+            this.PPC2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
             this.PPC2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPC2tb_MouseDown);
             // 
             // PPLW2tb
@@ -262,7 +262,7 @@ namespace Hockey_Lineup_Manager
             this.PPLW2tb.Size = new System.Drawing.Size(100, 20);
             this.PPLW2tb.TabIndex = 55;
             this.PPLW2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.PPLW2tb_DragDrop);
-            this.PPLW2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.PPLW2tb_DragEnter);
+            this.PPLW2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
             this.PPLW2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPLW2tb_MouseDown);
             // 
             // PPform

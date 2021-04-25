@@ -20,6 +20,16 @@ namespace Hockey_Lineup_Manager
         //
         //------------------------------------------------------------------------------------------------------------------------------------
 
+        /// <summary>
+        /// Make sure the data given is in the correct format.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CheckDataFormat(object sender, DragEventArgs e)
+        {
+            e.Effect = (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0) ? DragDropEffects.Copy : DragDropEffects.None;
+        }
+
         //--------------------------------------------  1st Line / 1st Pair --------------------------------------------
 
         //--------------------------------------------  Left Wing  --------------------------------------------
@@ -34,22 +44,6 @@ namespace Hockey_Lineup_Manager
             // When the user selects the textbox with the right mouse button, start the drag drop.
             if (e.Button == MouseButtons.Right)
                 LW1tb.DoDragDrop(LW1tb.Text, DragDropEffects.Copy);
-        }
-
-        /// <summary>
-        /// Check the given data to make sure it's the correct format and has the copy effect.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void LW1tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
         }
 
         /// <summary>
@@ -77,22 +71,6 @@ namespace Hockey_Lineup_Manager
         }
 
         /// <summary>
-        /// Check the given data to make sure it is a correct format and has the copy effect. 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void C1TB_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
-        }
-
-        /// <summary>
         /// Get the data from the drag drop and paste it into the 1st line center textbox.
         /// </summary>
         /// <param name="sender"></param>
@@ -117,22 +95,6 @@ namespace Hockey_Lineup_Manager
         }
 
         /// <summary>
-        /// Check  the given data to make sure it is a correct format and has the copy effect.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void RW1tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
-        }
-
-        /// <summary>
         /// Get the data from the drag drop and paste it into the 1st line right wing textbox.
         /// </summary>
         /// <param name="sender"></param>
@@ -151,17 +113,6 @@ namespace Hockey_Lineup_Manager
                 LD1tb.DoDragDrop(LD1tb.Text, DragDropEffects.Copy);
         }
 
-        private void LD1tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
-        }
-
         private void LD1tb_DragDrop(object sender, DragEventArgs e)
         {
             LD1tb.Text = (string)e.Data.GetData(DataFormats.Text);
@@ -172,17 +123,6 @@ namespace Hockey_Lineup_Manager
         private void RD1tb_MouseDown(object sender, MouseEventArgs e)
         {
             RD1tb.DoDragDrop(RD1tb.Text, DragDropEffects.Copy);
-        }
-
-        private void RD1tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
         }
 
         private void RD1tb_DragDrop(object sender, DragEventArgs e)
@@ -204,22 +144,6 @@ namespace Hockey_Lineup_Manager
             // When the user selects the textbox with the right mouse button, start the drag drop.
             if (e.Button == MouseButtons.Right)
                 LW2tb.DoDragDrop(LW2tb.Text, DragDropEffects.Copy);
-        }
-
-        /// <summary>
-        /// Check the given data to make sure it is a correct format and has the copy effect.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void LW2tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
         }
 
         /// <summary>
@@ -247,22 +171,6 @@ namespace Hockey_Lineup_Manager
         }
 
         /// <summary>
-        /// Check the given data to make sure it is a correct format and has the copy effect.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void C2tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
-        }
-
-        /// <summary>
         /// Get the data from the drag drop and paste it into the 2nd line center textbox.
         /// </summary>
         /// <param name="sender"></param>
@@ -287,22 +195,6 @@ namespace Hockey_Lineup_Manager
         }
 
         /// <summary>
-        /// Check the given data to make sure it is a acorrect format and has the copy effect.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void RW2tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
-        }
-
-        /// <summary>
         /// Get the data from the drag drop and paste it into the 2nd line right wing textbox.
         /// </summary>
         /// <param name="sender"></param>
@@ -321,17 +213,6 @@ namespace Hockey_Lineup_Manager
                 LD2tb.DoDragDrop(LD2tb.Text, DragDropEffects.Copy);
         }
 
-        private void LD2tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
-        }
-
         private void LD2tb_DragDrop(object sender, DragEventArgs e)
         {
             LD2tb.Text = (string)e.Data.GetData(DataFormats.Text);
@@ -344,17 +225,6 @@ namespace Hockey_Lineup_Manager
             // When the user selects the textbox with the right mouse button, start the drag drop.
             if (e.Button == MouseButtons.Right)
                 RD2tb.DoDragDrop(RD2tb.Text, DragDropEffects.Copy);
-        }
-
-        private void RD2tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
         }
 
         private void RD2tb_DragDrop(object sender, DragEventArgs e)
@@ -373,17 +243,6 @@ namespace Hockey_Lineup_Manager
                 LW3tb.DoDragDrop(LW3tb.Text, DragDropEffects.Copy);
         }
 
-        private void LW3tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
-        }
-
         private void LW3tb_DragDrop(object sender, DragEventArgs e)
         {
             LW3tb.Text = (string)e.Data.GetData(DataFormats.Text);
@@ -396,17 +255,6 @@ namespace Hockey_Lineup_Manager
             // When the user selects the textbox with the right mouse button, start the drag drop.
             if (e.Button == MouseButtons.Right)
                 C3tb.DoDragDrop(C3tb.Text, DragDropEffects.Copy);
-        }
-
-        private void C3tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
         }
 
         private void C3tb_DragDrop(object sender, DragEventArgs e)
@@ -423,17 +271,6 @@ namespace Hockey_Lineup_Manager
                 RW3tb.DoDragDrop(RW3tb.Text, DragDropEffects.Copy);
         }
 
-        private void RW3tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
-        }
-
         private void RW3tb_DragDrop(object sender, DragEventArgs e)
         {
             RW3tb.Text = (string)e.Data.GetData(DataFormats.Text);
@@ -448,17 +285,6 @@ namespace Hockey_Lineup_Manager
                 LD3tb.DoDragDrop(LD3tb.Text, DragDropEffects.Copy);
         }
 
-        private void LD3tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
-        }
-
         private void LD3tb_DragDrop(object sender, DragEventArgs e)
         {
             LD3tb.Text = (string)e.Data.GetData(DataFormats.Text);
@@ -471,17 +297,6 @@ namespace Hockey_Lineup_Manager
             // When the user selects the textbox with the right mouse button, start the drag drop.
             if (e.Button == MouseButtons.Right)
                 RD3tb.DoDragDrop(RD3tb.Text, DragDropEffects.Copy);
-        }
-
-        private void RD3tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
         }
 
         private void RD3tb_DragDrop(object sender, DragEventArgs e)
@@ -500,17 +315,6 @@ namespace Hockey_Lineup_Manager
                 LW4tb.DoDragDrop(LW4tb.Text, DragDropEffects.Copy);
         }
 
-        private void LW4tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
-        }
-
         private void LW4tb_DragDrop(object sender, DragEventArgs e)
         {
             LW4tb.Text = (string)e.Data.GetData(DataFormats.Text);
@@ -523,17 +327,6 @@ namespace Hockey_Lineup_Manager
             // When the user selects the textbox with the right mouse button, start the drag drop.
             if (e.Button == MouseButtons.Right)
                 C4tb.DoDragDrop(C4tb.Text, DragDropEffects.Copy);
-        }
-
-        private void C4tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
         }
 
         private void C4tb_DragDrop(object sender, DragEventArgs e)
@@ -550,17 +343,6 @@ namespace Hockey_Lineup_Manager
                 RW4tb.DoDragDrop(RW4tb.Text, DragDropEffects.Copy);
         }
 
-        private void RW4tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
-        }
-
         private void RW4tb_DragDrop(object sender, DragEventArgs e)
         {
             RW4tb.Text = (string)e.Data.GetData(DataFormats.Text);
@@ -575,17 +357,6 @@ namespace Hockey_Lineup_Manager
                 G1tb.DoDragDrop(G1tb.Text, DragDropEffects.Copy);
         }
 
-        private void G1tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
-        }
-
         private void G1tb_DragDrop(object sender, DragEventArgs e)
         {
             G1tb.Text = (string)e.Data.GetData(DataFormats.Text);
@@ -598,17 +369,6 @@ namespace Hockey_Lineup_Manager
             // When the user selects the textbox with the right mouse button, start the drag drop.
             if (e.Button == MouseButtons.Right)
                 G2tb.DoDragDrop(G2tb.Text, DragDropEffects.Copy);
-        }
-
-        private void G2tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
         }
 
         private void G2tb_DragDrop(object sender, DragEventArgs e)
@@ -627,17 +387,6 @@ namespace Hockey_Lineup_Manager
                 LW5tb.DoDragDrop(LW5tb.Text, DragDropEffects.Copy);
         }
 
-        private void LW5tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
-        }
-
         private void LW5tb_DragDrop(object sender, DragEventArgs e)
         {
             LW5tb.Text = (string)e.Data.GetData(DataFormats.Text);
@@ -650,17 +399,6 @@ namespace Hockey_Lineup_Manager
             // When the user selects the textbox with the right mouse button, start the drag drop.
             if (e.Button == MouseButtons.Right)
                 C5tb.DoDragDrop(C5tb.Text, DragDropEffects.Copy);
-        }
-
-        private void C5tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
         }
 
         private void C5tb_DragDrop(object sender, DragEventArgs e)
@@ -677,17 +415,6 @@ namespace Hockey_Lineup_Manager
                 RW5tb.DoDragDrop(RW5tb.Text, DragDropEffects.Copy);
         }
 
-        private void RW5tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
-        }
-
         private void RW5tb_DragDrop(object sender, DragEventArgs e)
         {
             RW5tb.Text = (string)e.Data.GetData(DataFormats.Text);
@@ -700,17 +427,6 @@ namespace Hockey_Lineup_Manager
             // When the user selects the textbox with the right mouse button, start the drag drop.
             if (e.Button == MouseButtons.Right)
                 LD4tb.DoDragDrop(LD4tb.Text, DragDropEffects.Copy);
-        }
-
-        private void LD4tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
         }
 
         private void LD4tb_DragDrop(object sender, DragEventArgs e)
@@ -727,34 +443,12 @@ namespace Hockey_Lineup_Manager
                 RD4tb.DoDragDrop(RD4tb.Text, DragDropEffects.Copy);
         }
 
-        private void RD4tb_DragEnter(object sender, DragEventArgs e)
-        {
-            // Make sure the data recieved is in the correct format.
-            if (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0)
-                // Allow the text to be copied.
-                e.Effect = DragDropEffects.Copy;
-            else
-                // Don't allow the text to be copied.
-                e.Effect = DragDropEffects.None;
-        }
-
         private void RD4tb_DragDrop(object sender, DragEventArgs e)
         {
             RD4tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
 
-        //--------------------------------------------  Misc  --------------------------------------------
-
-        /// <summary>
-        /// Show user powerplay lineup
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void PPbtn_Click(object sender, EventArgs e)
-        {
-            PPform pp = new PPform();
-            pp.Show();
-        }
+        
 
         /// <summary>
         /// Save user lines to Roster folder in root project folder
@@ -1140,10 +834,37 @@ namespace Hockey_Lineup_Manager
             }
         }
 
+        //--------------------------------------------  Buttons  --------------------------------------------
+
         private void AddYearbtn_Click(object sender, EventArgs e)
         {
             //TODO: Make this button add a year to the listbox
         }
+
+        /// <summary>
+        /// Show user powerplay lineup
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PPbtn_Click(object sender, EventArgs e)
+        {
+            PPform pp = new PPform();
+            pp.Show();
+        }
+
+        /// <summary>
+        /// Show user penalty kill lineup
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PKbtn_Click(object sender, EventArgs e)
+        {
+            // Show Penalty Kill form
+            PKform pKform = new PKform();
+            pKform.Show();
+        }
+
+
     }
     public class Player
     {
