@@ -51,6 +51,9 @@ namespace Hockey_Lineup_Manager
             this.label8 = new System.Windows.Forms.Label();
             this.PPC2tb = new System.Windows.Forms.TextBox();
             this.PPLW2tb = new System.Windows.Forms.TextBox();
+            this.LoadLinesbtn = new System.Windows.Forms.Button();
+            this.SaveLinesbtn = new System.Windows.Forms.Button();
+            this.TeamNamelbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label21
@@ -265,11 +268,45 @@ namespace Hockey_Lineup_Manager
             this.PPLW2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
             this.PPLW2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PPLW2tb_MouseDown);
             // 
+            // LoadLinesbtn
+            // 
+            this.LoadLinesbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadLinesbtn.Location = new System.Drawing.Point(593, 165);
+            this.LoadLinesbtn.Name = "LoadLinesbtn";
+            this.LoadLinesbtn.Size = new System.Drawing.Size(129, 41);
+            this.LoadLinesbtn.TabIndex = 65;
+            this.LoadLinesbtn.Text = "Load Lines";
+            this.LoadLinesbtn.UseVisualStyleBackColor = true;
+            this.LoadLinesbtn.Click += new System.EventHandler(this.LoadLinesbtn_Click);
+            // 
+            // SaveLinesbtn
+            // 
+            this.SaveLinesbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveLinesbtn.Location = new System.Drawing.Point(593, 228);
+            this.SaveLinesbtn.Name = "SaveLinesbtn";
+            this.SaveLinesbtn.Size = new System.Drawing.Size(129, 41);
+            this.SaveLinesbtn.TabIndex = 66;
+            this.SaveLinesbtn.Text = "Save Lines";
+            this.SaveLinesbtn.UseVisualStyleBackColor = true;
+            this.SaveLinesbtn.Click += new System.EventHandler(this.SaveLinesbtn_Click);
+            // 
+            // TeamNamelbl
+            // 
+            this.TeamNamelbl.AutoSize = true;
+            this.TeamNamelbl.Location = new System.Drawing.Point(271, 9);
+            this.TeamNamelbl.Name = "TeamNamelbl";
+            this.TeamNamelbl.Size = new System.Drawing.Size(65, 13);
+            this.TeamNamelbl.TabIndex = 67;
+            this.TeamNamelbl.Text = "Team Name";
+            // 
             // PPform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(759, 455);
+            this.Controls.Add(this.TeamNamelbl);
+            this.Controls.Add(this.SaveLinesbtn);
+            this.Controls.Add(this.LoadLinesbtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.PPRD2tb);
@@ -294,7 +331,6 @@ namespace Hockey_Lineup_Manager
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PPform";
             this.Text = "Powerplay";
-            this.Load += new System.EventHandler(this.PPform_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,5 +359,8 @@ namespace Hockey_Lineup_Manager
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox PPC2tb;
         private System.Windows.Forms.TextBox PPLW2tb;
+        private System.Windows.Forms.Button LoadLinesbtn;
+        private System.Windows.Forms.Button SaveLinesbtn;
+        private System.Windows.Forms.Label TeamNamelbl;
     }
 }

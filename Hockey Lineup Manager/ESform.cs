@@ -449,7 +449,7 @@ namespace Hockey_Lineup_Manager
         }
 
         
-
+        
         /// <summary>
         /// Save user lines to Roster folder in root project folder
         /// </summary>
@@ -848,7 +848,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void PPbtn_Click(object sender, EventArgs e)
         {
-            PPform pp = new PPform();
+            PPform pp = new PPform(TeamNametb.Text);
             pp.Show();
         }
 
