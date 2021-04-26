@@ -885,6 +885,17 @@ namespace Hockey_Lineup_Manager
             TTform ttform = new TTform();
             ttform.Show();
         }
+
+        /// <summary>
+        /// Show user Shootout and Even Strength lineups
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SOEAbtn_Click(object sender, EventArgs e)
+        {
+            SOEAform soeaform = new SOEAform();
+            soeaform.Show();
+        }
     }
     public class Player
     {

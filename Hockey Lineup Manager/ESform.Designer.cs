@@ -1028,6 +1028,7 @@ namespace Hockey_Lineup_Manager
             this.SOEAbtn.TabIndex = 93;
             this.SOEAbtn.Text = "Shootout / EA";
             this.SOEAbtn.UseVisualStyleBackColor = true;
+            this.SOEAbtn.Click += new System.EventHandler(this.SOEAbtn_Click);
             // 
             // ESform
             // 
