@@ -9,9 +9,393 @@ namespace Hockey_Lineup_Manager
 {
     public partial class ESform : Form
     {
+
         public ESform()
         {
             InitializeComponent();
+        }
+
+        //--------------------------------------------  Buttons  --------------------------------------------
+
+        private void AddYearbtn_Click(object sender, EventArgs e)
+        {
+            //TODO: Make this button add a year to the listbox
+        }
+
+        /// <summary>
+        /// Show user powerplay lineup
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PPbtn_Click(object sender, EventArgs e)
+        {
+            PPform pp = new PPform();
+            Methods.SetCurrent(TeamYearlb.SelectedItem.ToString());
+            pp.Show();
+        }
+
+        /// <summary>
+        /// Show user penalty kill lineup
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PKbtn_Click(object sender, EventArgs e)
+        {
+            // Show Penalty Kill form
+            PKform pKform = new PKform();
+            pKform.Show();
+        }
+
+        /// <summary>
+        /// Show user 4 on 4 lineup
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FFbtn_Click(object sender, EventArgs e)
+        {
+            FFform ffform = new FFform();
+            ffform.Show();
+        }
+
+        /// <summary>
+        /// Show user 3 on 3 lineup
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TTbtn_Click(object sender, EventArgs e)
+        {
+            TTform ttform = new TTform();
+            ttform.Show();
+        }
+
+        /// <summary>
+        /// Show user Shootout and Even Strength lineups
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SOEAbtn_Click(object sender, EventArgs e)
+        {
+            SOEAform soeaform = new SOEAform();
+            soeaform.Show();
+        }
+
+        /// <summary>
+        /// Save user lines to Roster folder in root project folder
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SaveLinesbtn_Click(object sender, EventArgs e)
+        {
+            Team team = (Methods.SelectCurrent() != null) ? Methods.SelectCurrent() : new Team();
+            team.Name = TeamNametb.Text;
+            team.Year = TeamYearlb.SelectedItem.ToString();
+            team.League = NHLrb.Checked ? true : false;
+
+
+            //--------------------------------------------  1st Line / 1st Pairing  --------------------------------------------
+            EvenStrengthLines line1 = new EvenStrengthLines();
+            line1.Line = 1;
+
+            // Save 1st line left wing
+            Player player = new Player();                       // Create a player object
+            player.Name = LW1tb.Text;
+            player.Overall = int.Parse(LW1OVRtb.Text);
+
+            line1.LeftWing = player;
+
+            // Save 1st line center
+            player = new Player();
+            player.Name = C1tb.Text;
+            player.Overall = int.Parse(C1OVRtb.Text);
+
+            line1.Center = player;
+
+            // Save 1st line right wing
+            player = new Player();
+            player.Name = RW1tb.Text;
+            player.Overall = int.Parse(RW1OVRtb.Text);
+
+            line1.RightWing = player;
+
+            // Save 1st pair left defence
+            player = new Player();
+            player.Name = LD1tb.Text;
+            player.Overall = int.Parse(LD1OVRtb.Text);
+
+            line1.LeftDefence = player;
+
+            // Save 1st pair right defence
+            player = new Player();
+            player.Name = RD1tb.Text;
+            player.Overall = int.Parse(RD1OVRtb.Text);
+
+            line1.RightDefence = player;
+
+            //--------------------------------------------  2nd Line / 2nd Pairing  --------------------------------------------
+            EvenStrengthLines line2 = new EvenStrengthLines();
+            line2.Line = 2;
+
+            // Save 2nd line left wing
+            player = new Player();
+            player.Name = LW2tb.Text;
+            player.Overall = int.Parse(LW2OVRtb.Text);
+
+            line2.LeftWing = player;
+
+            // Save 2nd line center
+            player = new Player();
+            player.Name = C2tb.Text;
+            player.Overall = int.Parse(C2OVRtb.Text);
+
+            line2.Center = player;
+
+            // Save 2nd line right wing
+            player = new Player();
+            player.Name = RW2tb.Text;
+            player.Overall = int.Parse(RW2OVRtb.Text);
+
+            line2.RightWing = player;
+
+            // Save 2nd pair left defence
+            player = new Player();
+            player.Name = LD2tb.Text;
+            player.Overall = int.Parse(LD2OVRtb.Text);
+
+            line2.LeftDefence = player;
+
+            // Save 2nd pair right defence
+            player = new Player();
+            player.Name = RD2tb.Text;
+            player.Overall = int.Parse(RD2OVRtb.Text);
+
+            line2.RightDefence = player;
+
+            //--------------------------------------------  3rd Line / 3rd Pairing  --------------------------------------------
+            EvenStrengthLines line3 = new EvenStrengthLines();
+            line3.Line = 3;
+
+            // Save 3rd line left wing
+            player = new Player();
+            player.Name = LW3tb.Text;
+            player.Overall = int.Parse(LW3OVRtb.Text);
+
+            line3.LeftWing = player;
+
+            // Save 3rd line center
+            player = new Player();
+            player.Name = C3tb.Text;
+            player.Overall = int.Parse(C3OVRtb.Text);
+
+            line3.Center = player;
+
+            // Save 3rd line right wing
+            player = new Player();
+            player.Name = RW3tb.Text;
+            player.Overall = int.Parse(RW3OVRtb.Text);
+
+            line3.RightWing = player;
+
+            // Save 3rd pair left defence
+            player = new Player();
+            player.Name = LD3tb.Text;
+            player.Overall = int.Parse(LD3OVRtb.Text);
+
+            line3.LeftDefence = player;
+
+            // Save 3rd pair right defence
+            player = new Player();
+            player.Name = RD3tb.Text;
+            player.Overall = int.Parse(RD3OVRtb.Text);
+
+            line3.RightDefence = player;
+
+            //--------------------------------------------  4th Line  --------------------------------------------
+            EvenStrengthLines line4 = new EvenStrengthLines();
+            line4.Line = 4;
+
+            // Save 4th line left wing
+            player = new Player();
+            player.Name = LW4tb.Text;
+            player.Overall = int.Parse(LW4OVRtb.Text);
+
+            line4.LeftWing = player;
+
+            // Save 4th line center
+            player = new Player();
+            player.Name = C4tb.Text;
+            player.Overall = int.Parse(C4OVRtb.Text);
+
+            line4.Center = player;
+
+            // Save 4th line right wing
+            player = new Player();
+            player.Name = RW4tb.Text;
+            player.Overall = int.Parse(RW4OVRtb.Text);
+
+            line4.RightWing = player;
+
+            //--------------------------------------------  Goalies  --------------------------------------------
+            Goalies goalies = new Goalies();
+
+            // Save starting goalie
+            player = new Player();
+            player.Name = G1tb.Text;
+            player.Overall = int.Parse(G1OVRtb.Text);
+
+            goalies.Starter = player;
+
+            // Save backup goalie
+            player = new Player();
+            player.Name = G2tb.Text;
+            player.Overall = int.Parse(G2OVRtb.Text);
+
+            goalies.Backup = player;
+
+            //--------------------------------------------  Scratched  --------------------------------------------
+            EvenStrengthLines scratched = new EvenStrengthLines();
+            scratched.Line = 5;
+
+            // Save scratched left wing
+            player = new Player();
+            player.Name = LW5tb.Text;
+            player.Overall = int.Parse(LW5OVRtb.Text);
+
+            scratched.LeftWing = player;
+
+            // Save scratched center
+            player = new Player();
+            player.Name = C5tb.Text;
+            player.Overall = int.Parse(C5OVRtb.Text);
+
+            scratched.Center = player;
+
+            // Save scratched right wing
+            player = new Player();
+            player.Name = RW5tb.Text;
+            player.Overall = int.Parse(RW5OVRtb.Text);
+
+            scratched.RightWing = player;
+
+            // Save scratched left defence
+            player = new Player();
+            player.Name = LD4tb.Text;
+            player.Overall = int.Parse(LD4OVRtb.Text);
+
+            scratched.LeftDefence = player;
+
+            // Save scratched right defence
+            player = new Player();
+            player.Name = RD4tb.Text;
+            player.Overall = int.Parse(RD4OVRtb.Text);
+
+            scratched.RightDefence = player;
+
+            team.ESL[0] = line1;
+            team.ESL[1] = line2;
+            team.ESL[2] = line3;
+            team.ESL[3] = line4;
+            team.ESL[4] = scratched;
+            team.goalies = goalies;
+
+            Methods.Add(team);
+            Methods.SetCurrent(team.Year);
+
+            // Save the setup
+            using (StreamWriter file = File.CreateText(Path.Combine("..\\..\\Rosters\\", (team.Name + ".txt"))))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, team);
+            }
+        }
+
+        /// <summary>
+        /// Load user lines from Roster folder in root project folder
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LoadLinesbtn_Click(object sender, EventArgs e)
+        {
+            string teamName = TeamNametb.Text;
+            string fileContent = File.ReadAllText(Path.Combine("..\\..\\Rosters\\", (teamName + ".txt")));
+            Team team = JsonConvert.DeserializeObject<Team>(fileContent);
+            Methods.Add(team);
+            Methods.SetCurrent(team.Year);
+
+            TeamNametb.Text = team.Name;
+
+            NHLrb.Checked = team.League ? true : false;
+            AHLrb.Checked = team.League ? false : true;
+
+
+            G1tb.Text = team.goalies.Starter.Name.ToString();
+            G1OVRtb.Text = team.goalies.Starter.Overall.ToString();
+            G2tb.Text = team.goalies.Backup.Name.ToString();
+            G2OVRtb.Text = team.goalies.Backup.Overall.ToString();
+
+            // Go through each line
+            foreach (EvenStrengthLines line in team.ESL)
+            {
+                int unit = line.Line;
+                switch (unit)
+                {
+                    case 1:                                                     // First Line / First Pair
+                        LW1tb.Text = line.LeftWing.Name.ToString();
+                        LW1OVRtb.Text = line.LeftWing.Overall.ToString();
+                        C1tb.Text = line.Center.Name.ToString();
+                        C1OVRtb.Text = line.Center.Overall.ToString();
+                        RW1tb.Text = line.RightWing.Name.ToString();
+                        RW1OVRtb.Text = line.RightWing.Overall.ToString();
+                        LD1tb.Text = line.LeftDefence.Name.ToString();
+                        LD1OVRtb.Text = line.LeftDefence.Overall.ToString();
+                        RD1tb.Text = line.RightDefence.Name.ToString();
+                        RD1OVRtb.Text = line.RightDefence.Overall.ToString();
+                        break;
+                    case 2:                                                     // Second Line / Second Pair
+                        LW2tb.Text = line.LeftWing.Name.ToString();
+                        LW2OVRtb.Text = line.LeftWing.Overall.ToString();
+                        C2tb.Text = line.Center.Name.ToString();
+                        C2OVRtb.Text = line.Center.Overall.ToString();
+                        RW2tb.Text = line.RightWing.Name.ToString();
+                        RW2OVRtb.Text = line.RightWing.Overall.ToString();
+                        LD2tb.Text = line.LeftDefence.Name.ToString();
+                        LD2OVRtb.Text = line.LeftDefence.Overall.ToString();
+                        RD2tb.Text = line.RightDefence.Name.ToString();
+                        RD2OVRtb.Text = line.RightDefence.Overall.ToString();
+                        break;
+                    case 3:                                                     // Third Line / Third Pair
+                        LW3tb.Text = line.LeftWing.Name.ToString();
+                        LW3OVRtb.Text = line.LeftWing.Overall.ToString();
+                        C3tb.Text = line.Center.Name.ToString();
+                        C3OVRtb.Text = line.Center.Overall.ToString();
+                        RW3tb.Text = line.RightWing.Name.ToString();
+                        RW3OVRtb.Text = line.RightWing.Overall.ToString();
+                        LD3tb.Text = line.LeftDefence.Name.ToString();
+                        LD3OVRtb.Text = line.LeftDefence.Overall.ToString();
+                        RD3tb.Text = line.RightDefence.Name.ToString();
+                        RD3OVRtb.Text = line.RightDefence.Overall.ToString();
+                        break;
+                    case 4:                                                     // Fourth Line
+                        LW4tb.Text = line.LeftWing.Name.ToString();
+                        LW4OVRtb.Text = line.LeftWing.Overall.ToString();
+                        C4tb.Text = line.Center.Name.ToString();
+                        C4OVRtb.Text = line.Center.Overall.ToString();
+                        RW4tb.Text = line.RightWing.Name.ToString();
+                        RW4OVRtb.Text = line.RightWing.Overall.ToString();
+                        break;
+                    case 5:                                                     // Scratched
+                        LW5tb.Text = line.LeftWing.Name.ToString();
+                        LW5OVRtb.Text = line.LeftWing.Overall.ToString();
+                        C5tb.Text = line.Center.Name.ToString();
+                        C5OVRtb.Text = line.Center.Overall.ToString();
+                        RW5tb.Text = line.RightWing.Name.ToString();
+                        RW5OVRtb.Text = line.RightWing.Overall.ToString();
+                        LD4tb.Text = line.LeftDefence.Name.ToString();
+                        LD4OVRtb.Text = line.LeftDefence.Overall.ToString();
+                        RD4tb.Text = line.RightDefence.Name.ToString();
+                        RD4OVRtb.Text = line.RightDefence.Overall.ToString();
+                        break;
+                }
+            }
         }
 
         //------------------------------------------------------------------------------------------------------------------------------------
@@ -448,386 +832,17 @@ namespace Hockey_Lineup_Manager
             RD4tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
 
-        
-        
-        /// <summary>
-        /// Save user lines to Roster folder in root project folder
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void SaveLinesbtn_Click(object sender, EventArgs e)
-        {
-            Team team = new Team();                                 // Create team object
-            team.Name = TeamNametb.Text;                            
-            team.Year = TeamYearlb.SelectedItem.ToString();
-            team.League = NHLrb.Checked ? true : false;
-
-
-            //--------------------------------------------  1st Line / 1st Pairing  --------------------------------------------
-            EvenStrengthLines line1 = new EvenStrengthLines();
-            line1.Line = 1;
-
-            // Save 1st line left wing
-            Player player = new Player();                       // Create a player object
-            player.Name = LW1tb.Text;
-            player.Overall = int.Parse(LW1OVRtb.Text);
-
-            line1.LeftWing = player;
-
-            // Save 1st line center
-            player = new Player();
-            player.Name = C1tb.Text;
-            player.Overall = int.Parse(C1OVRtb.Text);
-
-            line1.Center = player;
-
-            // Save 1st line right wing
-            player = new Player();
-            player.Name = RW1tb.Text;
-            player.Overall = int.Parse(RW1OVRtb.Text);
-
-            line1.RightWing = player;
-
-            // Save 1st pair left defence
-            player = new Player();
-            player.Name = LD1tb.Text;
-            player.Overall = int.Parse(LD1OVRtb.Text);
-
-            line1.LeftDefence = player;
-
-            // Save 1st pair right defence
-            player = new Player();
-            player.Name = RD1tb.Text;
-            player.Overall = int.Parse(RD1OVRtb.Text);
-
-            line1.RightDefence = player;
-
-            //--------------------------------------------  2nd Line / 2nd Pairing  --------------------------------------------
-            EvenStrengthLines line2 = new EvenStrengthLines();
-            line2.Line = 2;
-
-            // Save 2nd line left wing
-            player = new Player();
-            player.Name = LW2tb.Text;
-            player.Overall = int.Parse(LW2OVRtb.Text);
-
-            line2.LeftWing = player;
-
-            // Save 2nd line center
-            player = new Player();
-            player.Name = C2tb.Text;
-            player.Overall = int.Parse(C2OVRtb.Text);
-
-            line2.Center = player;
-
-            // Save 2nd line right wing
-            player = new Player();
-            player.Name = RW2tb.Text;
-            player.Overall = int.Parse(RW2OVRtb.Text);
-
-            line2.RightWing = player;
-
-            // Save 2nd pair left defence
-            player = new Player();
-            player.Name = LD2tb.Text;
-            player.Overall = int.Parse(LD2OVRtb.Text);
-
-            line2.LeftDefence = player;
-
-            // Save 2nd pair right defence
-            player = new Player();
-            player.Name = RD2tb.Text;
-            player.Overall = int.Parse(RD2OVRtb.Text);
-
-            line2.RightDefence = player;
-
-            //--------------------------------------------  3rd Line / 3rd Pairing  --------------------------------------------
-            EvenStrengthLines line3 = new EvenStrengthLines();
-            line3.Line = 3;
-
-            // Save 3rd line left wing
-            player = new Player();
-            player.Name = LW3tb.Text;
-            player.Overall = int.Parse(LW3OVRtb.Text);
-
-            line3.LeftWing = player;
-
-            // Save 3rd line center
-            player = new Player();
-            player.Name = C3tb.Text;
-            player.Overall = int.Parse(C3OVRtb.Text);
-
-            line3.Center = player;
-
-            // Save 3rd line right wing
-            player = new Player();
-            player.Name = RW3tb.Text;
-            player.Overall = int.Parse(RW3OVRtb.Text);
-
-            line3.RightWing = player;
-
-            // Save 3rd pair left defence
-            player = new Player();
-            player.Name = LD3tb.Text;
-            player.Overall = int.Parse(LD3OVRtb.Text);
-
-            line3.LeftDefence = player;
-
-            // Save 3rd pair right defence
-            player = new Player();
-            player.Name = RD3tb.Text;
-            player.Overall = int.Parse(RD3OVRtb.Text);
-
-            line3.RightDefence = player;
-
-            //--------------------------------------------  4th Line  --------------------------------------------
-            EvenStrengthLines line4 = new EvenStrengthLines();
-            line4.Line = 4;
-
-            // Save 4th line left wing
-            player = new Player();
-            player.Name = LW4tb.Text;
-            player.Overall = int.Parse(LW4OVRtb.Text);
-
-            line4.LeftWing = player;
-
-            // Save 4th line center
-            player = new Player();
-            player.Name = C4tb.Text;
-            player.Overall = int.Parse(C4OVRtb.Text);
-
-            line4.Center = player;
-
-            // Save 4th line right wing
-            player = new Player();
-            player.Name = RW4tb.Text;
-            player.Overall = int.Parse(RW4OVRtb.Text);
-
-            line4.RightWing = player;
-
-            //--------------------------------------------  Goalies  --------------------------------------------
-            Goalies goalies = new Goalies();
-
-            // Save starting goalie
-            player = new Player();
-            player.Name = G1tb.Text;
-            player.Overall = int.Parse(G1OVRtb.Text);
-
-            goalies.Starter = player;
-
-            // Save backup goalie
-            player = new Player();
-            player.Name = G2tb.Text;
-            player.Overall = int.Parse(G2OVRtb.Text);
-
-            goalies.Backup = player;
-
-            //--------------------------------------------  Scratched  --------------------------------------------
-            EvenStrengthLines scratched = new EvenStrengthLines();
-            scratched.Line = 5;
-
-            // Save scratched left wing
-            player = new Player();
-            player.Name = LW5tb.Text;
-            player.Overall = int.Parse(LW5OVRtb.Text);
-
-            scratched.LeftWing = player;
-
-            // Save scratched center
-            player = new Player();
-            player.Name = C5tb.Text;
-            player.Overall = int.Parse(C5OVRtb.Text);
-
-            scratched.Center = player;
-
-            // Save scratched right wing
-            player = new Player();
-            player.Name = RW5tb.Text;
-            player.Overall = int.Parse(RW5OVRtb.Text);
-
-            scratched.RightWing = player;
-
-            // Save scratched left defence
-            player = new Player();
-            player.Name = LD4tb.Text;
-            player.Overall = int.Parse(LD4OVRtb.Text);
-
-            scratched.LeftDefence = player;
-
-            // Save scratched right defence
-            player = new Player();
-            player.Name = RD4tb.Text;
-            player.Overall = int.Parse(RD4OVRtb.Text);
-
-            scratched.RightDefence = player;
-
-            team.ESL[0] = line1;
-            team.ESL[1] = line2;
-            team.ESL[2] = line3;
-            team.ESL[3] = line4;
-            team.ESL[4] = scratched;
-            team.goalies = goalies;
-
-            // Save the setup
-            using (StreamWriter file = File.CreateText(Path.Combine("..\\..\\Rosters\\", (team.Name + ".txt"))))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, team);
-            }
-        }
-
-        /// <summary>
-        /// Load user lines from Roster folder in root project folder
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void LoadLinesbtn_Click(object sender, EventArgs e)
-        {
-            string teamName = TeamNametb.Text;
-            string fileContent = File.ReadAllText(Path.Combine("..\\..\\Rosters\\", (teamName + ".txt")));
-            Team team = JsonConvert.DeserializeObject<Team>(fileContent);
-
-            TeamNametb.Text = team.Name;
-
-            NHLrb.Checked = team.League ? true : false;
-            AHLrb.Checked = team.League ? false : true;
-
-
-            G1tb.Text = team.goalies.Starter.Name.ToString();
-            G1OVRtb.Text = team.goalies.Starter.Overall.ToString();
-            G2tb.Text = team.goalies.Backup.Name.ToString();
-            G2OVRtb.Text = team.goalies.Backup.Overall.ToString();
-
-            // Go through each line
-            foreach (EvenStrengthLines line in team.ESL)
-            {
-                int unit = line.Line;
-                switch (unit)
-                {
-                    case 1:                                                     // First Line / First Pair
-                        LW1tb.Text = line.LeftWing.Name.ToString();
-                        LW1OVRtb.Text = line.LeftWing.Overall.ToString();
-                        C1tb.Text = line.Center.Name.ToString();
-                        C1OVRtb.Text = line.Center.Overall.ToString();
-                        RW1tb.Text = line.RightWing.Name.ToString();
-                        RW1OVRtb.Text = line.RightWing.Overall.ToString();
-                        LD1tb.Text = line.LeftDefence.Name.ToString();
-                        LD1OVRtb.Text = line.LeftDefence.Overall.ToString();
-                        RD1tb.Text = line.RightDefence.Name.ToString();
-                        RD1OVRtb.Text = line.RightDefence.Overall.ToString();
-                        break;
-                    case 2:                                                     // Second Line / Second Pair
-                        LW2tb.Text = line.LeftWing.Name.ToString();
-                        LW2OVRtb.Text = line.LeftWing.Overall.ToString();
-                        C2tb.Text = line.Center.Name.ToString();
-                        C2OVRtb.Text = line.Center.Overall.ToString();
-                        RW2tb.Text = line.RightWing.Name.ToString();
-                        RW2OVRtb.Text = line.RightWing.Overall.ToString();
-                        LD2tb.Text = line.LeftDefence.Name.ToString();
-                        LD2OVRtb.Text = line.LeftDefence.Overall.ToString();
-                        RD2tb.Text = line.RightDefence.Name.ToString();
-                        RD2OVRtb.Text = line.RightDefence.Overall.ToString();
-                        break;
-                    case 3:                                                     // Third Line / Third Pair
-                        LW3tb.Text = line.LeftWing.Name.ToString();
-                        LW3OVRtb.Text = line.LeftWing.Overall.ToString();
-                        C3tb.Text = line.Center.Name.ToString();
-                        C3OVRtb.Text = line.Center.Overall.ToString();
-                        RW3tb.Text = line.RightWing.Name.ToString();
-                        RW3OVRtb.Text = line.RightWing.Overall.ToString();
-                        LD3tb.Text = line.LeftDefence.Name.ToString();
-                        LD3OVRtb.Text = line.LeftDefence.Overall.ToString();
-                        RD3tb.Text = line.RightDefence.Name.ToString();
-                        RD3OVRtb.Text = line.RightDefence.Overall.ToString();
-                        break;
-                    case 4:                                                     // Fourth Line
-                        LW4tb.Text = line.LeftWing.Name.ToString();
-                        LW4OVRtb.Text = line.LeftWing.Overall.ToString();
-                        C4tb.Text = line.Center.Name.ToString();
-                        C4OVRtb.Text = line.Center.Overall.ToString();
-                        RW4tb.Text = line.RightWing.Name.ToString();
-                        RW4OVRtb.Text = line.RightWing.Overall.ToString();
-                        break;
-                    case 5:                                                     // Scratched
-                        LW5tb.Text = line.LeftWing.Name.ToString();
-                        LW5OVRtb.Text = line.LeftWing.Overall.ToString();
-                        C5tb.Text = line.Center.Name.ToString();
-                        C5OVRtb.Text = line.Center.Overall.ToString();
-                        RW5tb.Text = line.RightWing.Name.ToString();
-                        RW5OVRtb.Text = line.RightWing.Overall.ToString();
-                        LD4tb.Text = line.LeftDefence.Name.ToString();
-                        LD4OVRtb.Text = line.LeftDefence.Overall.ToString();
-                        RD4tb.Text = line.RightDefence.Name.ToString();
-                        RD4OVRtb.Text = line.RightDefence.Overall.ToString();
-                        break;
-                }
-            }
-        }
-
-        //--------------------------------------------  Buttons  --------------------------------------------
-
-        private void AddYearbtn_Click(object sender, EventArgs e)
-        {
-            //TODO: Make this button add a year to the listbox
-        }
-
-        /// <summary>
-        /// Show user powerplay lineup
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void PPbtn_Click(object sender, EventArgs e)
-        {
-            PPform pp = new PPform(TeamNametb.Text);
-            pp.MdiParent = this;
-            pp.Show();
-        }
-
-        /// <summary>
-        /// Show user penalty kill lineup
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void PKbtn_Click(object sender, EventArgs e)
-        {
-            // Show Penalty Kill form
-            PKform pKform = new PKform();
-            pKform.Show();
-        }
-
-        /// <summary>
-        /// Show user 4 on 4 lineup
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void FFbtn_Click(object sender, EventArgs e)
-        {
-            FFform ffform = new FFform();
-            ffform.Show();
-        }
-
-        /// <summary>
-        /// Show user 3 on 3 lineup
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void TTbtn_Click(object sender, EventArgs e)
-        {
-            TTform ttform = new TTform();
-            ttform.Show();
-        }
-
-        /// <summary>
-        /// Show user Shootout and Even Strength lineups
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void SOEAbtn_Click(object sender, EventArgs e)
-        {
-            SOEAform soeaform = new SOEAform();
-            soeaform.Show();
-        }
     }
+
+    //------------------------------------------------------------------------------------------------------------------------------------
+    //
+    //--------------------------------------------  Classes  --------------------------------------------
+    //
+    //------------------------------------------------------------------------------------------------------------------------------------
+    //
+    // Honestly I don't have to include a new class for every situation as there will only be 3 cases for the amount
+    //      of players on the ice (3,4,5). So I could just have the three classes and get rid of 2 classes.
+
     public class Player
     {
         public string Name;                     // Name of player
@@ -861,44 +876,44 @@ namespace Hockey_Lineup_Manager
     public class PowerPlayLines
     {
         public int Unit;
-        public Player LeftWing;
-        public Player Center;
-        public Player RightWing;
-        public Player LeftDefence;
-        public Player RightDefence;
+        public string LeftWing;
+        public string Center;
+        public string RightWing;
+        public string LeftDefence;
+        public string RightDefence;
     }
     public class PenaltyKillLines
     {
         public int Unit;
-        public Player Wing;
-        public Player Center;
-        public Player LeftDefence;
-        public Player RightDefence;
+        public string Wing;
+        public string Center;
+        public string LeftDefence;
+        public string RightDefence;
     }
     public class FourOnFourLines
     {
         public int Unit;
-        public Player Wing;
-        public Player Center;
-        public Player LeftDefence;
-        public Player RightDefence;
+        public string Wing;
+        public string Center;
+        public string LeftDefence;
+        public string RightDefence;
     }
     public class ThreeOnThreeLines
     {
         public int Unit;
-        public Player Wing;
-        public Player Center;
-        public Player Defence;
+        public string Wing;
+        public string Center;
+        public string Defence;
     }
     public class ShootoutExtraAttacker
     {
-        public Player Shooter1;
-        public Player Shooter2;
-        public Player Shooter3;
-        public Player Shooter4;
-        public Player Shooter5;
-        public Player ExtraA1;
-        public Player ExtraA2;
+        public string Shooter1;
+        public string Shooter2;
+        public string Shooter3;
+        public string Shooter4;
+        public string Shooter5;
+        public string ExtraA1;
+        public string ExtraA2;
     }
     public class Goalies
     {

@@ -14,11 +14,10 @@ namespace Hockey_Lineup_Manager
 {
     public partial class PPform : Form
     {
-        public PPform(string data)
+
+        public PPform()
         {
             InitializeComponent();
-            TeamNamelbl.Text = data;
-            Team mainTeam = new Team();
         }
 
         //------------------------------------------------------------------------------------------------------------------------------------
@@ -288,8 +287,10 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void LoadLinesbtn_Click(object sender, EventArgs e)
         {
-            string fileContent = File.ReadAllText(Path.Combine("..\\..\\Roster\\", (TeamNamelbl.Text + ".txt")));
-            Team team = JsonConvert.DeserializeObject<Team>(fileContent);
+            //string fileContent = File.ReadAllText(Path.Combine("..\\..\\Roster\\", (ESform.MainTeam.Name.ToString() + ".txt")));
+            //Team team = JsonConvert.DeserializeObject<Team>(fileContent);
+
+            Team team = Methods.SelectCurrent();                    // Copy the currently selected team
 
             // Go through each powerplay unit
             foreach (PowerPlayLines unit in team.PPL)
@@ -298,18 +299,18 @@ namespace Hockey_Lineup_Manager
                 switch (line)
                 {
                     case 1:                                                 // First Unit
-                        PPLW1tb.Text = unit.LeftWing.Name.ToString();
-                        PPC1tb.Text = unit.Center.Name.ToString();
-                        PPRW1tb.Text = unit.RightWing.Name.ToString();
-                        PPLD1tb.Text = unit.LeftDefence.Name.ToString();
-                        PPRD1tb.Text = unit.RightDefence.Name.ToString();
+                        PPLW1tb.Text = unit.LeftWing;
+                        PPC1tb.Text = unit.Center;
+                        PPRW1tb.Text = unit.RightWing;
+                        PPLD1tb.Text = unit.LeftDefence;
+                        PPRD1tb.Text = unit.RightDefence;
                         break;
                     case 2:                                                 // Second Unit
-                        PPLW2tb.Text = unit.LeftWing.Name.ToString();
-                        PPC2tb.Text = unit.Center.Name.ToString();
-                        PPRW2tb.Text = unit.RightWing.Name.ToString();
-                        PPLD2tb.Text = unit.LeftDefence.Name.ToString();
-                        PPRD2tb.Text = unit.RightDefence.Name.ToString();
+                        PPLW2tb.Text = unit.LeftWing;
+                        PPC2tb.Text = unit.Center;
+                        PPRW2tb.Text = unit.RightWing;
+                        PPLD2tb.Text = unit.LeftDefence;
+                        PPRD2tb.Text = unit.RightDefence;
                         break;
                 }
             }
@@ -322,10 +323,29 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void SaveLinesbtn_Click(object sender, EventArgs e)
         {
-
+            Team team = Methods.SelectCurrent();            // Copy the currently selected team
             //--------------------------------------------  1st Line / 1st Pairing  --------------------------------------------
             // Save 1st line left wing
-            
+            PowerPlayLines ppl1 = new PowerPlayLines();
+            ppl1.Unit = 1;
+            ppl1.LeftWing = PPLW1tb.Text;
+            ppl1.Center = PPC1tb.Text;
+            ppl1.RightWing = PPRW1tb.Text;
+            ppl1.LeftDefence = PPLD1tb.Text;
+            ppl1.RightDefence = PPRD1tb.Text;
+
+            PowerPlayLines ppl2 = new PowerPlayLines();
+            ppl2.Unit = 2;
+            ppl2.LeftWing = PPLW2tb.Text;
+            ppl2.Center = PPC2tb.Text;
+            ppl2.RightWing = PPRW2tb.Text;
+            ppl2.LeftDefence = PPLD2tb.Text;
+            ppl2.RightDefence = PPRD2tb.Text;
+
+            team.PPL[0] = ppl1;
+            team.PPL[1] = ppl2;
+
+            Methods.Add(team);              // Overwrite the currently selected team (only changing the powerplay)
         }
     }
 }
