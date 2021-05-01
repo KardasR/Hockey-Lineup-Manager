@@ -862,8 +862,8 @@ namespace Hockey_Lineup_Manager
         public string           Record;         // Record of the team
         public string           Playoff;        // How far the team made it in the playoffs and who eliminated them
         public EvenStrengthLines[] ESL = new EvenStrengthLines[5];
-        public PowerPlayLines[] PPL = new PowerPlayLines[2];
-        public PenaltyKillLines[] PKL = new PenaltyKillLines[2];
+        public PowerPlayLines[] PPL = new PowerPlayLines[4];
+        public PenaltyKillLines[] PKL = new PenaltyKillLines[4];
         public FourOnFourLines[] FFL = new FourOnFourLines[3];
         public ThreeOnThreeLines[] TTL = new ThreeOnThreeLines[3];
         public ShootoutExtraAttacker SOEA;
@@ -884,7 +884,7 @@ namespace Hockey_Lineup_Manager
         public string LeftWing;
         public string Center;
         public string RightWing;
-        public string LeftDefence;
+        public string LeftDefence;          // This will store the only defenceman in the case of a four-man powerplay
         public string RightDefence;
     }
     public class PenaltyKillLines
@@ -892,7 +892,7 @@ namespace Hockey_Lineup_Manager
         public int Unit;
         public string Wing;
         public string Center;
-        public string LeftDefence;
+        public string LeftDefence;          // This will store the only defenceman in the case of a three-man penalty kill
         public string RightDefence;
     }
     public class FourOnFourLines

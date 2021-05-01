@@ -55,6 +55,18 @@ namespace Hockey_Lineup_Manager
                         PPLD2tb.Text = unit.LeftDefence;
                         PPRD2tb.Text = unit.RightDefence;
                         break;
+                    case 3:                                                 // First Unit (Four-man powerplay)
+                        FPLW1tb.Text = unit.LeftWing;
+                        FPC1tb.Text = unit.Center;
+                        FPRW1tb.Text = unit.RightWing;
+                        FPD1tb.Text = unit.LeftDefence;
+                        break;
+                    case 4:                                                 // Second Unit (Four-man powerplay)
+                        FPLW2tb.Text = unit.LeftWing;
+                        FPC2tb.Text = unit.Center;
+                        FPRW2tb.Text = unit.RightWing;
+                        FPD2tb.Text = unit.LeftDefence;
+                        break;
                 }
             }
         }
@@ -68,7 +80,7 @@ namespace Hockey_Lineup_Manager
         {
             Team team = Methods.SelectCurrent();            // Copy the currently selected team
 
-            //--------------------------------------------  1st Line / 1st Pairing  --------------------------------------------
+            //--------------------------------------------  1st Unit  --------------------------------------------
             PowerPlayLines ppl1 = new PowerPlayLines();
             ppl1.Unit = 1;
             ppl1.LeftWing = PPLW1tb.Text;
@@ -77,7 +89,7 @@ namespace Hockey_Lineup_Manager
             ppl1.LeftDefence = PPLD1tb.Text;
             ppl1.RightDefence = PPRD1tb.Text;
 
-            //--------------------------------------------  2nd Line / 2nd Pairing  --------------------------------------------
+            //--------------------------------------------  2nd Unit  --------------------------------------------
             PowerPlayLines ppl2 = new PowerPlayLines();
             ppl2.Unit = 2;
             ppl2.LeftWing = PPLW2tb.Text;
@@ -86,9 +98,27 @@ namespace Hockey_Lineup_Manager
             ppl2.LeftDefence = PPLD2tb.Text;
             ppl2.RightDefence = PPRD2tb.Text;
 
+            //--------------------------------------------  1st Unit Four-man  --------------------------------------------
+            PowerPlayLines ppl3 = new PowerPlayLines();
+            ppl3.Unit = 3;
+            ppl3.LeftWing = FPLW1tb.Text;
+            ppl3.Center = FPC1tb.Text;
+            ppl3.RightWing = FPRW1tb.Text;
+            ppl3.LeftDefence = FPD1tb.Text;
+
+            //--------------------------------------------  2nd Unit Four-man  --------------------------------------------
+            PowerPlayLines ppl4 = new PowerPlayLines();
+            ppl4.Unit = 4;
+            ppl4.LeftWing = FPLW2tb.Text;
+            ppl4.Center = FPC2tb.Text;
+            ppl4.RightWing = FPRW2tb.Text;
+            ppl4.LeftDefence = FPD2tb.Text;
+
 
             team.PPL[0] = ppl1;
             team.PPL[1] = ppl2;
+            team.PPL[2] = ppl3;
+            team.PPL[3] = ppl4;
 
             Methods.Add(team);              // Overwrite the currently selected team (only changing the powerplay)
         }
@@ -353,6 +383,200 @@ namespace Hockey_Lineup_Manager
             PPRD2tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
 
-        
+        //--------------------------------------------  1st Unit Four-man Powerplay  --------------------------------------------
+
+        //--------------------------------------------  Left Wing  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 1st unit four-man left wing when the user right clicks on the textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FPLW1tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the texbox with the right mouse button, start the drag drop
+            if (e.Button == MouseButtons.Right)
+                FPLW1tb.DoDragDrop(FPLW1tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 1st unit four-man left wing.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FPLW1tb_DragDrop(object sender, DragEventArgs e)
+        {
+            FPLW1tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Center  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 1st unit four-man center when the user right clicks on the textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FPC1tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the texbox with the right mouse button, start the drag drop
+            if (e.Button == MouseButtons.Right)
+                FPC1tb.DoDragDrop(FPC1tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 1st unit four-man center.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FPC1tb_DragDrop(object sender, DragEventArgs e)
+        {
+            FPC1tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Wing  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 1st unit four-man right wing when the user right clicks on the textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FPRW1tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the texbox with the right mouse button, start the drag drop
+            if (e.Button == MouseButtons.Right)
+                FPRW1tb.DoDragDrop(FPRW1tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 1st unit four-man right wing.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FPRW1tb_DragDrop(object sender, DragEventArgs e)
+        {
+            FPRW1tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Defence  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 1st unit four-man defenceman when the user right clicks on the textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FPD1tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the texbox with the right mouse button, start the drag drop
+            if (e.Button == MouseButtons.Right)
+                FPD1tb.DoDragDrop(FPD1tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 1st unit four-man defenceman.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FPD1tb_DragDrop(object sender, DragEventArgs e)
+        {
+            FPD1tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  2nd Unit Four-man Powerplay  --------------------------------------------
+
+        //--------------------------------------------  Left Wing  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 2nd unit four-man left wing when the user right clicks on the textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FPLW2tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the texbox with the right mouse button, start the drag drop
+            if (e.Button == MouseButtons.Right)
+                FPLW2tb.DoDragDrop(FPLW2tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 2nd unit four-man left wing.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FPLW2tb_DragDrop(object sender, DragEventArgs e)
+        {
+            FPLW2tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Center  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 2nd unit four-man center when the user right clicks on the textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FPC2tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the texbox with the right mouse button, start the drag drop
+            if (e.Button == MouseButtons.Right)
+                FPC2tb.DoDragDrop(FPC2tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 2nd unit four-man center.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FPC2tb_DragDrop(object sender, DragEventArgs e)
+        {
+            FPC2tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Wing  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 2nd unit four-man right wing when the user right clicks on the textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FPRW2tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the texbox with the right mouse button, start the drag drop
+            if (e.Button == MouseButtons.Right)
+                FPRW2tb.DoDragDrop(FPRW2tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 2nd unit four-man right wing.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FPRW2tb_DragDrop(object sender, DragEventArgs e)
+        {
+            FPRW2tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Defence  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 2nd unit four-man right wing when the user right clicks on the textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FPD2tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the texbox with the right mouse button, start the drag drop
+            if (e.Button == MouseButtons.Right)
+                FPD2tb.DoDragDrop(FPD2tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 2nd unit four-man right wing.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FPD2tb_DragDrop(object sender, DragEventArgs e)
+        {
+            FPD2tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
     }
 }

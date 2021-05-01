@@ -50,6 +50,16 @@ namespace Hockey_Lineup_Manager
                         PKLD2tb.Text = unit.LeftDefence;
                         PKRD2tb.Text = unit.RightDefence;
                         break;
+                    case 3:
+                        TPC1tb.Text = unit.Center;
+                        TPLD1tb.Text = unit.LeftDefence;
+                        TPRD1tb.Text = unit.RightDefence;
+                        break;
+                    case 4:
+                        TPC2tb.Text = unit.Center;
+                        TPLD2tb.Text = unit.LeftDefence;
+                        TPRD2tb.Text = unit.RightDefence;
+                        break;
                 }
             }
         }
@@ -71,7 +81,7 @@ namespace Hockey_Lineup_Manager
             pkl1.LeftDefence = PKLD1tb.Text;
             pkl1.RightDefence = PKRD1tb.Text;
 
-            //--------------------------------------------  1st Line / 1st Pairing  --------------------------------------------
+            //--------------------------------------------  2nd Unit  --------------------------------------------
             PenaltyKillLines pkl2 = new PenaltyKillLines();
             pkl2.Unit = 2;
             pkl2.Wing = PKLW2tb.Text;
@@ -79,8 +89,24 @@ namespace Hockey_Lineup_Manager
             pkl2.LeftDefence = PKLD1tb.Text;
             pkl2.RightDefence = PKRD1tb.Text;
 
+            //--------------------------------------------  1st Unit (Three-man)  --------------------------------------------
+            PenaltyKillLines pkl3 = new PenaltyKillLines();
+            pkl3.Unit = 3;
+            pkl3.Center = TPC1tb.Text;
+            pkl3.LeftDefence = TPLD1tb.Text;
+            pkl3.RightDefence = TPRD1tb.Text;
+
+            //--------------------------------------------  2nd Unit (Three-man)  --------------------------------------------
+            PenaltyKillLines pkl4 = new PenaltyKillLines();
+            pkl4.Unit = 4;
+            pkl4.Center = TPC2tb.Text;
+            pkl4.LeftDefence = TPLD2tb.Text;
+            pkl4.RightDefence = TPRD2tb.Text;
+
             team.PKL[0] = pkl1;
             team.PKL[1] = pkl2;
+            team.PKL[2] = pkl3;
+            team.PKL[3] = pkl4;
 
             Methods.Add(team);          // Overwrite the currently selected team (only changing the penalty kill)
         }
@@ -304,6 +330,152 @@ namespace Hockey_Lineup_Manager
             PKRD2tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
 
-        
+        //--------------------------------------------  1st Unit Three-man Penalty Kill  --------------------------------------------
+
+        //--------------------------------------------  Center  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 1st unit three-man center when the user right clicks on the texbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TPC1tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop
+            if (e.Button == MouseButtons.Right)
+                TPC1tb.DoDragDrop(TPC1tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 1st unit three-man center.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TPC1tb_DragDrop(object sender, DragEventArgs e)
+        {
+            TPC1tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Left Defence  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 1st unit three-man left defence when the user right clicks on the texbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TPLD1tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop
+            if (e.Button == MouseButtons.Right)
+                TPLD1tb.DoDragDrop(TPLD1tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 1st unit three-man left defence.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TPLD1tb_DragDrop(object sender, DragEventArgs e)
+        {
+            TPLD1tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Defence  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 1st unit three-man right defence when the user right clicks on the texbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TPRD1tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop
+            if (e.Button == MouseButtons.Right)
+                TPRD1tb.DoDragDrop(TPRD1tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 1st unit three-man right defence.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TPRD1tb_DragDrop(object sender, DragEventArgs e)
+        {
+            TPRD1tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  2nd Unit Three-man Penalty Kill  --------------------------------------------
+
+        //--------------------------------------------  Center  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 2nd unit three-man center when the user right clicks on the texbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TPC2tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop
+            if (e.Button == MouseButtons.Right)
+                TPC2tb.DoDragDrop(TPC2tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 2nd unit three-man center.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TPC2tb_DragDrop(object sender, DragEventArgs e)
+        {
+            TPC2tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Left Defence  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 2nd unit three-man left defence when the user right clicks on the texbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TPLD2tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop
+            if (e.Button == MouseButtons.Right)
+                TPLD2tb.DoDragDrop(TPLD2tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 2nd unit three-man left defence.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TPLD2tb_DragDrop(object sender, DragEventArgs e)
+        {
+            TPLD2tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Defence  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 2nd unit three-man right defence when the user right clicks on the texbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TPRD2tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop
+            if (e.Button == MouseButtons.Right)
+                TPRD2tb.DoDragDrop(TPRD2tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 2nd unit three-man right defence.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TPRD2tb_DragDrop(object sender, DragEventArgs e)
+        {
+            TPRD2tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
     }
 }
