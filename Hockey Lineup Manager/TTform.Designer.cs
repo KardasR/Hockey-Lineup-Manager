@@ -32,8 +32,6 @@ namespace Hockey_Lineup_Manager
             this.label16 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.TTC1tb = new System.Windows.Forms.TextBox();
             this.TTLD1tb = new System.Windows.Forms.TextBox();
@@ -42,57 +40,49 @@ namespace Hockey_Lineup_Manager
             this.TTLD2tb = new System.Windows.Forms.TextBox();
             this.TTRD2tb = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.LoadLinesbtn = new System.Windows.Forms.Button();
+            this.SaveLinesbtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TTRD3tb = new System.Windows.Forms.TextBox();
+            this.TTLD3tb = new System.Windows.Forms.TextBox();
+            this.TTC3tb = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(240, 177);
+            this.label16.Location = new System.Drawing.Point(129, 195);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(23, 13);
+            this.label16.Size = new System.Drawing.Size(15, 13);
             this.label16.TabIndex = 88;
-            this.label16.Text = "RD";
+            this.label16.Text = "D";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(41, 177);
+            this.label13.Location = new System.Drawing.Point(44, 118);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(21, 13);
+            this.label13.Size = new System.Drawing.Size(18, 13);
             this.label13.TabIndex = 87;
-            this.label13.Text = "LD";
+            this.label13.Text = "W";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(130, 106);
+            this.label2.Location = new System.Drawing.Point(249, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(14, 13);
             this.label2.TabIndex = 86;
             this.label2.Text = "C";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(240, 334);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 13);
-            this.label1.TabIndex = 91;
-            this.label1.Text = "RD";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 334);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 13);
-            this.label3.TabIndex = 90;
-            this.label3.Text = "LD";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(130, 269);
+            this.label4.Location = new System.Drawing.Point(249, 286);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(14, 13);
             this.label4.TabIndex = 89;
@@ -101,7 +91,7 @@ namespace Hockey_Lineup_Manager
             // TTC1tb
             // 
             this.TTC1tb.AllowDrop = true;
-            this.TTC1tb.Location = new System.Drawing.Point(150, 103);
+            this.TTC1tb.Location = new System.Drawing.Point(269, 115);
             this.TTC1tb.Name = "TTC1tb";
             this.TTC1tb.Size = new System.Drawing.Size(100, 20);
             this.TTC1tb.TabIndex = 92;
@@ -112,7 +102,7 @@ namespace Hockey_Lineup_Manager
             // TTLD1tb
             // 
             this.TTLD1tb.AllowDrop = true;
-            this.TTLD1tb.Location = new System.Drawing.Point(68, 174);
+            this.TTLD1tb.Location = new System.Drawing.Point(68, 115);
             this.TTLD1tb.Name = "TTLD1tb";
             this.TTLD1tb.Size = new System.Drawing.Size(100, 20);
             this.TTLD1tb.TabIndex = 93;
@@ -123,7 +113,7 @@ namespace Hockey_Lineup_Manager
             // TTRD1tb
             // 
             this.TTRD1tb.AllowDrop = true;
-            this.TTRD1tb.Location = new System.Drawing.Point(269, 174);
+            this.TTRD1tb.Location = new System.Drawing.Point(150, 192);
             this.TTRD1tb.Name = "TTRD1tb";
             this.TTRD1tb.Size = new System.Drawing.Size(100, 20);
             this.TTRD1tb.TabIndex = 94;
@@ -134,7 +124,7 @@ namespace Hockey_Lineup_Manager
             // TTC2tb
             // 
             this.TTC2tb.AllowDrop = true;
-            this.TTC2tb.Location = new System.Drawing.Point(150, 266);
+            this.TTC2tb.Location = new System.Drawing.Point(269, 283);
             this.TTC2tb.Name = "TTC2tb";
             this.TTC2tb.Size = new System.Drawing.Size(100, 20);
             this.TTC2tb.TabIndex = 95;
@@ -145,7 +135,7 @@ namespace Hockey_Lineup_Manager
             // TTLD2tb
             // 
             this.TTLD2tb.AllowDrop = true;
-            this.TTLD2tb.Location = new System.Drawing.Point(68, 331);
+            this.TTLD2tb.Location = new System.Drawing.Point(68, 283);
             this.TTLD2tb.Name = "TTLD2tb";
             this.TTLD2tb.Size = new System.Drawing.Size(100, 20);
             this.TTLD2tb.TabIndex = 96;
@@ -156,7 +146,7 @@ namespace Hockey_Lineup_Manager
             // TTRD2tb
             // 
             this.TTRD2tb.AllowDrop = true;
-            this.TTRD2tb.Location = new System.Drawing.Point(269, 331);
+            this.TTRD2tb.Location = new System.Drawing.Point(150, 360);
             this.TTRD2tb.Name = "TTRD2tb";
             this.TTRD2tb.Size = new System.Drawing.Size(100, 20);
             this.TTRD2tb.TabIndex = 97;
@@ -168,17 +158,127 @@ namespace Hockey_Lineup_Manager
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(137, 22);
+            this.label21.Location = new System.Drawing.Point(143, 31);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(113, 37);
             this.label21.TabIndex = 98;
             this.label21.Text = "3 on 3";
             // 
+            // LoadLinesbtn
+            // 
+            this.LoadLinesbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadLinesbtn.Location = new System.Drawing.Point(417, 149);
+            this.LoadLinesbtn.Name = "LoadLinesbtn";
+            this.LoadLinesbtn.Size = new System.Drawing.Size(123, 41);
+            this.LoadLinesbtn.TabIndex = 99;
+            this.LoadLinesbtn.Text = "Load Lines";
+            this.LoadLinesbtn.UseVisualStyleBackColor = true;
+            this.LoadLinesbtn.Click += new System.EventHandler(this.LoadLinesbtn_Click);
+            // 
+            // SaveLinesbtn
+            // 
+            this.SaveLinesbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveLinesbtn.Location = new System.Drawing.Point(417, 219);
+            this.SaveLinesbtn.Name = "SaveLinesbtn";
+            this.SaveLinesbtn.Size = new System.Drawing.Size(123, 41);
+            this.SaveLinesbtn.TabIndex = 100;
+            this.SaveLinesbtn.Text = "Save Lines";
+            this.SaveLinesbtn.UseVisualStyleBackColor = true;
+            this.SaveLinesbtn.Click += new System.EventHandler(this.SaveLinesbtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(129, 363);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 13);
+            this.label1.TabIndex = 101;
+            this.label1.Text = "D";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(44, 286);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(18, 13);
+            this.label3.TabIndex = 102;
+            this.label3.Text = "W";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(44, 453);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(18, 13);
+            this.label5.TabIndex = 108;
+            this.label5.Text = "W";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(129, 530);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(15, 13);
+            this.label6.TabIndex = 107;
+            this.label6.Text = "D";
+            // 
+            // TTRD3tb
+            // 
+            this.TTRD3tb.AllowDrop = true;
+            this.TTRD3tb.Location = new System.Drawing.Point(150, 527);
+            this.TTRD3tb.Name = "TTRD3tb";
+            this.TTRD3tb.Size = new System.Drawing.Size(100, 20);
+            this.TTRD3tb.TabIndex = 106;
+            this.TTRD3tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.TTRD3tb_DragDrop);
+            this.TTRD3tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.TTRD3tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TTRD3tb_MouseDown);
+            // 
+            // TTLD3tb
+            // 
+            this.TTLD3tb.AllowDrop = true;
+            this.TTLD3tb.Location = new System.Drawing.Point(68, 450);
+            this.TTLD3tb.Name = "TTLD3tb";
+            this.TTLD3tb.Size = new System.Drawing.Size(100, 20);
+            this.TTLD3tb.TabIndex = 105;
+            this.TTLD3tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.TTLD3tb_DragDrop);
+            this.TTLD3tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.TTLD3tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TTLD3tb_MouseDown);
+            // 
+            // TTC3tb
+            // 
+            this.TTC3tb.AllowDrop = true;
+            this.TTC3tb.Location = new System.Drawing.Point(269, 450);
+            this.TTC3tb.Name = "TTC3tb";
+            this.TTC3tb.Size = new System.Drawing.Size(100, 20);
+            this.TTC3tb.TabIndex = 104;
+            this.TTC3tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.TTC3tb_DragDrop);
+            this.TTC3tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.TTC3tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TTC3tb_MouseDown);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(249, 453);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(14, 13);
+            this.label7.TabIndex = 103;
+            this.label7.Text = "C";
+            // 
             // TTform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 378);
+            this.ClientSize = new System.Drawing.Size(573, 571);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.TTRD3tb);
+            this.Controls.Add(this.TTLD3tb);
+            this.Controls.Add(this.TTC3tb);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.SaveLinesbtn);
+            this.Controls.Add(this.LoadLinesbtn);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.TTRD2tb);
             this.Controls.Add(this.TTLD2tb);
@@ -186,8 +286,6 @@ namespace Hockey_Lineup_Manager
             this.Controls.Add(this.TTRD1tb);
             this.Controls.Add(this.TTLD1tb);
             this.Controls.Add(this.TTC1tb);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label13);
@@ -204,8 +302,6 @@ namespace Hockey_Lineup_Manager
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TTC1tb;
         private System.Windows.Forms.TextBox TTLD1tb;
@@ -214,5 +310,15 @@ namespace Hockey_Lineup_Manager
         private System.Windows.Forms.TextBox TTLD2tb;
         private System.Windows.Forms.TextBox TTRD2tb;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button LoadLinesbtn;
+        private System.Windows.Forms.Button SaveLinesbtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox TTRD3tb;
+        private System.Windows.Forms.TextBox TTLD3tb;
+        private System.Windows.Forms.TextBox TTC3tb;
+        private System.Windows.Forms.Label label7;
     }
 }

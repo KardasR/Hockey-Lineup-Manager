@@ -865,7 +865,7 @@ namespace Hockey_Lineup_Manager
         public PowerPlayLines[] PPL = new PowerPlayLines[2];
         public PenaltyKillLines[] PKL = new PenaltyKillLines[2];
         public FourOnFourLines[] FFL = new FourOnFourLines[3];
-        public ThreeOnThreeLines[] TTL = new ThreeOnThreeLines[2];
+        public ThreeOnThreeLines[] TTL = new ThreeOnThreeLines[3];
         public ShootoutExtraAttacker SOEA;
         public Goalies goalies;
     }

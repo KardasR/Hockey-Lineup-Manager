@@ -19,6 +19,57 @@ namespace Hockey_Lineup_Manager
 
         //------------------------------------------------------------------------------------------------------------------------------------
         //
+        //--------------------------------------------  Buttons  --------------------------------------------
+        //
+        //------------------------------------------------------------------------------------------------------------------------------------
+
+        /// <summary>
+        /// Load the extra attackers and shootout lineup from the currently selected team.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LoadLinesbtn_Click(object sender, EventArgs e)
+        {
+            Team team = Methods.SelectCurrent();            // Copy the currently selected team
+
+            // Go through each extra attacker then the shootout lineup
+            EA1tb.Text = team.SOEA.ExtraA1;
+            EA2tb.Text = team.SOEA.ExtraA2;
+
+            SO1tb.Text = team.SOEA.Shooter1;
+            SO2tb.Text = team.SOEA.Shooter2;
+            SO3tb.Text = team.SOEA.Shooter3;
+            SO4tb.Text = team.SOEA.Shooter4;
+            SO5tb.Text = team.SOEA.Shooter5;
+        }
+
+        /// <summary>
+        /// Overwrite the currently selected team's extra attackers and shootout lineup with the current extra attackers and shootout lineup.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SaveLinesbtn_Click(object sender, EventArgs e)
+        {
+            Team team = Methods.SelectCurrent();                // Copy the currently selected team
+
+            // Go through the extra attackers then the shootout lineup
+            ShootoutExtraAttacker soea = new ShootoutExtraAttacker();
+            soea.ExtraA1 = EA1tb.Text;
+            soea.ExtraA2 = EA2tb.Text;
+
+            soea.Shooter1 = SO1tb.Text;
+            soea.Shooter2 = SO2tb.Text;
+            soea.Shooter3 = SO3tb.Text;
+            soea.Shooter4 = SO4tb.Text;
+            soea.Shooter5 = SO5tb.Text;
+
+            team.SOEA = soea;
+
+            Methods.Add(team);
+        }
+
+        //------------------------------------------------------------------------------------------------------------------------------------
+        //
         //--------------------------------------------  Drag and Drop Functionallity  --------------------------------------------
         //
         //------------------------------------------------------------------------------------------------------------------------------------
