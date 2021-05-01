@@ -19,6 +19,74 @@ namespace Hockey_Lineup_Manager
 
         //------------------------------------------------------------------------------------------------------------------------------------
         //
+        //--------------------------------------------  Buttons  --------------------------------------------
+        //
+        //------------------------------------------------------------------------------------------------------------------------------------
+
+        /// <summary>
+        /// Load the penalty kill from the currently selected team.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LoadLinesbtn_Click(object sender, EventArgs e)
+        {
+            Team team = Methods.SelectCurrent();        // Copy the currently selected team to gain access to the penalty kill
+
+            // Go through each penalty killing unit
+            foreach (PenaltyKillLines unit in team.PKL)
+            {
+                int line = unit.Unit;
+                switch(line)
+                {
+                    case 1:
+                        PKLW1tb.Text = unit.Wing;
+                        PKC1tb.Text = unit.Center;
+                        PKLD1tb.Text = unit.LeftDefence;
+                        PKRD1tb.Text = unit.RightDefence;
+                        break;
+                    case 2:
+                        PKLW2tb.Text = unit.Wing;
+                        PKC2tb.Text = unit.Center;
+                        PKLD2tb.Text = unit.LeftDefence;
+                        PKRD2tb.Text = unit.RightDefence;
+                        break;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Overwrite the currently selected team's penalty kill with the current penalty kill.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SaveLinesbtn_Click(object sender, EventArgs e)
+        {
+            Team team = Methods.SelectCurrent();        // Copy the currently selected team
+
+            //--------------------------------------------  1st Unit  --------------------------------------------
+            PenaltyKillLines pkl1 = new PenaltyKillLines();
+            pkl1.Unit = 1;
+            pkl1.Wing = PKLW1tb.Text;
+            pkl1.Center = PKC1tb.Text;
+            pkl1.LeftDefence = PKLD1tb.Text;
+            pkl1.RightDefence = PKRD1tb.Text;
+
+            //--------------------------------------------  1st Line / 1st Pairing  --------------------------------------------
+            PenaltyKillLines pkl2 = new PenaltyKillLines();
+            pkl2.Unit = 2;
+            pkl2.Wing = PKLW2tb.Text;
+            pkl2.Center = PKC1tb.Text;
+            pkl2.LeftDefence = PKLD1tb.Text;
+            pkl2.RightDefence = PKRD1tb.Text;
+
+            team.PKL[0] = pkl1;
+            team.PKL[1] = pkl2;
+
+            Methods.Add(team);          // Overwrite the currently selected team (only changing the penalty kill)
+        }
+
+        //------------------------------------------------------------------------------------------------------------------------------------
+        //
         //--------------------------------------------  Drag and Drop Functionallity  --------------------------------------------
         //
         //------------------------------------------------------------------------------------------------------------------------------------
@@ -235,5 +303,7 @@ namespace Hockey_Lineup_Manager
         {
             PKRD2tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
+
+        
     }
 }

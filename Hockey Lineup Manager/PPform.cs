@@ -281,15 +281,12 @@ namespace Hockey_Lineup_Manager
         }
 
         /// <summary>
-        /// Load the lines from the JSON and place the players in their correct textboxes.
+        /// Load the powerplay from the currently selected team.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void LoadLinesbtn_Click(object sender, EventArgs e)
         {
-            //string fileContent = File.ReadAllText(Path.Combine("..\\..\\Roster\\", (ESform.MainTeam.Name.ToString() + ".txt")));
-            //Team team = JsonConvert.DeserializeObject<Team>(fileContent);
-
             Team team = Methods.SelectCurrent();                    // Copy the currently selected team
 
             // Go through each powerplay unit
@@ -317,15 +314,15 @@ namespace Hockey_Lineup_Manager
         }
 
         /// <summary>
-        /// Save the lines to JSON file
+        /// Overwrite the currently selected team's powerplay with the current powerplay.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void SaveLinesbtn_Click(object sender, EventArgs e)
         {
             Team team = Methods.SelectCurrent();            // Copy the currently selected team
+
             //--------------------------------------------  1st Line / 1st Pairing  --------------------------------------------
-            // Save 1st line left wing
             PowerPlayLines ppl1 = new PowerPlayLines();
             ppl1.Unit = 1;
             ppl1.LeftWing = PPLW1tb.Text;
@@ -334,6 +331,7 @@ namespace Hockey_Lineup_Manager
             ppl1.LeftDefence = PPLD1tb.Text;
             ppl1.RightDefence = PPRD1tb.Text;
 
+            //--------------------------------------------  2nd Line / 2nd Pairing  --------------------------------------------
             PowerPlayLines ppl2 = new PowerPlayLines();
             ppl2.Unit = 2;
             ppl2.LeftWing = PPLW2tb.Text;
@@ -341,6 +339,7 @@ namespace Hockey_Lineup_Manager
             ppl2.RightWing = PPRW2tb.Text;
             ppl2.LeftDefence = PPLD2tb.Text;
             ppl2.RightDefence = PPRD2tb.Text;
+
 
             team.PPL[0] = ppl1;
             team.PPL[1] = ppl2;

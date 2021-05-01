@@ -20,6 +20,7 @@ namespace Hockey_Lineup_Manager
         private void AddYearbtn_Click(object sender, EventArgs e)
         {
             //TODO: Make this button add a year to the listbox
+            //      Also create a new item in the dictionary with the new year as the key
         }
 
         /// <summary>
@@ -43,6 +44,7 @@ namespace Hockey_Lineup_Manager
         {
             // Show Penalty Kill form
             PKform pKform = new PKform();
+            Methods.SetCurrent(TeamYearlb.SelectedItem.ToString());
             pKform.Show();
         }
 
@@ -54,6 +56,7 @@ namespace Hockey_Lineup_Manager
         private void FFbtn_Click(object sender, EventArgs e)
         {
             FFform ffform = new FFform();
+            Methods.SetCurrent(TeamYearlb.SelectedItem.ToString());
             ffform.Show();
         }
 
@@ -65,6 +68,7 @@ namespace Hockey_Lineup_Manager
         private void TTbtn_Click(object sender, EventArgs e)
         {
             TTform ttform = new TTform();
+            Methods.SetCurrent(TeamYearlb.SelectedItem.ToString());
             ttform.Show();
         }
 
@@ -76,6 +80,7 @@ namespace Hockey_Lineup_Manager
         private void SOEAbtn_Click(object sender, EventArgs e)
         {
             SOEAform soeaform = new SOEAform();
+            Methods.SetCurrent(TeamYearlb.SelectedItem.ToString());
             soeaform.Show();
         }
 

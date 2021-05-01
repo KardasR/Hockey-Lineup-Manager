@@ -19,6 +19,89 @@ namespace Hockey_Lineup_Manager
 
         //------------------------------------------------------------------------------------------------------------------------------------
         //
+        //--------------------------------------------  Buttons  --------------------------------------------
+        //
+        //------------------------------------------------------------------------------------------------------------------------------------
+
+        /// <summary>
+        /// Load the four on four from the currently selected team.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LoadLinesbtn_Click(object sender, EventArgs e)
+        {
+            Team team = Methods.SelectCurrent();        // Copy the currently selected team to gain access to the four on four
+
+            // Go through each four on four unit
+            foreach (FourOnFourLines unit in team.FFL)
+            {
+                int line = unit.Unit;
+                switch (line)
+                {
+                    case 1:
+                        FourLW1tb.Text = unit.Wing;
+                        FourC1tb.Text = unit.Center;
+                        FourLD1tb.Text = unit.LeftDefence;
+                        FourRD1tb.Text = unit.RightDefence;
+                        break;
+                    case 2:
+                        FourLW2tb.Text = unit.Wing;
+                        FourC2tb.Text = unit.Center;
+                        FourLD2tb.Text = unit.LeftDefence;
+                        FourRD2tb.Text = unit.RightDefence;
+                        break;
+                    case 3:
+                        FourLW3tb.Text = unit.Wing;
+                        FourC3tb.Text = unit.Center;
+                        FourLD3tb.Text = unit.LeftDefence;
+                        FourRD3tb.Text = unit.RightDefence;
+                        break;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Overwrite the currently selected team's penalty kill with the current penalty kill.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SaveLinesbtn_Click(object sender, EventArgs e)
+        {
+            Team team = Methods.SelectCurrent();            // Copy the currently selected team
+
+            //--------------------------------------------  1st Unit  --------------------------------------------
+            FourOnFourLines ff1 = new FourOnFourLines();
+            ff1.Unit = 1;
+            ff1.Wing = FourLW1tb.Text;
+            ff1.Center = FourC1tb.Text;
+            ff1.LeftDefence = FourLD1tb.Text;
+            ff1.RightDefence = FourRD1tb.Text;
+
+            //--------------------------------------------  2nd Unit  --------------------------------------------
+            FourOnFourLines ff2 = new FourOnFourLines();
+            ff2.Unit = 2;
+            ff2.Wing = FourLW2tb.Text;
+            ff2.Center = FourC2tb.Text;
+            ff2.LeftDefence = FourLD2tb.Text;
+            ff2.RightDefence = FourRD2tb.Text;
+
+            //--------------------------------------------  3rd Unit  --------------------------------------------
+            FourOnFourLines ff3 = new FourOnFourLines();
+            ff3.Unit = 3;
+            ff3.Wing = FourLW3tb.Text;
+            ff3.Center = FourC3tb.Text;
+            ff3.LeftDefence = FourLD3tb.Text;
+            ff3.RightDefence = FourRD3tb.Text;
+
+            team.FFL[0] = ff1;
+            team.FFL[1] = ff2;
+            team.FFL[2] = ff3;
+
+            Methods.Add(team);
+        }
+
+        //------------------------------------------------------------------------------------------------------------------------------------
+        //
         //--------------------------------------------  Drag and Drop Functionallity  --------------------------------------------
         //
         //------------------------------------------------------------------------------------------------------------------------------------
@@ -338,5 +421,7 @@ namespace Hockey_Lineup_Manager
         {
             FourRD3tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
+
+        
     }
 }
