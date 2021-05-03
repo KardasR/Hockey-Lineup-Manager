@@ -422,6 +422,15 @@ namespace Hockey_Lineup_Manager
             FourRD3tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
 
-        
+        private void FFform_Load(object sender, EventArgs e)
+        {
+            if (Screen.AllScreens.Length >= 1)
+            {
+                // Get the data of the second monitor
+                var monitor = Screen.AllScreens[2].WorkingArea;
+                // Change the wingow to the second monitor
+                Location = monitor.Location;
+            }
+        }
     }
 }

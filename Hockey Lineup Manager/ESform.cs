@@ -15,6 +15,22 @@ namespace Hockey_Lineup_Manager
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Open the form on my vertical monitor so I don't have to move it because I'm lazy
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ESform_Load(object sender, EventArgs e)
+        {
+            if (Screen.AllScreens.Length >= 1)
+            {
+                // Get the data of the second monitor
+                var monitor = Screen.AllScreens[2].WorkingArea;
+                // Change the wingow to the second monitor
+                Location = monitor.Location;
+            }
+        }
+
         //--------------------------------------------  Buttons  --------------------------------------------
 
         private void AddYearbtn_Click(object sender, EventArgs e)
@@ -95,7 +111,8 @@ namespace Hockey_Lineup_Manager
             team.Name = TeamNametb.Text;
             team.Year = TeamYearlb.SelectedItem.ToString();
             team.League = NHLrb.Checked ? true : false;
-
+            team.Record = Recordtb.Text.ToString();
+            team.Playoff = Playofftb.Text.ToString();
 
             //--------------------------------------------  1st Line / 1st Pairing  --------------------------------------------
             EvenStrengthLines line1 = new EvenStrengthLines();
@@ -104,35 +121,35 @@ namespace Hockey_Lineup_Manager
             // Save 1st line left wing
             Player player = new Player();                       // Create a player object
             player.Name = LW1tb.Text;
-            player.Overall = int.Parse(LW1OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(LW1OVRtb.Text) ? int.Parse(LW1OVRtb.Text) : 0;
 
             line1.LeftWing = player;
 
             // Save 1st line center
             player = new Player();
             player.Name = C1tb.Text;
-            player.Overall = int.Parse(C1OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(C1OVRtb.Text) ? int.Parse(C1OVRtb.Text) : 0;
 
             line1.Center = player;
 
             // Save 1st line right wing
             player = new Player();
             player.Name = RW1tb.Text;
-            player.Overall = int.Parse(RW1OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(RW1OVRtb.Text) ? int.Parse(RW1OVRtb.Text) : 0;
 
             line1.RightWing = player;
 
             // Save 1st pair left defence
             player = new Player();
             player.Name = LD1tb.Text;
-            player.Overall = int.Parse(LD1OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(LD1OVRtb.Text) ? int.Parse(LD1OVRtb.Text) : 0;
 
             line1.LeftDefence = player;
 
             // Save 1st pair right defence
             player = new Player();
             player.Name = RD1tb.Text;
-            player.Overall = int.Parse(RD1OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(RD1OVRtb.Text) ? int.Parse(RD1OVRtb.Text) : 0;
 
             line1.RightDefence = player;
 
@@ -143,35 +160,35 @@ namespace Hockey_Lineup_Manager
             // Save 2nd line left wing
             player = new Player();
             player.Name = LW2tb.Text;
-            player.Overall = int.Parse(LW2OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(LW2OVRtb.Text) ? int.Parse(LW2OVRtb.Text) : 0;
 
             line2.LeftWing = player;
 
             // Save 2nd line center
             player = new Player();
             player.Name = C2tb.Text;
-            player.Overall = int.Parse(C2OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(C2OVRtb.Text) ? int.Parse(C2OVRtb.Text) : 0;
 
             line2.Center = player;
 
             // Save 2nd line right wing
             player = new Player();
             player.Name = RW2tb.Text;
-            player.Overall = int.Parse(RW2OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(RW2OVRtb.Text) ? int.Parse(RW2OVRtb.Text) : 0;
 
             line2.RightWing = player;
 
             // Save 2nd pair left defence
             player = new Player();
             player.Name = LD2tb.Text;
-            player.Overall = int.Parse(LD2OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(LD2OVRtb.Text) ? int.Parse(LD2OVRtb.Text) : 0;
 
             line2.LeftDefence = player;
 
             // Save 2nd pair right defence
             player = new Player();
             player.Name = RD2tb.Text;
-            player.Overall = int.Parse(RD2OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(RD2OVRtb.Text) ? int.Parse(RD2OVRtb.Text) : 0;
 
             line2.RightDefence = player;
 
@@ -182,35 +199,35 @@ namespace Hockey_Lineup_Manager
             // Save 3rd line left wing
             player = new Player();
             player.Name = LW3tb.Text;
-            player.Overall = int.Parse(LW3OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(LW3OVRtb.Text) ? int.Parse(LW3OVRtb.Text) : 0;
 
             line3.LeftWing = player;
 
             // Save 3rd line center
             player = new Player();
             player.Name = C3tb.Text;
-            player.Overall = int.Parse(C3OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(C3OVRtb.Text) ? int.Parse(C3OVRtb.Text) : 0;
 
             line3.Center = player;
 
             // Save 3rd line right wing
             player = new Player();
             player.Name = RW3tb.Text;
-            player.Overall = int.Parse(RW3OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(RW3OVRtb.Text) ? int.Parse(RW3OVRtb.Text) : 0;
 
             line3.RightWing = player;
 
             // Save 3rd pair left defence
             player = new Player();
             player.Name = LD3tb.Text;
-            player.Overall = int.Parse(LD3OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(LD3OVRtb.Text) ? int.Parse(LD3OVRtb.Text) : 0;
 
             line3.LeftDefence = player;
 
             // Save 3rd pair right defence
             player = new Player();
             player.Name = RD3tb.Text;
-            player.Overall = int.Parse(RD3OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(RD3OVRtb.Text) ? int.Parse(RD3OVRtb.Text) : 0;
 
             line3.RightDefence = player;
 
@@ -221,21 +238,21 @@ namespace Hockey_Lineup_Manager
             // Save 4th line left wing
             player = new Player();
             player.Name = LW4tb.Text;
-            player.Overall = int.Parse(LW4OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(LW4OVRtb.Text) ? int.Parse(LW4OVRtb.Text) : 0;
 
             line4.LeftWing = player;
 
             // Save 4th line center
             player = new Player();
             player.Name = C4tb.Text;
-            player.Overall = int.Parse(C4OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(C4OVRtb.Text) ? int.Parse(C4OVRtb.Text) : 0;
 
             line4.Center = player;
 
             // Save 4th line right wing
             player = new Player();
             player.Name = RW4tb.Text;
-            player.Overall = int.Parse(RW4OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(RW4OVRtb.Text) ? int.Parse(RW4OVRtb.Text) : 0;
 
             line4.RightWing = player;
 
@@ -245,14 +262,14 @@ namespace Hockey_Lineup_Manager
             // Save starting goalie
             player = new Player();
             player.Name = G1tb.Text;
-            player.Overall = int.Parse(G1OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(G1OVRtb.Text) ? int.Parse(G1OVRtb.Text) : 0;
 
             goalies.Starter = player;
 
             // Save backup goalie
             player = new Player();
             player.Name = G2tb.Text;
-            player.Overall = int.Parse(G2OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(G2OVRtb.Text) ? int.Parse(G2OVRtb.Text) : 0;
 
             goalies.Backup = player;
 
@@ -263,35 +280,35 @@ namespace Hockey_Lineup_Manager
             // Save scratched left wing
             player = new Player();
             player.Name = LW5tb.Text;
-            player.Overall = int.Parse(LW5OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(LW5OVRtb.Text) ? int.Parse(LW5OVRtb.Text) : 0;
 
             scratched.LeftWing = player;
 
             // Save scratched center
             player = new Player();
             player.Name = C5tb.Text;
-            player.Overall = int.Parse(C5OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(C5OVRtb.Text) ? int.Parse(C5OVRtb.Text) : 0;
 
             scratched.Center = player;
 
             // Save scratched right wing
             player = new Player();
             player.Name = RW5tb.Text;
-            player.Overall = int.Parse(RW5OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(RW5OVRtb.Text) ? int.Parse(RW5OVRtb.Text) : 0;
 
             scratched.RightWing = player;
 
             // Save scratched left defence
             player = new Player();
             player.Name = LD4tb.Text;
-            player.Overall = int.Parse(LD4OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(LD4OVRtb.Text) ? int.Parse(LD4OVRtb.Text) : 0;
 
             scratched.LeftDefence = player;
 
             // Save scratched right defence
             player = new Player();
             player.Name = RD4tb.Text;
-            player.Overall = int.Parse(RD4OVRtb.Text);
+            player.Overall = String.IsNullOrEmpty(RD4OVRtb.Text) ? int.Parse(RD4OVRtb.Text) : 0;
 
             scratched.RightDefence = player;
 
@@ -331,7 +348,10 @@ namespace Hockey_Lineup_Manager
             NHLrb.Checked = team.League ? true : false;
             AHLrb.Checked = team.League ? false : true;
 
+            Recordtb.Text = team.Record;
+            Playofftb.Text = team.Playoff;
 
+            // Load Goalies
             G1tb.Text = team.goalies.Starter.Name.ToString();
             G1OVRtb.Text = team.goalies.Starter.Overall.ToString();
             G2tb.Text = team.goalies.Backup.Name.ToString();
@@ -511,7 +531,8 @@ namespace Hockey_Lineup_Manager
 
         private void RD1tb_MouseDown(object sender, MouseEventArgs e)
         {
-            RD1tb.DoDragDrop(RD1tb.Text, DragDropEffects.Copy);
+            if (e.Button == MouseButtons.Right)
+                RD1tb.DoDragDrop(RD1tb.Text, DragDropEffects.Copy);
         }
 
         private void RD1tb_DragDrop(object sender, DragEventArgs e)
@@ -836,7 +857,6 @@ namespace Hockey_Lineup_Manager
         {
             RD4tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
-
     }
 
     //------------------------------------------------------------------------------------------------------------------------------------

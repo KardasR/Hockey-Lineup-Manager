@@ -85,9 +85,9 @@ namespace Hockey_Lineup_Manager
             PenaltyKillLines pkl2 = new PenaltyKillLines();
             pkl2.Unit = 2;
             pkl2.Wing = PKLW2tb.Text;
-            pkl2.Center = PKC1tb.Text;
-            pkl2.LeftDefence = PKLD1tb.Text;
-            pkl2.RightDefence = PKRD1tb.Text;
+            pkl2.Center = PKC2tb.Text;
+            pkl2.LeftDefence = PKLD2tb.Text;
+            pkl2.RightDefence = PKRD2tb.Text;
 
             //--------------------------------------------  1st Unit (Three-man)  --------------------------------------------
             PenaltyKillLines pkl3 = new PenaltyKillLines();
@@ -476,6 +476,17 @@ namespace Hockey_Lineup_Manager
         private void TPRD2tb_DragDrop(object sender, DragEventArgs e)
         {
             TPRD2tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        private void PKform_Load(object sender, EventArgs e)
+        {
+            if (Screen.AllScreens.Length >= 1)
+            {
+                // Get the data of the second monitor
+                var monitor = Screen.AllScreens[2].WorkingArea;
+                // Change the wingow to the second monitor
+                Location = monitor.Location;
+            }
         }
     }
 }

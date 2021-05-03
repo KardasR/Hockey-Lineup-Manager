@@ -341,5 +341,16 @@ namespace Hockey_Lineup_Manager
         {
             TTRD3tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
+
+        private void TTform_Load(object sender, EventArgs e)
+        {
+            if (Screen.AllScreens.Length >= 1)
+            {
+                // Get the data of the second monitor
+                var monitor = Screen.AllScreens[2].WorkingArea;
+                // Change the wingow to the second monitor
+                Location = monitor.Location;
+            }
+        }
     }
 }
