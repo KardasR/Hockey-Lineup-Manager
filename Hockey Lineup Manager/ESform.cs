@@ -33,10 +33,16 @@ namespace Hockey_Lineup_Manager
 
         //--------------------------------------------  Buttons  --------------------------------------------
 
+        /// <summary>
+        /// Increment the years and add it to the listbox. DO NOTHING ELSE
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddYearbtn_Click(object sender, EventArgs e)
         {
-            //TODO: Make this button add a year to the listbox
-            //      Also create a new item in the dictionary with the new year as the key
+            //int yr = int.Parse(TeamYearlb.SelectedItem.ToString().Substring(5));        // Get the last year of the selected season
+            //TeamYearlb.Items.Add(String.Format("{0}-{1}", yr, yr+1));                   // Add the new season string to the listbox
+            TeamYearlb.Items.Add(String.Format("{0}-{1}", int.Parse(TeamYearlb.SelectedItem.ToString().Substring(5)), int.Parse(TeamYearlb.SelectedItem.ToString().Substring(5)) + 1));                   // Add the new season string to the listbox
         }
 
         /// <summary>
@@ -866,7 +872,7 @@ namespace Hockey_Lineup_Manager
     //------------------------------------------------------------------------------------------------------------------------------------
     //
     // Honestly I don't have to include a new class for every situation as there will only be 3 cases for the amount
-    //      of players on the ice (3,4,5). So I could just have the three classes and get rid of 2 classes.
+    //      of players on the ice (3,4,5). So I could just have the 3 classes and get rid of 2 classes.
 
     public class Player
     {
