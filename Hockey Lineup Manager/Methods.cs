@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -9,7 +12,8 @@ namespace Hockey_Lineup_Manager
 {
     public static class Methods
     {
-        public static Dictionary<string, Team> Teams = new Dictionary<string, Team>();
+        public static Dictionary<string, NHLTeam> Teams = new Dictionary<string, NHLTeam>();
+        //public static Org org = new Org();
 
         private static string _currentTeam = string.Empty;
 
@@ -19,32 +23,46 @@ namespace Hockey_Lineup_Manager
         }
 
         /// <summary>
-        /// Return the currently selected team in the dictionary.
+        /// Return the currently selected team in the dictionary, converted to a string.
         /// </summary>
         /// <returns></returns>
-        public static Team SelectCurrent()
+        public static string SelectCurrent()
         {
-            if (Teams.ContainsKey(_currentTeam) == true)
-            {
-                return Teams[_currentTeam];
-            }
+            if (Teams.ContainsKey(_currentTeam))
+                return JsonConvert.SerializeObject(Teams[_currentTeam]);
 
             return null;
+        }
+
+        /// <summary>
+        /// Returns the currently selected year. This is to allow other forms to add to the dictionary
+        /// </summary>
+        /// <returns></returns>
+        public static string GetCurrentYear()
+        {
+            if (_currentTeam.Equals(string.Empty))
+                return "2020-2021";
+
+            return _currentTeam;
         }
 
         /// <summary>
         /// Add a new team to the dictionary of teams. This does NOT change the selected team to the additional team.
         /// </summary>
         /// <param name="team"></param>
-        public static void Add(Team team)
+        public static void Add(string year, string team)
         {
-            if (Teams.ContainsKey(team.Year) == false)
+            if (Teams.ContainsKey(year) == false)
             {
-                Teams.Add(team.Year, team);
+                Teams.Add(year, JsonConvert.DeserializeObject<NHLTeam>(team));
             }
             else
             {
-                Teams[team.Year] = team;
+                // Wait to do this but you may need to 
+                //Teams[year].Name = givTeam.Name;
+                //Teams[year].League = givTeam.League;
+
+                Teams[year] = JsonConvert.DeserializeObject<NHLTeam>(team);
             }
         }
 
@@ -63,6 +81,12 @@ namespace Hockey_Lineup_Manager
             }
 
             return false;
+        }
+
+        public static Dictionary<string, NHLTeam> GiveHistory()
+        {
+            //return JsonConvert.SerializeObject(Teams);
+            return Teams;
         }
     }
 }

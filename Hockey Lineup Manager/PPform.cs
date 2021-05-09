@@ -33,7 +33,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void LoadLinesbtn_Click(object sender, EventArgs e)
         {
-            Team team = Methods.SelectCurrent();                    // Copy the currently selected team
+            NHLTeam team = JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent());                    // Copy the currently selected team
 
             // Go through each powerplay unit
             foreach (PowerPlayLines unit in team.PPL)
@@ -78,7 +78,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void SaveLinesbtn_Click(object sender, EventArgs e)
         {
-            Team team = Methods.SelectCurrent();            // Copy the currently selected team
+            NHLTeam team = JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent());            // Copy the currently selected team
 
             //--------------------------------------------  1st Unit  --------------------------------------------
             PowerPlayLines ppl1 = new PowerPlayLines();
@@ -120,7 +120,7 @@ namespace Hockey_Lineup_Manager
             team.PPL[2] = ppl3;
             team.PPL[3] = ppl4;
 
-            Methods.Add(team);              // Overwrite the currently selected team (only changing the powerplay)
+            Methods.Add(Methods.GetCurrentYear(), JsonConvert.SerializeObject(team));              // Overwrite the currently selected team (only changing the powerplay)
         }
 
         //------------------------------------------------------------------------------------------------------------------------------------

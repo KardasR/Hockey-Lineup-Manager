@@ -106,15 +106,137 @@ namespace Hockey_Lineup_Manager
         }
 
         /// <summary>
+        /// Show user AHL Team lineups
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AHLbtn_Click(object sender, EventArgs e)
+        {
+            AHLform ahlform = new AHLform();
+            Methods.SetCurrent(TeamYearlb.SelectedItem.ToString());
+            ahlform.Show();
+        }
+
+        /// <summary>
+        /// Load user lines from Roster folder in root project folder
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LoadLinesbtn_Click(object sender, EventArgs e)
+        {
+            string nhlTeamName = TeamNametb.Text;
+            string fileContent = File.ReadAllText(Path.Combine("..\\..\\Rosters\\", (nhlTeamName + ".txt")));
+            Dictionary<string, NHLTeam> org = JsonConvert.DeserializeObject<Dictionary<string, NHLTeam>>(fileContent);
+
+            // Find the team of the selected year
+            string selYr = TeamYearlb.SelectedItem.ToString();
+
+
+            // Iterate over each key to populate the year listbox and team dictionary
+            foreach (var item in org)
+            {
+                // Check if year is not already in the year listbox before adding
+                if (TeamYearlb.FindString(item.Key) == ListBox.NoMatches)
+                    TeamYearlb.Items.Add(item.Key);
+
+                // Check if year is not already in the dictionary before adding the team
+                if (!Methods.SetCurrent(item.Key))
+                    Methods.Add(item.Key, JsonConvert.SerializeObject(item.Value));
+            }
+
+            // Load in the team for the selected year
+            Methods.SetCurrent(selYr);
+            NHLTeam team = JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent());
+
+            TeamNametb.Text = team.Name;
+
+            NHLrb.Checked = team.League ? true : false;
+            AHLrb.Checked = team.League ? false : true;
+
+            Recordtb.Text = team.Record;
+            Playofftb.Text = team.Playoff;
+
+            // Load Goalies
+            G1tb.Text = team.goalies.Starter.Name.ToString();
+            G1OVRtb.Text = team.goalies.Starter.Overall.ToString();
+            G2tb.Text = team.goalies.Backup.Name.ToString();
+            G2OVRtb.Text = team.goalies.Backup.Overall.ToString();
+
+            // Go through each line
+            foreach (EvenStrengthLines line in team.ESL)
+            {
+                int unit = line.Line;
+                switch (unit)
+                {
+                    case 1:                                                     // First Line / First Pair
+                        LW1tb.Text = line.LeftWing.Name.ToString();
+                        LW1OVRtb.Text = line.LeftWing.Overall.ToString();
+                        C1tb.Text = line.Center.Name.ToString();
+                        C1OVRtb.Text = line.Center.Overall.ToString();
+                        RW1tb.Text = line.RightWing.Name.ToString();
+                        RW1OVRtb.Text = line.RightWing.Overall.ToString();
+                        LD1tb.Text = line.LeftDefence.Name.ToString();
+                        LD1OVRtb.Text = line.LeftDefence.Overall.ToString();
+                        RD1tb.Text = line.RightDefence.Name.ToString();
+                        RD1OVRtb.Text = line.RightDefence.Overall.ToString();
+                        break;
+                    case 2:                                                     // Second Line / Second Pair
+                        LW2tb.Text = line.LeftWing.Name.ToString();
+                        LW2OVRtb.Text = line.LeftWing.Overall.ToString();
+                        C2tb.Text = line.Center.Name.ToString();
+                        C2OVRtb.Text = line.Center.Overall.ToString();
+                        RW2tb.Text = line.RightWing.Name.ToString();
+                        RW2OVRtb.Text = line.RightWing.Overall.ToString();
+                        LD2tb.Text = line.LeftDefence.Name.ToString();
+                        LD2OVRtb.Text = line.LeftDefence.Overall.ToString();
+                        RD2tb.Text = line.RightDefence.Name.ToString();
+                        RD2OVRtb.Text = line.RightDefence.Overall.ToString();
+                        break;
+                    case 3:                                                     // Third Line / Third Pair
+                        LW3tb.Text = line.LeftWing.Name.ToString();
+                        LW3OVRtb.Text = line.LeftWing.Overall.ToString();
+                        C3tb.Text = line.Center.Name.ToString();
+                        C3OVRtb.Text = line.Center.Overall.ToString();
+                        RW3tb.Text = line.RightWing.Name.ToString();
+                        RW3OVRtb.Text = line.RightWing.Overall.ToString();
+                        LD3tb.Text = line.LeftDefence.Name.ToString();
+                        LD3OVRtb.Text = line.LeftDefence.Overall.ToString();
+                        RD3tb.Text = line.RightDefence.Name.ToString();
+                        RD3OVRtb.Text = line.RightDefence.Overall.ToString();
+                        break;
+                    case 4:                                                     // Fourth Line
+                        LW4tb.Text = line.LeftWing.Name.ToString();
+                        LW4OVRtb.Text = line.LeftWing.Overall.ToString();
+                        C4tb.Text = line.Center.Name.ToString();
+                        C4OVRtb.Text = line.Center.Overall.ToString();
+                        RW4tb.Text = line.RightWing.Name.ToString();
+                        RW4OVRtb.Text = line.RightWing.Overall.ToString();
+                        break;
+                    case 5:                                                     // Scratched
+                        LW5tb.Text = line.LeftWing.Name.ToString();
+                        LW5OVRtb.Text = line.LeftWing.Overall.ToString();
+                        C5tb.Text = line.Center.Name.ToString();
+                        C5OVRtb.Text = line.Center.Overall.ToString();
+                        RW5tb.Text = line.RightWing.Name.ToString();
+                        RW5OVRtb.Text = line.RightWing.Overall.ToString();
+                        LD4tb.Text = line.LeftDefence.Name.ToString();
+                        LD4OVRtb.Text = line.LeftDefence.Overall.ToString();
+                        RD4tb.Text = line.RightDefence.Name.ToString();
+                        RD4OVRtb.Text = line.RightDefence.Overall.ToString();
+                        break;
+                }
+            }
+        }
+
+        /// <summary>
         /// Save user lines to Roster folder in root project folder
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void SaveLinesbtn_Click(object sender, EventArgs e)
         {
-            Team team = (Methods.SelectCurrent() != null) ? Methods.SelectCurrent() : new Team();
+            NHLTeam team = (Methods.SelectCurrent() != null) ? JsonConvert.DeserializeObject < NHLTeam > (Methods.SelectCurrent()) : new NHLTeam();
             team.Name = TeamNametb.Text;
-            team.Year = TeamYearlb.SelectedItem.ToString();
             team.League = NHLrb.Checked ? true : false;
             team.Record = Recordtb.Text.ToString();
             team.Playoff = Playofftb.Text.ToString();
@@ -324,107 +446,14 @@ namespace Hockey_Lineup_Manager
             team.ESL[4] = scratched;
             team.goalies = goalies;
 
-            Methods.Add(team);
-            Methods.SetCurrent(team.Year);
+            Methods.Add(TeamYearlb.SelectedItem.ToString(), JsonConvert.SerializeObject(team));
+            Methods.SetCurrent(TeamYearlb.SelectedItem.ToString());
 
             // Save the setup
             using (StreamWriter file = File.CreateText(Path.Combine("..\\..\\Rosters\\", (team.Name + ".txt"))))
             {
                 JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, team);
-            }
-        }
-
-        /// <summary>
-        /// Load user lines from Roster folder in root project folder
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void LoadLinesbtn_Click(object sender, EventArgs e)
-        {
-            string teamName = TeamNametb.Text;
-            string fileContent = File.ReadAllText(Path.Combine("..\\..\\Rosters\\", (teamName + ".txt")));
-            Team team = JsonConvert.DeserializeObject<Team>(fileContent);
-            Methods.Add(team);
-            Methods.SetCurrent(team.Year);
-
-            TeamNametb.Text = team.Name;
-
-            NHLrb.Checked = team.League ? true : false;
-            AHLrb.Checked = team.League ? false : true;
-
-            Recordtb.Text = team.Record;
-            Playofftb.Text = team.Playoff;
-
-            // Load Goalies
-            G1tb.Text = team.goalies.Starter.Name.ToString();
-            G1OVRtb.Text = team.goalies.Starter.Overall.ToString();
-            G2tb.Text = team.goalies.Backup.Name.ToString();
-            G2OVRtb.Text = team.goalies.Backup.Overall.ToString();
-
-            // Go through each line
-            foreach (EvenStrengthLines line in team.ESL)
-            {
-                int unit = line.Line;
-                switch (unit)
-                {
-                    case 1:                                                     // First Line / First Pair
-                        LW1tb.Text = line.LeftWing.Name.ToString();
-                        LW1OVRtb.Text = line.LeftWing.Overall.ToString();
-                        C1tb.Text = line.Center.Name.ToString();
-                        C1OVRtb.Text = line.Center.Overall.ToString();
-                        RW1tb.Text = line.RightWing.Name.ToString();
-                        RW1OVRtb.Text = line.RightWing.Overall.ToString();
-                        LD1tb.Text = line.LeftDefence.Name.ToString();
-                        LD1OVRtb.Text = line.LeftDefence.Overall.ToString();
-                        RD1tb.Text = line.RightDefence.Name.ToString();
-                        RD1OVRtb.Text = line.RightDefence.Overall.ToString();
-                        break;
-                    case 2:                                                     // Second Line / Second Pair
-                        LW2tb.Text = line.LeftWing.Name.ToString();
-                        LW2OVRtb.Text = line.LeftWing.Overall.ToString();
-                        C2tb.Text = line.Center.Name.ToString();
-                        C2OVRtb.Text = line.Center.Overall.ToString();
-                        RW2tb.Text = line.RightWing.Name.ToString();
-                        RW2OVRtb.Text = line.RightWing.Overall.ToString();
-                        LD2tb.Text = line.LeftDefence.Name.ToString();
-                        LD2OVRtb.Text = line.LeftDefence.Overall.ToString();
-                        RD2tb.Text = line.RightDefence.Name.ToString();
-                        RD2OVRtb.Text = line.RightDefence.Overall.ToString();
-                        break;
-                    case 3:                                                     // Third Line / Third Pair
-                        LW3tb.Text = line.LeftWing.Name.ToString();
-                        LW3OVRtb.Text = line.LeftWing.Overall.ToString();
-                        C3tb.Text = line.Center.Name.ToString();
-                        C3OVRtb.Text = line.Center.Overall.ToString();
-                        RW3tb.Text = line.RightWing.Name.ToString();
-                        RW3OVRtb.Text = line.RightWing.Overall.ToString();
-                        LD3tb.Text = line.LeftDefence.Name.ToString();
-                        LD3OVRtb.Text = line.LeftDefence.Overall.ToString();
-                        RD3tb.Text = line.RightDefence.Name.ToString();
-                        RD3OVRtb.Text = line.RightDefence.Overall.ToString();
-                        break;
-                    case 4:                                                     // Fourth Line
-                        LW4tb.Text = line.LeftWing.Name.ToString();
-                        LW4OVRtb.Text = line.LeftWing.Overall.ToString();
-                        C4tb.Text = line.Center.Name.ToString();
-                        C4OVRtb.Text = line.Center.Overall.ToString();
-                        RW4tb.Text = line.RightWing.Name.ToString();
-                        RW4OVRtb.Text = line.RightWing.Overall.ToString();
-                        break;
-                    case 5:                                                     // Scratched
-                        LW5tb.Text = line.LeftWing.Name.ToString();
-                        LW5OVRtb.Text = line.LeftWing.Overall.ToString();
-                        C5tb.Text = line.Center.Name.ToString();
-                        C5OVRtb.Text = line.Center.Overall.ToString();
-                        RW5tb.Text = line.RightWing.Name.ToString();
-                        RW5OVRtb.Text = line.RightWing.Overall.ToString();
-                        LD4tb.Text = line.LeftDefence.Name.ToString();
-                        LD4OVRtb.Text = line.LeftDefence.Overall.ToString();
-                        RD4tb.Text = line.RightDefence.Name.ToString();
-                        RD4OVRtb.Text = line.RightDefence.Overall.ToString();
-                        break;
-                }
+                serializer.Serialize(file, Methods.GiveHistory());
             }
         }
 
@@ -879,19 +908,29 @@ namespace Hockey_Lineup_Manager
         public int Overall;                     // Overall of player
         public string Potential;                // Potential of player
     }
-    public class Team
+    [Serializable]
+    public class NHLTeam
     {
-        public string           Name;           // Name of team 
-        public string           Year;           // Year of team
-        public bool             League;         // Which league the team is in (1 = NHL, 0 = AHL)
-        public string           Record;         // Record of the team
-        public string           Playoff;        // How far the team made it in the playoffs and who eliminated them
-        public EvenStrengthLines[] ESL = new EvenStrengthLines[5];
-        public PowerPlayLines[] PPL = new PowerPlayLines[4];
-        public PenaltyKillLines[] PKL = new PenaltyKillLines[4];
-        public FourOnFourLines[] FFL = new FourOnFourLines[3];
-        public ThreeOnThreeLines[] TTL = new ThreeOnThreeLines[3];
+        public string               Name;           // Name of team 
+        public bool                 League;         // Which league the team is in (1 = NHL, 0 = AHL)
+        public string               Record;         // Record of the team
+        public string               Playoff;        // How far the team made it in the playoffs and who eliminated them
+        public EvenStrengthLines[]  ESL = new EvenStrengthLines[5];
+        public PowerPlayLines[]     PPL = new PowerPlayLines[4];
+        public PenaltyKillLines[]   PKL = new PenaltyKillLines[4];
+        public FourOnFourLines[]    FFL = new FourOnFourLines[3];
+        public ThreeOnThreeLines[]  TTL = new ThreeOnThreeLines[3];
         public ShootoutExtraAttacker SOEA;
+        public Goalies              goalies;
+        public AHLTeam              AHLLines;
+    }
+    public class AHLTeam
+    {
+        public string Name;
+        public bool League;
+        public string Record;
+        public string Playoff;
+        public EvenStrengthLines[] ESL = new EvenStrengthLines[5];
         public Goalies goalies;
     }
     public class EvenStrengthLines
@@ -949,5 +988,6 @@ namespace Hockey_Lineup_Manager
     {
         public Player Starter;
         public Player Backup;
+        public Player ThirdString;
     }
 }

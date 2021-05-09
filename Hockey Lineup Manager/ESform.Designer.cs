@@ -122,6 +122,7 @@ namespace Hockey_Lineup_Manager
             this.label27 = new System.Windows.Forms.Label();
             this.Recordtb = new System.Windows.Forms.MaskedTextBox();
             this.Playofftb = new System.Windows.Forms.TextBox();
+            this.AHLbtn = new System.Windows.Forms.Button();
             this.Leaguegb.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -702,6 +703,7 @@ namespace Hockey_Lineup_Manager
             this.NHLrb.Name = "NHLrb";
             this.NHLrb.Size = new System.Drawing.Size(47, 17);
             this.NHLrb.TabIndex = 0;
+            this.NHLrb.TabStop = true;
             this.NHLrb.Text = "NHL";
             this.NHLrb.UseVisualStyleBackColor = true;
             // 
@@ -1003,7 +1005,7 @@ namespace Hockey_Lineup_Manager
             // FFbtn
             // 
             this.FFbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FFbtn.Location = new System.Drawing.Point(659, 213);
+            this.FFbtn.Location = new System.Drawing.Point(659, 214);
             this.FFbtn.Name = "FFbtn";
             this.FFbtn.Size = new System.Drawing.Size(129, 31);
             this.FFbtn.TabIndex = 53;
@@ -1014,7 +1016,7 @@ namespace Hockey_Lineup_Manager
             // TTbtn
             // 
             this.TTbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TTbtn.Location = new System.Drawing.Point(659, 260);
+            this.TTbtn.Location = new System.Drawing.Point(659, 261);
             this.TTbtn.Name = "TTbtn";
             this.TTbtn.Size = new System.Drawing.Size(129, 31);
             this.TTbtn.TabIndex = 54;
@@ -1025,7 +1027,7 @@ namespace Hockey_Lineup_Manager
             // SOEAbtn
             // 
             this.SOEAbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SOEAbtn.Location = new System.Drawing.Point(659, 307);
+            this.SOEAbtn.Location = new System.Drawing.Point(659, 308);
             this.SOEAbtn.Name = "SOEAbtn";
             this.SOEAbtn.Size = new System.Drawing.Size(129, 31);
             this.SOEAbtn.TabIndex = 55;
@@ -1059,11 +1061,23 @@ namespace Hockey_Lineup_Manager
             this.Playofftb.Size = new System.Drawing.Size(129, 63);
             this.Playofftb.TabIndex = 60;
             // 
+            // AHLbtn
+            // 
+            this.AHLbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AHLbtn.Location = new System.Drawing.Point(659, 355);
+            this.AHLbtn.Name = "AHLbtn";
+            this.AHLbtn.Size = new System.Drawing.Size(129, 31);
+            this.AHLbtn.TabIndex = 65;
+            this.AHLbtn.Text = "AHL Team";
+            this.AHLbtn.UseVisualStyleBackColor = true;
+            this.AHLbtn.Click += new System.EventHandler(this.AHLbtn_Click);
+            // 
             // ESform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 750);
+            this.Controls.Add(this.AHLbtn);
             this.Controls.Add(this.Playofftb);
             this.Controls.Add(this.Recordtb);
             this.Controls.Add(this.label27);
@@ -1262,6 +1276,7 @@ namespace Hockey_Lineup_Manager
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.MaskedTextBox Recordtb;
         private System.Windows.Forms.TextBox Playofftb;
+        private System.Windows.Forms.Button AHLbtn;
     }
 }
 

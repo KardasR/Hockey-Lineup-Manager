@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,8 +31,8 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void LoadLinesbtn_Click(object sender, EventArgs e)
         {
-            Team team = Methods.SelectCurrent();        // Copy the currently selected team to gain access to the four on four
-
+            NHLTeam team = JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent());        // Copy the currently selected team to gain access to the four on four
+            
             // Go through each four on four unit
             foreach (FourOnFourLines unit in team.FFL)
             {
@@ -67,7 +68,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void SaveLinesbtn_Click(object sender, EventArgs e)
         {
-            Team team = Methods.SelectCurrent();            // Copy the currently selected team
+            NHLTeam team = JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent());        // Copy the currently selected team to gain access to the four on four
 
             //--------------------------------------------  1st Unit  --------------------------------------------
             FourOnFourLines ff1 = new FourOnFourLines();
@@ -97,7 +98,7 @@ namespace Hockey_Lineup_Manager
             team.FFL[1] = ff2;
             team.FFL[2] = ff3;
 
-            Methods.Add(team);
+            Methods.Add(Methods.GetCurrentYear(), JsonConvert.SerializeObject(team));
         }
 
         //------------------------------------------------------------------------------------------------------------------------------------

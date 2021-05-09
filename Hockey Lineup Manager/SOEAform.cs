@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,7 +31,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void LoadLinesbtn_Click(object sender, EventArgs e)
         {
-            Team team = Methods.SelectCurrent();            // Copy the currently selected team
+            NHLTeam team = JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent());            // Copy the currently selected team
 
             // Go through each extra attacker then the shootout lineup
             EA1tb.Text = team.SOEA.ExtraA1;
@@ -50,7 +51,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void SaveLinesbtn_Click(object sender, EventArgs e)
         {
-            Team team = Methods.SelectCurrent();                // Copy the currently selected team
+            NHLTeam team = JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent());                // Copy the currently selected team
 
             // Go through the extra attackers then the shootout lineup
             ShootoutExtraAttacker soea = new ShootoutExtraAttacker();
@@ -65,7 +66,7 @@ namespace Hockey_Lineup_Manager
 
             team.SOEA = soea;
 
-            Methods.Add(team);
+            Methods.Add(Methods.GetCurrentYear(), JsonConvert.SerializeObject(team));
         }
 
         //------------------------------------------------------------------------------------------------------------------------------------

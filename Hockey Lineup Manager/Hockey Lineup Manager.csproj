@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AHLform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AHLform.Designer.cs">
+      <DependentUpon>AHLform.cs</DependentUpon>
+    </Compile>
     <Compile Include="FFform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     <Compile Include="TTform.Designer.cs">
       <DependentUpon>TTform.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AHLform.resx">
+      <DependentUpon>AHLform.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FFform.resx">
       <DependentUpon>FFform.cs</DependentUpon>
     </EmbeddedResource>

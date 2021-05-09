@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,7 +31,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void LoadLinesbtn_Click(object sender, EventArgs e)
         {
-            Team team = Methods.SelectCurrent();        // Copy the currently selected team to gain access to the penalty kill
+            NHLTeam team = JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent());        // Copy the currently selected team to gain access to the penalty kill
 
             // Go through each penalty killing unit
             foreach (PenaltyKillLines unit in team.PKL)
@@ -71,7 +72,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void SaveLinesbtn_Click(object sender, EventArgs e)
         {
-            Team team = Methods.SelectCurrent();        // Copy the currently selected team
+            NHLTeam team = JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent());        // Copy the currently selected team
 
             //--------------------------------------------  1st Unit  --------------------------------------------
             PenaltyKillLines pkl1 = new PenaltyKillLines();
@@ -108,7 +109,7 @@ namespace Hockey_Lineup_Manager
             team.PKL[2] = pkl3;
             team.PKL[3] = pkl4;
 
-            Methods.Add(team);          // Overwrite the currently selected team (only changing the penalty kill)
+            Methods.Add(Methods.GetCurrentYear(), JsonConvert.SerializeObject(team));          // Overwrite the currently selected team (only changing the penalty kill)
         }
 
         //------------------------------------------------------------------------------------------------------------------------------------

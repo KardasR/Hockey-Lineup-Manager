@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,7 +31,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void LoadLinesbtn_Click(object sender, EventArgs e)
         {
-            Team team = Methods.SelectCurrent();        // Copy the currently selected team
+            NHLTeam team = JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent());        // Copy the currently selected team
 
             // Go through each powerplay unit
             foreach (ThreeOnThreeLines unit in team.TTL)
@@ -64,7 +65,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void SaveLinesbtn_Click(object sender, EventArgs e)
         {
-            Team team = Methods.SelectCurrent();            // Copy the currently selected team
+            NHLTeam team = JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent());            // Copy the currently selected team
 
             //--------------------------------------------  1st Unit  --------------------------------------------
             ThreeOnThreeLines ttl1 = new ThreeOnThreeLines();
@@ -91,7 +92,7 @@ namespace Hockey_Lineup_Manager
             team.TTL[1] = ttl2;
             team.TTL[2] = ttl3;
 
-            Methods.Add(team);              // Overwrite the currently selected team (only changing the three on three)
+            Methods.Add(Methods.GetCurrentYear(), JsonConvert.SerializeObject(team));              // Overwrite the currently selected team (only changing the three on three)
         }
 
         //------------------------------------------------------------------------------------------------------------------------------------
