@@ -129,7 +129,7 @@ namespace Hockey_Lineup_Manager
             // LW1tb
             // 
             this.LW1tb.AllowDrop = true;
-            this.LW1tb.Location = new System.Drawing.Point(76, 127);
+            this.LW1tb.Location = new System.Drawing.Point(44, 127);
             this.LW1tb.Name = "LW1tb";
             this.LW1tb.Size = new System.Drawing.Size(100, 20);
             this.LW1tb.TabIndex = 1;
@@ -140,7 +140,7 @@ namespace Hockey_Lineup_Manager
             // C1tb
             // 
             this.C1tb.AllowDrop = true;
-            this.C1tb.Location = new System.Drawing.Point(258, 127);
+            this.C1tb.Location = new System.Drawing.Point(226, 127);
             this.C1tb.Name = "C1tb";
             this.C1tb.Size = new System.Drawing.Size(100, 20);
             this.C1tb.TabIndex = 3;
@@ -152,7 +152,7 @@ namespace Hockey_Lineup_Manager
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(46, 130);
+            this.label1.Location = new System.Drawing.Point(14, 130);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 13);
             this.label1.TabIndex = 2;
@@ -161,7 +161,7 @@ namespace Hockey_Lineup_Manager
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(238, 130);
+            this.label2.Location = new System.Drawing.Point(206, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(14, 13);
             this.label2.TabIndex = 3;
@@ -170,7 +170,7 @@ namespace Hockey_Lineup_Manager
             // RW1tb
             // 
             this.RW1tb.AllowDrop = true;
-            this.RW1tb.Location = new System.Drawing.Point(438, 127);
+            this.RW1tb.Location = new System.Drawing.Point(406, 127);
             this.RW1tb.Name = "RW1tb";
             this.RW1tb.Size = new System.Drawing.Size(100, 20);
             this.RW1tb.TabIndex = 5;
@@ -181,7 +181,7 @@ namespace Hockey_Lineup_Manager
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(406, 130);
+            this.label3.Location = new System.Drawing.Point(374, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 5;
@@ -190,7 +190,7 @@ namespace Hockey_Lineup_Manager
             // C2tb
             // 
             this.C2tb.AllowDrop = true;
-            this.C2tb.Location = new System.Drawing.Point(258, 182);
+            this.C2tb.Location = new System.Drawing.Point(226, 182);
             this.C2tb.Name = "C2tb";
             this.C2tb.Size = new System.Drawing.Size(100, 20);
             this.C2tb.TabIndex = 9;
@@ -201,7 +201,7 @@ namespace Hockey_Lineup_Manager
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(238, 185);
+            this.label4.Location = new System.Drawing.Point(206, 185);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(14, 13);
             this.label4.TabIndex = 8;
@@ -210,7 +210,7 @@ namespace Hockey_Lineup_Manager
             // RW2tb
             // 
             this.RW2tb.AllowDrop = true;
-            this.RW2tb.Location = new System.Drawing.Point(438, 182);
+            this.RW2tb.Location = new System.Drawing.Point(406, 182);
             this.RW2tb.Name = "RW2tb";
             this.RW2tb.Size = new System.Drawing.Size(100, 20);
             this.RW2tb.TabIndex = 11;
@@ -221,7 +221,7 @@ namespace Hockey_Lineup_Manager
             // LW2tb
             // 
             this.LW2tb.AllowDrop = true;
-            this.LW2tb.Location = new System.Drawing.Point(76, 182);
+            this.LW2tb.Location = new System.Drawing.Point(44, 182);
             this.LW2tb.Name = "LW2tb";
             this.LW2tb.Size = new System.Drawing.Size(100, 20);
             this.LW2tb.TabIndex = 7;
@@ -233,7 +233,7 @@ namespace Hockey_Lineup_Manager
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(46, 185);
+            this.label5.Location = new System.Drawing.Point(14, 185);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(24, 13);
             this.label5.TabIndex = 11;
@@ -242,7 +242,7 @@ namespace Hockey_Lineup_Manager
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(406, 185);
+            this.label6.Location = new System.Drawing.Point(374, 185);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 13);
             this.label6.TabIndex = 12;
@@ -251,7 +251,7 @@ namespace Hockey_Lineup_Manager
             // C4tb
             // 
             this.C4tb.AllowDrop = true;
-            this.C4tb.Location = new System.Drawing.Point(258, 292);
+            this.C4tb.Location = new System.Drawing.Point(226, 292);
             this.C4tb.Name = "C4tb";
             this.C4tb.Size = new System.Drawing.Size(100, 20);
             this.C4tb.TabIndex = 21;
@@ -262,7 +262,7 @@ namespace Hockey_Lineup_Manager
             // C3tb
             // 
             this.C3tb.AllowDrop = true;
-            this.C3tb.Location = new System.Drawing.Point(258, 237);
+            this.C3tb.Location = new System.Drawing.Point(226, 237);
             this.C3tb.Name = "C3tb";
             this.C3tb.Size = new System.Drawing.Size(100, 20);
             this.C3tb.TabIndex = 15;
@@ -273,7 +273,7 @@ namespace Hockey_Lineup_Manager
             // LW3tb
             // 
             this.LW3tb.AllowDrop = true;
-            this.LW3tb.Location = new System.Drawing.Point(76, 237);
+            this.LW3tb.Location = new System.Drawing.Point(44, 237);
             this.LW3tb.Name = "LW3tb";
             this.LW3tb.Size = new System.Drawing.Size(100, 20);
             this.LW3tb.TabIndex = 13;
@@ -284,7 +284,7 @@ namespace Hockey_Lineup_Manager
             // LW4tb
             // 
             this.LW4tb.AllowDrop = true;
-            this.LW4tb.Location = new System.Drawing.Point(76, 292);
+            this.LW4tb.Location = new System.Drawing.Point(44, 292);
             this.LW4tb.Name = "LW4tb";
             this.LW4tb.Size = new System.Drawing.Size(100, 20);
             this.LW4tb.TabIndex = 19;
@@ -295,7 +295,7 @@ namespace Hockey_Lineup_Manager
             // RW3tb
             // 
             this.RW3tb.AllowDrop = true;
-            this.RW3tb.Location = new System.Drawing.Point(438, 237);
+            this.RW3tb.Location = new System.Drawing.Point(406, 237);
             this.RW3tb.Name = "RW3tb";
             this.RW3tb.Size = new System.Drawing.Size(100, 20);
             this.RW3tb.TabIndex = 17;
@@ -306,7 +306,7 @@ namespace Hockey_Lineup_Manager
             // RW4tb
             // 
             this.RW4tb.AllowDrop = true;
-            this.RW4tb.Location = new System.Drawing.Point(438, 292);
+            this.RW4tb.Location = new System.Drawing.Point(406, 292);
             this.RW4tb.Name = "RW4tb";
             this.RW4tb.Size = new System.Drawing.Size(100, 20);
             this.RW4tb.TabIndex = 23;
@@ -317,7 +317,7 @@ namespace Hockey_Lineup_Manager
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(406, 240);
+            this.label7.Location = new System.Drawing.Point(374, 240);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(26, 13);
             this.label7.TabIndex = 19;
@@ -326,7 +326,7 @@ namespace Hockey_Lineup_Manager
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(406, 295);
+            this.label8.Location = new System.Drawing.Point(374, 295);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(26, 13);
             this.label8.TabIndex = 20;
@@ -335,7 +335,7 @@ namespace Hockey_Lineup_Manager
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(238, 240);
+            this.label9.Location = new System.Drawing.Point(206, 240);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(14, 13);
             this.label9.TabIndex = 21;
@@ -344,7 +344,7 @@ namespace Hockey_Lineup_Manager
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(238, 295);
+            this.label10.Location = new System.Drawing.Point(206, 295);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(14, 13);
             this.label10.TabIndex = 22;
@@ -354,7 +354,7 @@ namespace Hockey_Lineup_Manager
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(46, 240);
+            this.label11.Location = new System.Drawing.Point(14, 240);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(24, 13);
             this.label11.TabIndex = 23;
@@ -364,7 +364,7 @@ namespace Hockey_Lineup_Manager
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(46, 295);
+            this.label12.Location = new System.Drawing.Point(14, 295);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(24, 13);
             this.label12.TabIndex = 24;
@@ -373,7 +373,7 @@ namespace Hockey_Lineup_Manager
             // LD1tb
             // 
             this.LD1tb.AllowDrop = true;
-            this.LD1tb.Location = new System.Drawing.Point(152, 430);
+            this.LD1tb.Location = new System.Drawing.Point(120, 420);
             this.LD1tb.Name = "LD1tb";
             this.LD1tb.Size = new System.Drawing.Size(100, 20);
             this.LD1tb.TabIndex = 31;
@@ -384,7 +384,7 @@ namespace Hockey_Lineup_Manager
             // RD1tb
             // 
             this.RD1tb.AllowDrop = true;
-            this.RD1tb.Location = new System.Drawing.Point(365, 430);
+            this.RD1tb.Location = new System.Drawing.Point(333, 420);
             this.RD1tb.Name = "RD1tb";
             this.RD1tb.Size = new System.Drawing.Size(100, 20);
             this.RD1tb.TabIndex = 33;
@@ -395,7 +395,7 @@ namespace Hockey_Lineup_Manager
             // LD2tb
             // 
             this.LD2tb.AllowDrop = true;
-            this.LD2tb.Location = new System.Drawing.Point(152, 483);
+            this.LD2tb.Location = new System.Drawing.Point(120, 473);
             this.LD2tb.Name = "LD2tb";
             this.LD2tb.Size = new System.Drawing.Size(100, 20);
             this.LD2tb.TabIndex = 35;
@@ -406,7 +406,7 @@ namespace Hockey_Lineup_Manager
             // RD2tb
             // 
             this.RD2tb.AllowDrop = true;
-            this.RD2tb.Location = new System.Drawing.Point(365, 483);
+            this.RD2tb.Location = new System.Drawing.Point(333, 473);
             this.RD2tb.Name = "RD2tb";
             this.RD2tb.Size = new System.Drawing.Size(100, 20);
             this.RD2tb.TabIndex = 37;
@@ -417,7 +417,7 @@ namespace Hockey_Lineup_Manager
             // LD3tb
             // 
             this.LD3tb.AllowDrop = true;
-            this.LD3tb.Location = new System.Drawing.Point(152, 536);
+            this.LD3tb.Location = new System.Drawing.Point(120, 526);
             this.LD3tb.Name = "LD3tb";
             this.LD3tb.Size = new System.Drawing.Size(100, 20);
             this.LD3tb.TabIndex = 39;
@@ -428,7 +428,7 @@ namespace Hockey_Lineup_Manager
             // RD3tb
             // 
             this.RD3tb.AllowDrop = true;
-            this.RD3tb.Location = new System.Drawing.Point(365, 536);
+            this.RD3tb.Location = new System.Drawing.Point(333, 526);
             this.RD3tb.Name = "RD3tb";
             this.RD3tb.Size = new System.Drawing.Size(100, 20);
             this.RD3tb.TabIndex = 41;
@@ -439,7 +439,7 @@ namespace Hockey_Lineup_Manager
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(125, 433);
+            this.label13.Location = new System.Drawing.Point(93, 423);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(21, 13);
             this.label13.TabIndex = 33;
@@ -448,7 +448,7 @@ namespace Hockey_Lineup_Manager
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(125, 486);
+            this.label14.Location = new System.Drawing.Point(93, 476);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(21, 13);
             this.label14.TabIndex = 34;
@@ -457,7 +457,7 @@ namespace Hockey_Lineup_Manager
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(125, 539);
+            this.label15.Location = new System.Drawing.Point(93, 529);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(21, 13);
             this.label15.TabIndex = 35;
@@ -466,7 +466,7 @@ namespace Hockey_Lineup_Manager
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(336, 433);
+            this.label16.Location = new System.Drawing.Point(304, 423);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(23, 13);
             this.label16.TabIndex = 36;
@@ -475,7 +475,7 @@ namespace Hockey_Lineup_Manager
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(336, 486);
+            this.label17.Location = new System.Drawing.Point(304, 476);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(23, 13);
             this.label17.TabIndex = 37;
@@ -484,7 +484,7 @@ namespace Hockey_Lineup_Manager
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(336, 539);
+            this.label18.Location = new System.Drawing.Point(304, 529);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(23, 13);
             this.label18.TabIndex = 38;
@@ -493,7 +493,7 @@ namespace Hockey_Lineup_Manager
             // G1tb
             // 
             this.G1tb.AllowDrop = true;
-            this.G1tb.Location = new System.Drawing.Point(258, 665);
+            this.G1tb.Location = new System.Drawing.Point(226, 655);
             this.G1tb.Name = "G1tb";
             this.G1tb.Size = new System.Drawing.Size(100, 20);
             this.G1tb.TabIndex = 47;
@@ -504,7 +504,7 @@ namespace Hockey_Lineup_Manager
             // G2tb
             // 
             this.G2tb.AllowDrop = true;
-            this.G2tb.Location = new System.Drawing.Point(258, 718);
+            this.G2tb.Location = new System.Drawing.Point(226, 708);
             this.G2tb.Name = "G2tb";
             this.G2tb.Size = new System.Drawing.Size(100, 20);
             this.G2tb.TabIndex = 49;
@@ -515,7 +515,7 @@ namespace Hockey_Lineup_Manager
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(237, 668);
+            this.label19.Location = new System.Drawing.Point(205, 658);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(15, 13);
             this.label19.TabIndex = 41;
@@ -524,7 +524,7 @@ namespace Hockey_Lineup_Manager
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(237, 721);
+            this.label20.Location = new System.Drawing.Point(205, 711);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(15, 13);
             this.label20.TabIndex = 42;
@@ -534,7 +534,7 @@ namespace Hockey_Lineup_Manager
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(186, 70);
+            this.label21.Location = new System.Drawing.Point(190, 70);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(231, 37);
             this.label21.TabIndex = 43;
@@ -543,7 +543,7 @@ namespace Hockey_Lineup_Manager
             // LD4tb
             // 
             this.LD4tb.AllowDrop = true;
-            this.LD4tb.Location = new System.Drawing.Point(152, 589);
+            this.LD4tb.Location = new System.Drawing.Point(120, 579);
             this.LD4tb.Name = "LD4tb";
             this.LD4tb.Size = new System.Drawing.Size(100, 20);
             this.LD4tb.TabIndex = 43;
@@ -554,7 +554,7 @@ namespace Hockey_Lineup_Manager
             // RD4tb
             // 
             this.RD4tb.AllowDrop = true;
-            this.RD4tb.Location = new System.Drawing.Point(365, 589);
+            this.RD4tb.Location = new System.Drawing.Point(333, 579);
             this.RD4tb.Name = "RD4tb";
             this.RD4tb.Size = new System.Drawing.Size(100, 20);
             this.RD4tb.TabIndex = 45;
@@ -565,7 +565,7 @@ namespace Hockey_Lineup_Manager
             // RW5tb
             // 
             this.RW5tb.AllowDrop = true;
-            this.RW5tb.Location = new System.Drawing.Point(438, 347);
+            this.RW5tb.Location = new System.Drawing.Point(406, 347);
             this.RW5tb.Name = "RW5tb";
             this.RW5tb.Size = new System.Drawing.Size(100, 20);
             this.RW5tb.TabIndex = 29;
@@ -576,7 +576,7 @@ namespace Hockey_Lineup_Manager
             // LW5tb
             // 
             this.LW5tb.AllowDrop = true;
-            this.LW5tb.Location = new System.Drawing.Point(76, 347);
+            this.LW5tb.Location = new System.Drawing.Point(44, 347);
             this.LW5tb.Name = "LW5tb";
             this.LW5tb.Size = new System.Drawing.Size(100, 20);
             this.LW5tb.TabIndex = 25;
@@ -587,7 +587,7 @@ namespace Hockey_Lineup_Manager
             // C5tb
             // 
             this.C5tb.AllowDrop = true;
-            this.C5tb.Location = new System.Drawing.Point(258, 347);
+            this.C5tb.Location = new System.Drawing.Point(226, 347);
             this.C5tb.Name = "C5tb";
             this.C5tb.Size = new System.Drawing.Size(100, 20);
             this.C5tb.TabIndex = 27;
@@ -598,7 +598,7 @@ namespace Hockey_Lineup_Manager
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(125, 592);
+            this.label22.Location = new System.Drawing.Point(93, 582);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(21, 13);
             this.label22.TabIndex = 51;
@@ -607,7 +607,7 @@ namespace Hockey_Lineup_Manager
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(336, 592);
+            this.label23.Location = new System.Drawing.Point(304, 582);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(23, 13);
             this.label23.TabIndex = 52;
@@ -616,7 +616,7 @@ namespace Hockey_Lineup_Manager
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(238, 350);
+            this.label24.Location = new System.Drawing.Point(206, 350);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(14, 13);
             this.label24.TabIndex = 53;
@@ -626,7 +626,7 @@ namespace Hockey_Lineup_Manager
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(46, 350);
+            this.label25.Location = new System.Drawing.Point(14, 350);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(24, 13);
             this.label25.TabIndex = 54;
@@ -635,7 +635,7 @@ namespace Hockey_Lineup_Manager
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(406, 350);
+            this.label26.Location = new System.Drawing.Point(374, 350);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(26, 13);
             this.label26.TabIndex = 55;
@@ -644,7 +644,7 @@ namespace Hockey_Lineup_Manager
             // PPbtn
             // 
             this.PPbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PPbtn.Location = new System.Drawing.Point(659, 120);
+            this.PPbtn.Location = new System.Drawing.Point(557, 130);
             this.PPbtn.Name = "PPbtn";
             this.PPbtn.Size = new System.Drawing.Size(129, 31);
             this.PPbtn.TabIndex = 51;
@@ -655,7 +655,7 @@ namespace Hockey_Lineup_Manager
             // SaveLinesbtn
             // 
             this.SaveLinesbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveLinesbtn.Location = new System.Drawing.Point(679, 526);
+            this.SaveLinesbtn.Location = new System.Drawing.Point(577, 526);
             this.SaveLinesbtn.Name = "SaveLinesbtn";
             this.SaveLinesbtn.Size = new System.Drawing.Size(109, 37);
             this.SaveLinesbtn.TabIndex = 57;
@@ -666,7 +666,7 @@ namespace Hockey_Lineup_Manager
             // LoadLinesbtn
             // 
             this.LoadLinesbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoadLinesbtn.Location = new System.Drawing.Point(679, 481);
+            this.LoadLinesbtn.Location = new System.Drawing.Point(577, 481);
             this.LoadLinesbtn.Name = "LoadLinesbtn";
             this.LoadLinesbtn.Size = new System.Drawing.Size(109, 37);
             this.LoadLinesbtn.TabIndex = 56;
@@ -720,7 +720,7 @@ namespace Hockey_Lineup_Manager
             // AddYearbtn
             // 
             this.AddYearbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddYearbtn.Location = new System.Drawing.Point(679, 572);
+            this.AddYearbtn.Location = new System.Drawing.Point(577, 572);
             this.AddYearbtn.Name = "AddYearbtn";
             this.AddYearbtn.Size = new System.Drawing.Size(109, 37);
             this.AddYearbtn.TabIndex = 58;
@@ -735,7 +735,7 @@ namespace Hockey_Lineup_Manager
             this.TeamYearlb.ItemHeight = 18;
             this.TeamYearlb.Items.AddRange(new object[] {
             "2020-2021"});
-            this.TeamYearlb.Location = new System.Drawing.Point(679, 618);
+            this.TeamYearlb.Location = new System.Drawing.Point(577, 618);
             this.TeamYearlb.Name = "TeamYearlb";
             this.TeamYearlb.Size = new System.Drawing.Size(109, 112);
             this.TeamYearlb.TabIndex = 63;
@@ -745,7 +745,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.LW1OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.LW1OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LW1OVRtb.Location = new System.Drawing.Point(182, 127);
+            this.LW1OVRtb.Location = new System.Drawing.Point(150, 127);
+            this.LW1OVRtb.MaxLength = 2;
             this.LW1OVRtb.Name = "LW1OVRtb";
             this.LW1OVRtb.Size = new System.Drawing.Size(23, 21);
             this.LW1OVRtb.TabIndex = 2;
@@ -755,7 +756,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.C1OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.C1OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C1OVRtb.Location = new System.Drawing.Point(364, 127);
+            this.C1OVRtb.Location = new System.Drawing.Point(332, 127);
+            this.C1OVRtb.MaxLength = 2;
             this.C1OVRtb.Name = "C1OVRtb";
             this.C1OVRtb.Size = new System.Drawing.Size(23, 21);
             this.C1OVRtb.TabIndex = 4;
@@ -765,7 +767,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.RW1OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.RW1OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RW1OVRtb.Location = new System.Drawing.Point(544, 127);
+            this.RW1OVRtb.Location = new System.Drawing.Point(512, 127);
+            this.RW1OVRtb.MaxLength = 2;
             this.RW1OVRtb.Name = "RW1OVRtb";
             this.RW1OVRtb.Size = new System.Drawing.Size(23, 21);
             this.RW1OVRtb.TabIndex = 6;
@@ -775,7 +778,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.LW2OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.LW2OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LW2OVRtb.Location = new System.Drawing.Point(182, 181);
+            this.LW2OVRtb.Location = new System.Drawing.Point(150, 181);
+            this.LW2OVRtb.MaxLength = 2;
             this.LW2OVRtb.Name = "LW2OVRtb";
             this.LW2OVRtb.Size = new System.Drawing.Size(23, 21);
             this.LW2OVRtb.TabIndex = 8;
@@ -785,7 +789,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.LW3OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.LW3OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LW3OVRtb.Location = new System.Drawing.Point(182, 237);
+            this.LW3OVRtb.Location = new System.Drawing.Point(150, 237);
+            this.LW3OVRtb.MaxLength = 2;
             this.LW3OVRtb.Name = "LW3OVRtb";
             this.LW3OVRtb.Size = new System.Drawing.Size(23, 21);
             this.LW3OVRtb.TabIndex = 14;
@@ -795,7 +800,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.LW4OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.LW4OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LW4OVRtb.Location = new System.Drawing.Point(182, 292);
+            this.LW4OVRtb.Location = new System.Drawing.Point(150, 292);
+            this.LW4OVRtb.MaxLength = 2;
             this.LW4OVRtb.Name = "LW4OVRtb";
             this.LW4OVRtb.Size = new System.Drawing.Size(23, 21);
             this.LW4OVRtb.TabIndex = 20;
@@ -805,7 +811,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.LW5OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.LW5OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LW5OVRtb.Location = new System.Drawing.Point(182, 347);
+            this.LW5OVRtb.Location = new System.Drawing.Point(150, 347);
+            this.LW5OVRtb.MaxLength = 2;
             this.LW5OVRtb.Name = "LW5OVRtb";
             this.LW5OVRtb.Size = new System.Drawing.Size(23, 21);
             this.LW5OVRtb.TabIndex = 26;
@@ -815,7 +822,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.C2OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.C2OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C2OVRtb.Location = new System.Drawing.Point(364, 182);
+            this.C2OVRtb.Location = new System.Drawing.Point(332, 182);
+            this.C2OVRtb.MaxLength = 2;
             this.C2OVRtb.Name = "C2OVRtb";
             this.C2OVRtb.Size = new System.Drawing.Size(23, 21);
             this.C2OVRtb.TabIndex = 10;
@@ -825,7 +833,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.C3OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.C3OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C3OVRtb.Location = new System.Drawing.Point(364, 237);
+            this.C3OVRtb.Location = new System.Drawing.Point(332, 237);
+            this.C3OVRtb.MaxLength = 2;
             this.C3OVRtb.Name = "C3OVRtb";
             this.C3OVRtb.Size = new System.Drawing.Size(23, 21);
             this.C3OVRtb.TabIndex = 16;
@@ -835,7 +844,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.C4OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.C4OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C4OVRtb.Location = new System.Drawing.Point(364, 292);
+            this.C4OVRtb.Location = new System.Drawing.Point(332, 292);
+            this.C4OVRtb.MaxLength = 2;
             this.C4OVRtb.Name = "C4OVRtb";
             this.C4OVRtb.Size = new System.Drawing.Size(23, 21);
             this.C4OVRtb.TabIndex = 22;
@@ -845,7 +855,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.C5OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.C5OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C5OVRtb.Location = new System.Drawing.Point(364, 347);
+            this.C5OVRtb.Location = new System.Drawing.Point(332, 347);
+            this.C5OVRtb.MaxLength = 2;
             this.C5OVRtb.Name = "C5OVRtb";
             this.C5OVRtb.Size = new System.Drawing.Size(23, 21);
             this.C5OVRtb.TabIndex = 28;
@@ -855,7 +866,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.RW2OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.RW2OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RW2OVRtb.Location = new System.Drawing.Point(544, 182);
+            this.RW2OVRtb.Location = new System.Drawing.Point(512, 182);
+            this.RW2OVRtb.MaxLength = 2;
             this.RW2OVRtb.Name = "RW2OVRtb";
             this.RW2OVRtb.Size = new System.Drawing.Size(23, 21);
             this.RW2OVRtb.TabIndex = 12;
@@ -865,7 +877,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.RW3OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.RW3OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RW3OVRtb.Location = new System.Drawing.Point(544, 237);
+            this.RW3OVRtb.Location = new System.Drawing.Point(512, 237);
+            this.RW3OVRtb.MaxLength = 2;
             this.RW3OVRtb.Name = "RW3OVRtb";
             this.RW3OVRtb.Size = new System.Drawing.Size(23, 21);
             this.RW3OVRtb.TabIndex = 18;
@@ -875,7 +888,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.RW4OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.RW4OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RW4OVRtb.Location = new System.Drawing.Point(544, 292);
+            this.RW4OVRtb.Location = new System.Drawing.Point(512, 292);
+            this.RW4OVRtb.MaxLength = 2;
             this.RW4OVRtb.Name = "RW4OVRtb";
             this.RW4OVRtb.Size = new System.Drawing.Size(23, 21);
             this.RW4OVRtb.TabIndex = 24;
@@ -885,7 +899,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.RW5OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.RW5OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RW5OVRtb.Location = new System.Drawing.Point(544, 347);
+            this.RW5OVRtb.Location = new System.Drawing.Point(512, 347);
+            this.RW5OVRtb.MaxLength = 2;
             this.RW5OVRtb.Name = "RW5OVRtb";
             this.RW5OVRtb.Size = new System.Drawing.Size(23, 21);
             this.RW5OVRtb.TabIndex = 30;
@@ -895,7 +910,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.LD1OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.LD1OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LD1OVRtb.Location = new System.Drawing.Point(258, 430);
+            this.LD1OVRtb.Location = new System.Drawing.Point(226, 420);
+            this.LD1OVRtb.MaxLength = 2;
             this.LD1OVRtb.Name = "LD1OVRtb";
             this.LD1OVRtb.Size = new System.Drawing.Size(23, 21);
             this.LD1OVRtb.TabIndex = 32;
@@ -905,7 +921,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.LD2OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.LD2OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LD2OVRtb.Location = new System.Drawing.Point(258, 482);
+            this.LD2OVRtb.Location = new System.Drawing.Point(226, 472);
+            this.LD2OVRtb.MaxLength = 2;
             this.LD2OVRtb.Name = "LD2OVRtb";
             this.LD2OVRtb.Size = new System.Drawing.Size(23, 21);
             this.LD2OVRtb.TabIndex = 36;
@@ -915,7 +932,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.LD3OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.LD3OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LD3OVRtb.Location = new System.Drawing.Point(258, 536);
+            this.LD3OVRtb.Location = new System.Drawing.Point(226, 526);
+            this.LD3OVRtb.MaxLength = 2;
             this.LD3OVRtb.Name = "LD3OVRtb";
             this.LD3OVRtb.Size = new System.Drawing.Size(23, 21);
             this.LD3OVRtb.TabIndex = 40;
@@ -925,7 +943,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.LD4OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.LD4OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LD4OVRtb.Location = new System.Drawing.Point(258, 589);
+            this.LD4OVRtb.Location = new System.Drawing.Point(226, 579);
+            this.LD4OVRtb.MaxLength = 2;
             this.LD4OVRtb.Name = "LD4OVRtb";
             this.LD4OVRtb.Size = new System.Drawing.Size(23, 21);
             this.LD4OVRtb.TabIndex = 44;
@@ -935,7 +954,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.RD1OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.RD1OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RD1OVRtb.Location = new System.Drawing.Point(471, 430);
+            this.RD1OVRtb.Location = new System.Drawing.Point(439, 420);
+            this.RD1OVRtb.MaxLength = 2;
             this.RD1OVRtb.Name = "RD1OVRtb";
             this.RD1OVRtb.Size = new System.Drawing.Size(23, 21);
             this.RD1OVRtb.TabIndex = 34;
@@ -945,7 +965,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.RD2OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.RD2OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RD2OVRtb.Location = new System.Drawing.Point(471, 483);
+            this.RD2OVRtb.Location = new System.Drawing.Point(439, 473);
+            this.RD2OVRtb.MaxLength = 2;
             this.RD2OVRtb.Name = "RD2OVRtb";
             this.RD2OVRtb.Size = new System.Drawing.Size(23, 21);
             this.RD2OVRtb.TabIndex = 38;
@@ -955,7 +976,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.RD3OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.RD3OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RD3OVRtb.Location = new System.Drawing.Point(471, 536);
+            this.RD3OVRtb.Location = new System.Drawing.Point(439, 526);
+            this.RD3OVRtb.MaxLength = 2;
             this.RD3OVRtb.Name = "RD3OVRtb";
             this.RD3OVRtb.Size = new System.Drawing.Size(23, 21);
             this.RD3OVRtb.TabIndex = 42;
@@ -965,7 +987,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.RD4OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.RD4OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RD4OVRtb.Location = new System.Drawing.Point(471, 588);
+            this.RD4OVRtb.Location = new System.Drawing.Point(439, 578);
+            this.RD4OVRtb.MaxLength = 2;
             this.RD4OVRtb.Name = "RD4OVRtb";
             this.RD4OVRtb.Size = new System.Drawing.Size(23, 21);
             this.RD4OVRtb.TabIndex = 46;
@@ -975,7 +998,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.G1OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.G1OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.G1OVRtb.Location = new System.Drawing.Point(364, 664);
+            this.G1OVRtb.Location = new System.Drawing.Point(332, 654);
+            this.G1OVRtb.MaxLength = 2;
             this.G1OVRtb.Name = "G1OVRtb";
             this.G1OVRtb.Size = new System.Drawing.Size(23, 21);
             this.G1OVRtb.TabIndex = 48;
@@ -985,7 +1009,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.G2OVRtb.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.G2OVRtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.G2OVRtb.Location = new System.Drawing.Point(364, 717);
+            this.G2OVRtb.Location = new System.Drawing.Point(332, 707);
+            this.G2OVRtb.MaxLength = 2;
             this.G2OVRtb.Name = "G2OVRtb";
             this.G2OVRtb.Size = new System.Drawing.Size(23, 21);
             this.G2OVRtb.TabIndex = 50;
@@ -994,7 +1019,7 @@ namespace Hockey_Lineup_Manager
             // PKbtn
             // 
             this.PKbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PKbtn.Location = new System.Drawing.Point(659, 167);
+            this.PKbtn.Location = new System.Drawing.Point(557, 177);
             this.PKbtn.Name = "PKbtn";
             this.PKbtn.Size = new System.Drawing.Size(129, 31);
             this.PKbtn.TabIndex = 52;
@@ -1005,7 +1030,7 @@ namespace Hockey_Lineup_Manager
             // FFbtn
             // 
             this.FFbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FFbtn.Location = new System.Drawing.Point(659, 214);
+            this.FFbtn.Location = new System.Drawing.Point(557, 224);
             this.FFbtn.Name = "FFbtn";
             this.FFbtn.Size = new System.Drawing.Size(129, 31);
             this.FFbtn.TabIndex = 53;
@@ -1016,7 +1041,7 @@ namespace Hockey_Lineup_Manager
             // TTbtn
             // 
             this.TTbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TTbtn.Location = new System.Drawing.Point(659, 261);
+            this.TTbtn.Location = new System.Drawing.Point(557, 271);
             this.TTbtn.Name = "TTbtn";
             this.TTbtn.Size = new System.Drawing.Size(129, 31);
             this.TTbtn.TabIndex = 54;
@@ -1027,7 +1052,7 @@ namespace Hockey_Lineup_Manager
             // SOEAbtn
             // 
             this.SOEAbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SOEAbtn.Location = new System.Drawing.Point(659, 308);
+            this.SOEAbtn.Location = new System.Drawing.Point(557, 318);
             this.SOEAbtn.Name = "SOEAbtn";
             this.SOEAbtn.Size = new System.Drawing.Size(129, 31);
             this.SOEAbtn.TabIndex = 55;
@@ -1038,7 +1063,7 @@ namespace Hockey_Lineup_Manager
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(665, 21);
+            this.label27.Location = new System.Drawing.Point(563, 21);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(42, 13);
             this.label27.TabIndex = 64;
@@ -1046,7 +1071,7 @@ namespace Hockey_Lineup_Manager
             // 
             // Recordtb
             // 
-            this.Recordtb.Location = new System.Drawing.Point(713, 18);
+            this.Recordtb.Location = new System.Drawing.Point(611, 18);
             this.Recordtb.Mask = "00-00-00";
             this.Recordtb.Name = "Recordtb";
             this.Recordtb.Size = new System.Drawing.Size(59, 20);
@@ -1055,7 +1080,7 @@ namespace Hockey_Lineup_Manager
             // 
             // Playofftb
             // 
-            this.Playofftb.Location = new System.Drawing.Point(659, 44);
+            this.Playofftb.Location = new System.Drawing.Point(557, 44);
             this.Playofftb.Multiline = true;
             this.Playofftb.Name = "Playofftb";
             this.Playofftb.Size = new System.Drawing.Size(129, 63);
@@ -1064,7 +1089,7 @@ namespace Hockey_Lineup_Manager
             // AHLbtn
             // 
             this.AHLbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AHLbtn.Location = new System.Drawing.Point(659, 355);
+            this.AHLbtn.Location = new System.Drawing.Point(557, 365);
             this.AHLbtn.Name = "AHLbtn";
             this.AHLbtn.Size = new System.Drawing.Size(129, 31);
             this.AHLbtn.TabIndex = 65;
@@ -1076,7 +1101,7 @@ namespace Hockey_Lineup_Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 750);
+            this.ClientSize = new System.Drawing.Size(702, 744);
             this.Controls.Add(this.AHLbtn);
             this.Controls.Add(this.Playofftb);
             this.Controls.Add(this.Recordtb);
@@ -1169,8 +1194,8 @@ namespace Hockey_Lineup_Manager
             this.Controls.Add(this.C1tb);
             this.Controls.Add(this.LW1tb);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(820, 790);
-            this.MinimumSize = new System.Drawing.Size(815, 785);
+            this.MaximumSize = new System.Drawing.Size(720, 785);
+            this.MinimumSize = new System.Drawing.Size(715, 780);
             this.Name = "ESform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Even Strength";

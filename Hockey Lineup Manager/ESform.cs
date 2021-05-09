@@ -908,7 +908,6 @@ namespace Hockey_Lineup_Manager
         public int Overall;                     // Overall of player
         public string Potential;                // Potential of player
     }
-    [Serializable]
     public class NHLTeam
     {
         public string               Name;           // Name of team 
