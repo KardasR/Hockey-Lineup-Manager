@@ -64,7 +64,7 @@ namespace Hockey_Lineup_Manager
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(212, 107);
+            this.label13.Location = new System.Drawing.Point(197, 107);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(18, 13);
             this.label13.TabIndex = 87;
@@ -102,7 +102,7 @@ namespace Hockey_Lineup_Manager
             // TTLD1tb
             // 
             this.TTLD1tb.AllowDrop = true;
-            this.TTLD1tb.Location = new System.Drawing.Point(236, 104);
+            this.TTLD1tb.Location = new System.Drawing.Point(221, 104);
             this.TTLD1tb.Name = "TTLD1tb";
             this.TTLD1tb.Size = new System.Drawing.Size(100, 20);
             this.TTLD1tb.TabIndex = 1;
@@ -135,7 +135,7 @@ namespace Hockey_Lineup_Manager
             // TTLD2tb
             // 
             this.TTLD2tb.AllowDrop = true;
-            this.TTLD2tb.Location = new System.Drawing.Point(236, 325);
+            this.TTLD2tb.Location = new System.Drawing.Point(221, 325);
             this.TTLD2tb.Name = "TTLD2tb";
             this.TTLD2tb.Size = new System.Drawing.Size(100, 20);
             this.TTLD2tb.TabIndex = 4;
@@ -198,7 +198,7 @@ namespace Hockey_Lineup_Manager
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(212, 328);
+            this.label3.Location = new System.Drawing.Point(197, 328);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(18, 13);
             this.label3.TabIndex = 102;
@@ -207,7 +207,7 @@ namespace Hockey_Lineup_Manager
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(212, 552);
+            this.label5.Location = new System.Drawing.Point(197, 552);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(18, 13);
             this.label5.TabIndex = 108;
@@ -236,7 +236,7 @@ namespace Hockey_Lineup_Manager
             // TTLD3tb
             // 
             this.TTLD3tb.AllowDrop = true;
-            this.TTLD3tb.Location = new System.Drawing.Point(236, 549);
+            this.TTLD3tb.Location = new System.Drawing.Point(221, 549);
             this.TTLD3tb.Name = "TTLD3tb";
             this.TTLD3tb.Size = new System.Drawing.Size(100, 20);
             this.TTLD3tb.TabIndex = 7;
@@ -268,7 +268,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 665);
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ClientSize = new System.Drawing.Size(339, 660);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TTRD3tb);
@@ -290,7 +291,8 @@ namespace Hockey_Lineup_Manager
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label2);
-            this.MaximumSize = new System.Drawing.Size(390, 740);
+            this.MaximumSize = new System.Drawing.Size(360, 700);
+            this.MinimumSize = new System.Drawing.Size(350, 695);
             this.Name = "TTform";
             this.Text = "TTform";
             this.Load += new System.EventHandler(this.TTform_Load);

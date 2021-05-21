@@ -18,6 +18,46 @@ namespace Hockey_Lineup_Manager
             InitializeComponent();
         }
 
+        private void TTform_Load(object sender, EventArgs e)
+        {
+            if (Screen.AllScreens.Length >= 1)
+            {
+                // Get the data of the second monitor
+                var monitor = Screen.AllScreens[2].WorkingArea;
+                // Change the wingow to the second monitor
+                Location = monitor.Location;
+            }
+
+            // Check to make sure the team is not empty before setting textbox's
+            NHLTeam nhlteam = (Methods.SelectCurrent() != null) ? JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent()) : new NHLTeam();
+            if (nhlteam.TTL[0] != null)
+            {
+                // Go through each powerplay unit
+                foreach (ThreeOnThreeLines unit in nhlteam.TTL)
+                {
+                    int line = unit.Unit;
+                    switch (line)
+                    {
+                        case 1:
+                            TTC1tb.Text = unit.Center;
+                            TTLD1tb.Text = unit.Wing;
+                            TTRD1tb.Text = unit.Defence;
+                            break;
+                        case 2:
+                            TTC2tb.Text = unit.Center;
+                            TTLD2tb.Text = unit.Wing;
+                            TTRD2tb.Text = unit.Defence;
+                            break;
+                        case 3:
+                            TTC3tb.Text = unit.Center;
+                            TTLD3tb.Text = unit.Wing;
+                            TTRD3tb.Text = unit.Defence;
+                            break;
+                    }
+                }
+            }
+        }
+
         //------------------------------------------------------------------------------------------------------------------------------------
         //
         //--------------------------------------------  Buttons  --------------------------------------------
@@ -341,17 +381,6 @@ namespace Hockey_Lineup_Manager
         private void TTRD3tb_DragDrop(object sender, DragEventArgs e)
         {
             TTRD3tb.Text = (string)e.Data.GetData(DataFormats.Text);
-        }
-
-        private void TTform_Load(object sender, EventArgs e)
-        {
-            if (Screen.AllScreens.Length >= 1)
-            {
-                // Get the data of the second monitor
-                var monitor = Screen.AllScreens[2].WorkingArea;
-                // Change the wingow to the second monitor
-                Location = monitor.Location;
-            }
         }
     }
 }

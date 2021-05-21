@@ -18,6 +18,53 @@ namespace Hockey_Lineup_Manager
             InitializeComponent();
         }
 
+        private void PKform_Load(object sender, EventArgs e)
+        {
+            if (Screen.AllScreens.Length >= 1)
+            {
+                // Get the data of the second monitor
+                var monitor = Screen.AllScreens[2].WorkingArea;
+                // Change the wingow to the second monitor
+                Location = monitor.Location;
+            }
+
+            // Check to make sure the team is not empty before setting textbox's
+            NHLTeam nhlteam = (Methods.SelectCurrent() != null) ? JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent()) : new NHLTeam();
+            if (nhlteam.PKL[0] != null)
+            {
+                // Go through each penalty killing unit
+                foreach (PenaltyKillLines unit in nhlteam.PKL)
+                {
+                    int line = unit.Unit;
+                    switch (line)
+                    {
+                        case 1:
+                            PKLW1tb.Text = unit.Wing;
+                            PKC1tb.Text = unit.Center;
+                            PKLD1tb.Text = unit.LeftDefence;
+                            PKRD1tb.Text = unit.RightDefence;
+                            break;
+                        case 2:
+                            PKLW2tb.Text = unit.Wing;
+                            PKC2tb.Text = unit.Center;
+                            PKLD2tb.Text = unit.LeftDefence;
+                            PKRD2tb.Text = unit.RightDefence;
+                            break;
+                        case 3:
+                            TPC1tb.Text = unit.Center;
+                            TPLD1tb.Text = unit.LeftDefence;
+                            TPRD1tb.Text = unit.RightDefence;
+                            break;
+                        case 4:
+                            TPC2tb.Text = unit.Center;
+                            TPLD2tb.Text = unit.LeftDefence;
+                            TPRD2tb.Text = unit.RightDefence;
+                            break;
+                    }
+                }
+            }
+        }
+
         //------------------------------------------------------------------------------------------------------------------------------------
         //
         //--------------------------------------------  Buttons  --------------------------------------------
@@ -477,17 +524,6 @@ namespace Hockey_Lineup_Manager
         private void TPRD2tb_DragDrop(object sender, DragEventArgs e)
         {
             TPRD2tb.Text = (string)e.Data.GetData(DataFormats.Text);
-        }
-
-        private void PKform_Load(object sender, EventArgs e)
-        {
-            if (Screen.AllScreens.Length >= 1)
-            {
-                // Get the data of the second monitor
-                var monitor = Screen.AllScreens[2].WorkingArea;
-                // Change the wingow to the second monitor
-                Location = monitor.Location;
-            }
         }
     }
 }

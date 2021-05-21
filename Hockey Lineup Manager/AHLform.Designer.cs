@@ -447,6 +447,9 @@ namespace Hockey_Lineup_Manager
             this.C5tb.Name = "C5tb";
             this.C5tb.Size = new System.Drawing.Size(100, 20);
             this.C5tb.TabIndex = 27;
+            this.C5tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.C5tb_DragDrop);
+            this.C5tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.C5tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.C5tb_MouseDown);
             // 
             // LW5tb
             // 
@@ -455,6 +458,9 @@ namespace Hockey_Lineup_Manager
             this.LW5tb.Name = "LW5tb";
             this.LW5tb.Size = new System.Drawing.Size(100, 20);
             this.LW5tb.TabIndex = 25;
+            this.LW5tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.LW5tb_DragDrop);
+            this.LW5tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.LW5tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LW5tb_MouseDown);
             // 
             // RW5tb
             // 
@@ -463,6 +469,9 @@ namespace Hockey_Lineup_Manager
             this.RW5tb.Name = "RW5tb";
             this.RW5tb.Size = new System.Drawing.Size(100, 20);
             this.RW5tb.TabIndex = 29;
+            this.RW5tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.RW5tb_DragDrop);
+            this.RW5tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.RW5tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RW5tb_MouseDown);
             // 
             // RD4tb
             // 
@@ -471,6 +480,9 @@ namespace Hockey_Lineup_Manager
             this.RD4tb.Name = "RD4tb";
             this.RD4tb.Size = new System.Drawing.Size(100, 20);
             this.RD4tb.TabIndex = 45;
+            this.RD4tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.RD4tb_DragDrop);
+            this.RD4tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.RD4tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RD4tb_MouseDown);
             // 
             // LD4tb
             // 
@@ -479,6 +491,9 @@ namespace Hockey_Lineup_Manager
             this.LD4tb.Name = "LD4tb";
             this.LD4tb.Size = new System.Drawing.Size(100, 20);
             this.LD4tb.TabIndex = 43;
+            this.LD4tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.LD4tb_DragDrop);
+            this.LD4tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.LD4tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LD4tb_MouseDown);
             // 
             // label20
             // 
@@ -505,6 +520,9 @@ namespace Hockey_Lineup_Manager
             this.G2tb.Name = "G2tb";
             this.G2tb.Size = new System.Drawing.Size(100, 20);
             this.G2tb.TabIndex = 49;
+            this.G2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.G2tb_DragDrop);
+            this.G2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.G2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.G2tb_MouseDown);
             // 
             // G1tb
             // 
@@ -513,6 +531,9 @@ namespace Hockey_Lineup_Manager
             this.G1tb.Name = "G1tb";
             this.G1tb.Size = new System.Drawing.Size(100, 20);
             this.G1tb.TabIndex = 47;
+            this.G1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.G1tb_DragDrop);
+            this.G1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.G1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.G1tb_MouseDown);
             // 
             // label18
             // 
@@ -575,6 +596,9 @@ namespace Hockey_Lineup_Manager
             this.RD3tb.Name = "RD3tb";
             this.RD3tb.Size = new System.Drawing.Size(100, 20);
             this.RD3tb.TabIndex = 41;
+            this.RD3tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.RD3tb_DragDrop);
+            this.RD3tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.RD3tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RD3tb_MouseDown);
             // 
             // LD3tb
             // 
@@ -583,6 +607,9 @@ namespace Hockey_Lineup_Manager
             this.LD3tb.Name = "LD3tb";
             this.LD3tb.Size = new System.Drawing.Size(100, 20);
             this.LD3tb.TabIndex = 39;
+            this.LD3tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.LD3tb_DragDrop);
+            this.LD3tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.LD3tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LD3tb_MouseDown);
             // 
             // RD2tb
             // 
@@ -591,6 +618,9 @@ namespace Hockey_Lineup_Manager
             this.RD2tb.Name = "RD2tb";
             this.RD2tb.Size = new System.Drawing.Size(100, 20);
             this.RD2tb.TabIndex = 37;
+            this.RD2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.RD2tb_DragDrop);
+            this.RD2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.RD2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RD2tb_MouseDown);
             // 
             // LD2tb
             // 
@@ -599,6 +629,9 @@ namespace Hockey_Lineup_Manager
             this.LD2tb.Name = "LD2tb";
             this.LD2tb.Size = new System.Drawing.Size(100, 20);
             this.LD2tb.TabIndex = 35;
+            this.LD2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.LD2tb_DragDrop);
+            this.LD2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.LD2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LD2tb_MouseDown);
             // 
             // RD1tb
             // 
@@ -607,6 +640,9 @@ namespace Hockey_Lineup_Manager
             this.RD1tb.Name = "RD1tb";
             this.RD1tb.Size = new System.Drawing.Size(100, 20);
             this.RD1tb.TabIndex = 33;
+            this.RD1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.RD1tb_DragDrop);
+            this.RD1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.RD1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RD1tb_MouseDown);
             // 
             // LD1tb
             // 
@@ -615,6 +651,9 @@ namespace Hockey_Lineup_Manager
             this.LD1tb.Name = "LD1tb";
             this.LD1tb.Size = new System.Drawing.Size(100, 20);
             this.LD1tb.TabIndex = 31;
+            this.LD1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.LD1tb_DragDrop);
+            this.LD1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.LD1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LD1tb_MouseDown);
             // 
             // label12
             // 
@@ -679,6 +718,9 @@ namespace Hockey_Lineup_Manager
             this.RW4tb.Name = "RW4tb";
             this.RW4tb.Size = new System.Drawing.Size(100, 20);
             this.RW4tb.TabIndex = 23;
+            this.RW4tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.RW4tb_DragDrop);
+            this.RW4tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.RW4tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RW4tb_MouseDown);
             // 
             // RW3tb
             // 
@@ -687,6 +729,9 @@ namespace Hockey_Lineup_Manager
             this.RW3tb.Name = "RW3tb";
             this.RW3tb.Size = new System.Drawing.Size(100, 20);
             this.RW3tb.TabIndex = 17;
+            this.RW3tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.RW3tb_DragDrop);
+            this.RW3tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.RW3tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RW3tb_MouseDown);
             // 
             // LW4tb
             // 
@@ -695,6 +740,9 @@ namespace Hockey_Lineup_Manager
             this.LW4tb.Name = "LW4tb";
             this.LW4tb.Size = new System.Drawing.Size(100, 20);
             this.LW4tb.TabIndex = 19;
+            this.LW4tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.LW4tb_DragDrop);
+            this.LW4tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.LW4tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LW4tb_MouseDown);
             // 
             // LW3tb
             // 
@@ -703,6 +751,9 @@ namespace Hockey_Lineup_Manager
             this.LW3tb.Name = "LW3tb";
             this.LW3tb.Size = new System.Drawing.Size(100, 20);
             this.LW3tb.TabIndex = 13;
+            this.LW3tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.LW3tb_DragDrop);
+            this.LW3tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.LW3tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LW3tb_MouseDown);
             // 
             // C3tb
             // 
@@ -711,6 +762,9 @@ namespace Hockey_Lineup_Manager
             this.C3tb.Name = "C3tb";
             this.C3tb.Size = new System.Drawing.Size(100, 20);
             this.C3tb.TabIndex = 15;
+            this.C3tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.C3tb_DragDrop);
+            this.C3tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.C3tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.C3tb_MouseDown);
             // 
             // C4tb
             // 
@@ -719,6 +773,9 @@ namespace Hockey_Lineup_Manager
             this.C4tb.Name = "C4tb";
             this.C4tb.Size = new System.Drawing.Size(100, 20);
             this.C4tb.TabIndex = 21;
+            this.C4tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.C4tb_DragDrop);
+            this.C4tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.C4tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.C4tb_MouseDown);
             // 
             // label6
             // 
@@ -746,6 +803,9 @@ namespace Hockey_Lineup_Manager
             this.LW2tb.Name = "LW2tb";
             this.LW2tb.Size = new System.Drawing.Size(100, 20);
             this.LW2tb.TabIndex = 7;
+            this.LW2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.LW2tb_DragDrop);
+            this.LW2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.LW2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LW2tb_MouseDown);
             // 
             // RW2tb
             // 
@@ -754,6 +814,9 @@ namespace Hockey_Lineup_Manager
             this.RW2tb.Name = "RW2tb";
             this.RW2tb.Size = new System.Drawing.Size(100, 20);
             this.RW2tb.TabIndex = 11;
+            this.RW2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.RW2tb_DragDrop);
+            this.RW2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.RW2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RW2tb_MouseDown);
             // 
             // label4
             // 
@@ -771,6 +834,9 @@ namespace Hockey_Lineup_Manager
             this.C2tb.Name = "C2tb";
             this.C2tb.Size = new System.Drawing.Size(100, 20);
             this.C2tb.TabIndex = 9;
+            this.C2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.C2tb_DragDrop);
+            this.C2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.C2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.C2tb_MouseDown);
             // 
             // label3
             // 
@@ -788,6 +854,9 @@ namespace Hockey_Lineup_Manager
             this.RW1tb.Name = "RW1tb";
             this.RW1tb.Size = new System.Drawing.Size(100, 20);
             this.RW1tb.TabIndex = 5;
+            this.RW1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.RW1tb_DragDrop);
+            this.RW1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.RW1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RW1tb_MouseDown);
             // 
             // label2
             // 
@@ -815,6 +884,9 @@ namespace Hockey_Lineup_Manager
             this.C1tb.Name = "C1tb";
             this.C1tb.Size = new System.Drawing.Size(100, 20);
             this.C1tb.TabIndex = 3;
+            this.C1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.C1TB_DragDrop);
+            this.C1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.C1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.C1TB_MouseDown);
             // 
             // LW1tb
             // 
@@ -823,6 +895,9 @@ namespace Hockey_Lineup_Manager
             this.LW1tb.Name = "LW1tb";
             this.LW1tb.Size = new System.Drawing.Size(100, 20);
             this.LW1tb.TabIndex = 2;
+            this.LW1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.LW1tb_DragDrop);
+            this.LW1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.LW1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LW1tb_MouseDown);
             // 
             // TeamNametb
             // 
@@ -894,6 +969,9 @@ namespace Hockey_Lineup_Manager
             this.G3tb.Name = "G3tb";
             this.G3tb.Size = new System.Drawing.Size(100, 20);
             this.G3tb.TabIndex = 51;
+            this.G3tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.G3tb_DragDrop);
+            this.G3tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.G3tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.G3tb_MouseDown);
             // 
             // LoadLinesbtn
             // 
@@ -947,6 +1025,7 @@ namespace Hockey_Lineup_Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(555, 757);
             this.Controls.Add(this.Playofftb);
             this.Controls.Add(this.Recordtb);

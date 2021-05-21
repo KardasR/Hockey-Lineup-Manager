@@ -18,6 +18,49 @@ namespace Hockey_Lineup_Manager
             InitializeComponent();
         }
 
+        private void FFform_Load(object sender, EventArgs e)
+        {
+            if (Screen.AllScreens.Length >= 1)
+            {
+                // Get the data of the second monitor
+                var monitor = Screen.AllScreens[2].WorkingArea;
+                // Change the wingow to the second monitor
+                Location = monitor.Location;
+            }
+
+            // Check to make sure the team is not empty before setting textbox's
+            NHLTeam nhlteam = (Methods.SelectCurrent() != null) ? JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent()) : new NHLTeam();
+            if(nhlteam.FFL[0] != null)
+            {
+                // Go through each four on four unit
+                foreach (FourOnFourLines unit in nhlteam.FFL)
+                {
+                    int line = unit.Unit;
+                    switch (line)
+                    {
+                        case 1:
+                            FourLW1tb.Text = unit.Wing;
+                            FourC1tb.Text = unit.Center;
+                            FourLD1tb.Text = unit.LeftDefence;
+                            FourRD1tb.Text = unit.RightDefence;
+                            break;
+                        case 2:
+                            FourLW2tb.Text = unit.Wing;
+                            FourC2tb.Text = unit.Center;
+                            FourLD2tb.Text = unit.LeftDefence;
+                            FourRD2tb.Text = unit.RightDefence;
+                            break;
+                        case 3:
+                            FourLW3tb.Text = unit.Wing;
+                            FourC3tb.Text = unit.Center;
+                            FourLD3tb.Text = unit.LeftDefence;
+                            FourRD3tb.Text = unit.RightDefence;
+                            break;
+                    }
+                }
+            }
+        }
+
         //------------------------------------------------------------------------------------------------------------------------------------
         //
         //--------------------------------------------  Buttons  --------------------------------------------
@@ -421,17 +464,6 @@ namespace Hockey_Lineup_Manager
         private void FourRD3tb_DragDrop(object sender, DragEventArgs e)
         {
             FourRD3tb.Text = (string)e.Data.GetData(DataFormats.Text);
-        }
-
-        private void FFform_Load(object sender, EventArgs e)
-        {
-            if (Screen.AllScreens.Length >= 1)
-            {
-                // Get the data of the second monitor
-                var monitor = Screen.AllScreens[2].WorkingArea;
-                // Change the wingow to the second monitor
-                Location = monitor.Location;
-            }
         }
     }
 }

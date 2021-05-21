@@ -25,8 +25,9 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void LoadLinesbtn_Click(object sender, EventArgs e)
         {
-            NHLTeam nhlteam = JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent());        // Copy the currently selected team to gain access to the four on four
-            AHLTeam team = nhlteam.AHLLines;
+            NHLTeam nhlteam = (Methods.SelectCurrent() != null) ? JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent()) : new NHLTeam();
+            AHLTeam team = (nhlteam.AHLLines != null) ? nhlteam.AHLLines : new AHLTeam();
+
 
             // Load team info
             TeamNametb.Text = team.Name;
@@ -356,91 +357,541 @@ namespace Hockey_Lineup_Manager
                 Location = monitor.Location;
             }
 
-            NHLTeam nhlteam = JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent());        // Copy the currently selected team to gain access to the four on four
-            AHLTeam team = nhlteam.AHLLines;
-
-            // Load team info
-            TeamNametb.Text = team.Name;
-
-            NHLrb.Checked = team.League ? true : false;
-            AHLrb.Checked = team.League ? false : true;
-
-            Recordtb.Text = team.Record;
-            Playofftb.Text = team.Playoff;
-
-            // Load Goalies
-            G1tb.Text = team.goalies.Starter.Name;
-            G1OVRtb.Text = team.goalies.Starter.Overall.ToString();
-            G2tb.Text = team.goalies.Backup.Name;
-            G2OVRtb.Text = team.goalies.Backup.Overall.ToString();
-            G3tb.Text = team.goalies.ThirdString.Name;
-            G3OVRtb.Text = team.goalies.ThirdString.Overall.ToString();
-
-
-            // Load Player Lines
-            foreach (EvenStrengthLines line in team.ESL)
+            NHLTeam nhlteam = (Methods.SelectCurrent() != null) ? JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent()) : new NHLTeam();
+            if (nhlteam.AHLLines != null)
             {
-                int unit = line.Line;
-                switch (unit)
+                AHLTeam team = nhlteam.AHLLines;
+
+                // Load team info
+                TeamNametb.Text = team.Name;
+
+                NHLrb.Checked = team.League ? true : false;
+                AHLrb.Checked = team.League ? false : true;
+
+                Recordtb.Text = team.Record;
+                Playofftb.Text = team.Playoff;
+
+                // Load Goalies
+                G1tb.Text = team.goalies.Starter.Name;
+                G1OVRtb.Text = team.goalies.Starter.Overall.ToString();
+                G2tb.Text = team.goalies.Backup.Name;
+                G2OVRtb.Text = team.goalies.Backup.Overall.ToString();
+                G3tb.Text = team.goalies.ThirdString.Name;
+                G3OVRtb.Text = team.goalies.ThirdString.Overall.ToString();
+
+
+                // Load Player Lines
+                foreach (EvenStrengthLines line in team.ESL)
                 {
-                    case 1:                                                     // First Line
-                        LW1tb.Text = line.LeftWing.Name;
-                        LW1OVRtb.Text = line.LeftWing.Overall.ToString();
-                        C1tb.Text = line.Center.Name;
-                        C1OVRtb.Text = line.Center.Overall.ToString();
-                        RW1tb.Text = line.RightWing.Name;
-                        RW1OVRtb.Text = line.RightWing.Overall.ToString();
-                        LD1tb.Text = line.LeftDefence.Name;
-                        LD1OVRtb.Text = line.LeftDefence.Overall.ToString();
-                        RD1tb.Text = line.RightDefence.Name;
-                        RD1OVRtb.Text = line.RightDefence.Overall.ToString();
-                        break;
-                    case 2:                                                     // Second Line
-                        LW2tb.Text = line.LeftWing.Name;
-                        LW2OVRtb.Text = line.LeftWing.Overall.ToString();
-                        C2tb.Text = line.Center.Name;
-                        C2OVRtb.Text = line.Center.Overall.ToString();
-                        RW2tb.Text = line.RightWing.Name;
-                        RW2OVRtb.Text = line.RightWing.Overall.ToString();
-                        LD2tb.Text = line.LeftDefence.Name;
-                        LD2OVRtb.Text = line.LeftDefence.Overall.ToString();
-                        RD2tb.Text = line.RightDefence.Name;
-                        RD2OVRtb.Text = line.RightDefence.Overall.ToString();
-                        break;
-                    case 3:                                                     // Third Line
-                        LW3tb.Text = line.LeftWing.Name;
-                        LW3OVRtb.Text = line.LeftWing.Overall.ToString();
-                        C3tb.Text = line.Center.Name;
-                        C3OVRtb.Text = line.Center.Overall.ToString();
-                        RW3tb.Text = line.RightWing.Name;
-                        RW3OVRtb.Text = line.RightWing.Overall.ToString();
-                        LD3tb.Text = line.LeftDefence.Name;
-                        LD3OVRtb.Text = line.LeftDefence.Overall.ToString();
-                        RD3tb.Text = line.RightDefence.Name;
-                        RD3OVRtb.Text = line.RightDefence.Overall.ToString();
-                        break;
-                    case 4:                                                     // Forth Line
-                        LW4tb.Text = line.LeftWing.Name;
-                        LW4OVRtb.Text = line.LeftWing.Overall.ToString();
-                        C4tb.Text = line.Center.Name;
-                        C4OVRtb.Text = line.Center.Overall.ToString();
-                        RW4tb.Text = line.RightWing.Name;
-                        RW4OVRtb.Text = line.RightWing.Overall.ToString();
-                        break;
-                    case 5:                                                     // Scratched
-                        LW5tb.Text = line.LeftWing.Name;
-                        LW5OVRtb.Text = line.LeftWing.Overall.ToString();
-                        C5tb.Text = line.Center.Name;
-                        C5OVRtb.Text = line.Center.Overall.ToString();
-                        RW5tb.Text = line.RightWing.Name;
-                        RW5OVRtb.Text = line.RightWing.Overall.ToString();
-                        LD4tb.Text = line.LeftDefence.Name;
-                        LD4OVRtb.Text = line.LeftDefence.Overall.ToString();
-                        RD4tb.Text = line.RightDefence.Name;
-                        RD4OVRtb.Text = line.RightDefence.Overall.ToString();
-                        break;
+                    int unit = line.Line;
+                    switch (unit)
+                    {
+                        case 1:                                                     // First Line
+                            LW1tb.Text = line.LeftWing.Name;
+                            LW1OVRtb.Text = line.LeftWing.Overall.ToString();
+                            C1tb.Text = line.Center.Name;
+                            C1OVRtb.Text = line.Center.Overall.ToString();
+                            RW1tb.Text = line.RightWing.Name;
+                            RW1OVRtb.Text = line.RightWing.Overall.ToString();
+                            LD1tb.Text = line.LeftDefence.Name;
+                            LD1OVRtb.Text = line.LeftDefence.Overall.ToString();
+                            RD1tb.Text = line.RightDefence.Name;
+                            RD1OVRtb.Text = line.RightDefence.Overall.ToString();
+                            break;
+                        case 2:                                                     // Second Line
+                            LW2tb.Text = line.LeftWing.Name;
+                            LW2OVRtb.Text = line.LeftWing.Overall.ToString();
+                            C2tb.Text = line.Center.Name;
+                            C2OVRtb.Text = line.Center.Overall.ToString();
+                            RW2tb.Text = line.RightWing.Name;
+                            RW2OVRtb.Text = line.RightWing.Overall.ToString();
+                            LD2tb.Text = line.LeftDefence.Name;
+                            LD2OVRtb.Text = line.LeftDefence.Overall.ToString();
+                            RD2tb.Text = line.RightDefence.Name;
+                            RD2OVRtb.Text = line.RightDefence.Overall.ToString();
+                            break;
+                        case 3:                                                     // Third Line
+                            LW3tb.Text = line.LeftWing.Name;
+                            LW3OVRtb.Text = line.LeftWing.Overall.ToString();
+                            C3tb.Text = line.Center.Name;
+                            C3OVRtb.Text = line.Center.Overall.ToString();
+                            RW3tb.Text = line.RightWing.Name;
+                            RW3OVRtb.Text = line.RightWing.Overall.ToString();
+                            LD3tb.Text = line.LeftDefence.Name;
+                            LD3OVRtb.Text = line.LeftDefence.Overall.ToString();
+                            RD3tb.Text = line.RightDefence.Name;
+                            RD3OVRtb.Text = line.RightDefence.Overall.ToString();
+                            break;
+                        case 4:                                                     // Forth Line
+                            LW4tb.Text = line.LeftWing.Name;
+                            LW4OVRtb.Text = line.LeftWing.Overall.ToString();
+                            C4tb.Text = line.Center.Name;
+                            C4OVRtb.Text = line.Center.Overall.ToString();
+                            RW4tb.Text = line.RightWing.Name;
+                            RW4OVRtb.Text = line.RightWing.Overall.ToString();
+                            break;
+                        case 5:                                                     // Scratched
+                            LW5tb.Text = line.LeftWing.Name;
+                            LW5OVRtb.Text = line.LeftWing.Overall.ToString();
+                            C5tb.Text = line.Center.Name;
+                            C5OVRtb.Text = line.Center.Overall.ToString();
+                            RW5tb.Text = line.RightWing.Name;
+                            RW5OVRtb.Text = line.RightWing.Overall.ToString();
+                            LD4tb.Text = line.LeftDefence.Name;
+                            LD4OVRtb.Text = line.LeftDefence.Overall.ToString();
+                            RD4tb.Text = line.RightDefence.Name;
+                            RD4OVRtb.Text = line.RightDefence.Overall.ToString();
+                            break;
+                    }
                 }
             }
+        }
+
+        //------------------------------------------------------------------------------------------------------------------------------------
+        //
+        //--------------------------------------------  Drag and Drop Functionallity  --------------------------------------------
+        //
+        //------------------------------------------------------------------------------------------------------------------------------------
+
+        /// <summary>
+        /// Make sure the data given is in the correct format.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CheckDataFormat(object sender, DragEventArgs e)
+        {
+            e.Effect = (e.Data.GetDataPresent(DataFormats.Text) && (e.AllowedEffect & DragDropEffects.Copy) != 0) ? DragDropEffects.Copy : DragDropEffects.None;
+        }
+
+        //--------------------------------------------  1st Line / 1st Pair --------------------------------------------
+
+        //--------------------------------------------  Left Wing  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 1st line left wing when the user right clicks on the textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LW1tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                LW1tb.DoDragDrop(LW1tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 1st line left wing textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LW1tb_DragDrop(object sender, DragEventArgs e)
+        {
+            LW1tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Center  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 1st line center when the user right clicks on the textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void C1TB_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                C1tb.DoDragDrop(C1tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 1st line center textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void C1TB_DragDrop(object sender, DragEventArgs e)
+        {
+            C1tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Wing  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 1st line right wing when the user right clicks on the textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RW1tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                RW1tb.DoDragDrop(RW1tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 1st line right wing textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RW1tb_DragDrop(object sender, DragEventArgs e)
+        {
+            RW1tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Left Defence  --------------------------------------------
+
+        private void LD1tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag and drop.
+            if (e.Button == MouseButtons.Right)
+                LD1tb.DoDragDrop(LD1tb.Text, DragDropEffects.Copy);
+        }
+
+        private void LD1tb_DragDrop(object sender, DragEventArgs e)
+        {
+            LD1tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Defence  --------------------------------------------
+
+        private void RD1tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                RD1tb.DoDragDrop(RD1tb.Text, DragDropEffects.Copy);
+        }
+
+        private void RD1tb_DragDrop(object sender, DragEventArgs e)
+        {
+            RD1tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  2nd Line / 2nd Pair --------------------------------------------
+
+        //--------------------------------------------  Left Wing  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 2nd line left wing when the user right clicks on the textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LW2tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                LW2tb.DoDragDrop(LW2tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 2nd line left wing textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LW2tb_DragDrop(object sender, DragEventArgs e)
+        {
+            LW2tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Center  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 2nd line center when the user right clicks on the textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void C2tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                C2tb.DoDragDrop(C2tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 2nd line center textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void C2tb_DragDrop(object sender, DragEventArgs e)
+        {
+            C2tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Wing  --------------------------------------------
+
+        /// <summary>
+        /// Initiate the drag drop for the 2nd line right wing when the user right clicks on the textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RW2tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                RW2tb.DoDragDrop(RW2tb.Text, DragDropEffects.Copy);
+        }
+
+        /// <summary>
+        /// Get the data from the drag drop and paste it into the 2nd line right wing textbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RW2tb_DragDrop(object sender, DragEventArgs e)
+        {
+            RW2tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Left Defence  --------------------------------------------
+
+        private void LD2tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                LD2tb.DoDragDrop(LD2tb.Text, DragDropEffects.Copy);
+        }
+
+        private void LD2tb_DragDrop(object sender, DragEventArgs e)
+        {
+            LD2tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Defence  --------------------------------------------
+
+        private void RD2tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                RD2tb.DoDragDrop(RD2tb.Text, DragDropEffects.Copy);
+        }
+
+        private void RD2tb_DragDrop(object sender, DragEventArgs e)
+        {
+            RD2tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Third Line / Third Pair --------------------------------------------
+
+        //--------------------------------------------  Left Wing  --------------------------------------------
+
+        private void LW3tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                LW3tb.DoDragDrop(LW3tb.Text, DragDropEffects.Copy);
+        }
+
+        private void LW3tb_DragDrop(object sender, DragEventArgs e)
+        {
+            LW3tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Center  --------------------------------------------
+
+        private void C3tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                C3tb.DoDragDrop(C3tb.Text, DragDropEffects.Copy);
+        }
+
+        private void C3tb_DragDrop(object sender, DragEventArgs e)
+        {
+            C3tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Wing  --------------------------------------------
+
+        private void RW3tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                RW3tb.DoDragDrop(RW3tb.Text, DragDropEffects.Copy);
+        }
+
+        private void RW3tb_DragDrop(object sender, DragEventArgs e)
+        {
+            RW3tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Left Defence  --------------------------------------------
+
+        private void LD3tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                LD3tb.DoDragDrop(LD3tb.Text, DragDropEffects.Copy);
+        }
+
+        private void LD3tb_DragDrop(object sender, DragEventArgs e)
+        {
+            LD3tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Defence  --------------------------------------------
+
+        private void RD3tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                RD3tb.DoDragDrop(RD3tb.Text, DragDropEffects.Copy);
+        }
+
+        private void RD3tb_DragDrop(object sender, DragEventArgs e)
+        {
+            RD3tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  4th Line / Goalies  --------------------------------------------
+
+        //--------------------------------------------  Left Wing  --------------------------------------------
+
+        private void LW4tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                LW4tb.DoDragDrop(LW4tb.Text, DragDropEffects.Copy);
+        }
+
+        private void LW4tb_DragDrop(object sender, DragEventArgs e)
+        {
+            LW4tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Center  --------------------------------------------
+
+        private void C4tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                C4tb.DoDragDrop(C4tb.Text, DragDropEffects.Copy);
+        }
+
+        private void C4tb_DragDrop(object sender, DragEventArgs e)
+        {
+            C4tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Wing  --------------------------------------------
+
+        private void RW4tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                RW4tb.DoDragDrop(RW4tb.Text, DragDropEffects.Copy);
+        }
+
+        private void RW4tb_DragDrop(object sender, DragEventArgs e)
+        {
+            RW4tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Starter  --------------------------------------------
+
+        private void G1tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                G1tb.DoDragDrop(G1tb.Text, DragDropEffects.Copy);
+        }
+
+        private void G1tb_DragDrop(object sender, DragEventArgs e)
+        {
+            G1tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Backup  --------------------------------------------
+
+        private void G2tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                G2tb.DoDragDrop(G2tb.Text, DragDropEffects.Copy);
+        }
+
+        private void G2tb_DragDrop(object sender, DragEventArgs e)
+        {
+            G2tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        private void G3tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbob with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                G3tb.DoDragDrop(G3tb.Text, DragDropEffects.Copy);
+        }
+
+        private void G3tb_DragDrop(object sender, DragEventArgs e)
+        {
+            G3tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Scratched  --------------------------------------------
+
+        //--------------------------------------------  Left Wing  --------------------------------------------
+
+        private void LW5tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                LW5tb.DoDragDrop(LW5tb.Text, DragDropEffects.Copy);
+        }
+
+        private void LW5tb_DragDrop(object sender, DragEventArgs e)
+        {
+            LW5tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Center  --------------------------------------------
+
+        private void C5tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                C5tb.DoDragDrop(C5tb.Text, DragDropEffects.Copy);
+        }
+
+        private void C5tb_DragDrop(object sender, DragEventArgs e)
+        {
+            C5tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Wing  --------------------------------------------
+
+        private void RW5tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                RW5tb.DoDragDrop(RW5tb.Text, DragDropEffects.Copy);
+        }
+
+        private void RW5tb_DragDrop(object sender, DragEventArgs e)
+        {
+            RW5tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Left Defence  --------------------------------------------
+
+        private void LD4tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                LD4tb.DoDragDrop(LD4tb.Text, DragDropEffects.Copy);
+        }
+
+        private void LD4tb_DragDrop(object sender, DragEventArgs e)
+        {
+            LD4tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
+
+        //--------------------------------------------  Right Defence  --------------------------------------------
+
+        private void RD4tb_MouseDown(object sender, MouseEventArgs e)
+        {
+            // When the user selects the textbox with the right mouse button, start the drag drop.
+            if (e.Button == MouseButtons.Right)
+                RD4tb.DoDragDrop(RD4tb.Text, DragDropEffects.Copy);
+        }
+
+        private void RD4tb_DragDrop(object sender, DragEventArgs e)
+        {
+            RD4tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
     }
 }

@@ -18,6 +18,32 @@ namespace Hockey_Lineup_Manager
             InitializeComponent();
         }
 
+        private void SOEAform_Load(object sender, EventArgs e)
+        {
+            if (Screen.AllScreens.Length >= 1)
+            {
+                // Get the data of the second monitor
+                var monitor = Screen.AllScreens[2].WorkingArea;
+                // Change the wingow to the second monitor
+                Location = monitor.Location;
+            }
+
+            // Check to make sure the team is not empty before setting textbox's
+            NHLTeam nhlteam = (Methods.SelectCurrent() != null) ? JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent()) : new NHLTeam();
+            if (nhlteam.SOEA != null)
+            {
+                // Go through each extra attacker then the shootout lineup
+                EA1tb.Text = nhlteam.SOEA.ExtraA1;
+                EA2tb.Text = nhlteam.SOEA.ExtraA2;
+
+                SO1tb.Text = nhlteam.SOEA.Shooter1;
+                SO2tb.Text = nhlteam.SOEA.Shooter2;
+                SO3tb.Text = nhlteam.SOEA.Shooter3;
+                SO4tb.Text = nhlteam.SOEA.Shooter4;
+                SO5tb.Text = nhlteam.SOEA.Shooter5;
+            }
+        }
+
         //------------------------------------------------------------------------------------------------------------------------------------
         //
         //--------------------------------------------  Buttons  --------------------------------------------
@@ -267,17 +293,6 @@ namespace Hockey_Lineup_Manager
         private void SO5tb_DragDrop(object sender, DragEventArgs e)
         {
             SO5tb.Text = (string)e.Data.GetData(DataFormats.Text);
-        }
-
-        private void SOEAform_Load(object sender, EventArgs e)
-        {
-            if (Screen.AllScreens.Length >= 1)
-            {
-                // Get the data of the second monitor
-                var monitor = Screen.AllScreens[2].WorkingArea;
-                // Change the wingow to the second monitor
-                Location = monitor.Location;
-            }
         }
     }
 }

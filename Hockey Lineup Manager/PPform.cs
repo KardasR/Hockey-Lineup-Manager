@@ -20,6 +20,57 @@ namespace Hockey_Lineup_Manager
             InitializeComponent();
         }
 
+        private void PPform_Load(object sender, EventArgs e)
+        {
+            if (Screen.AllScreens.Length >= 1)
+            {
+                // Get the data of the second monitor
+                var monitor = Screen.AllScreens[2].WorkingArea;
+                // Change the wingow to the second monitor
+                Location = monitor.Location;
+            }
+
+            // Check to make sure the team powerplay is not empty before setting textbox's
+            NHLTeam nhlteam = (Methods.SelectCurrent() != null) ? JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent()) : new NHLTeam();
+            if (nhlteam.PPL[0] != null)
+            {
+                // Go through each powerplay unit
+                foreach (PowerPlayLines unit in nhlteam.PPL)
+                {
+                    int line = unit.Unit;
+                    switch (line)
+                    {
+                        case 1:                                                 // First Unit
+                            PPLW1tb.Text = unit.LeftWing;
+                            PPC1tb.Text = unit.Center;
+                            PPRW1tb.Text = unit.RightWing;
+                            PPLD1tb.Text = unit.LeftDefence;
+                            PPRD1tb.Text = unit.RightDefence;
+                            break;
+                        case 2:                                                 // Second Unit
+                            PPLW2tb.Text = unit.LeftWing;
+                            PPC2tb.Text = unit.Center;
+                            PPRW2tb.Text = unit.RightWing;
+                            PPLD2tb.Text = unit.LeftDefence;
+                            PPRD2tb.Text = unit.RightDefence;
+                            break;
+                        case 3:                                                 // First Unit (Four-man powerplay)
+                            FPLW1tb.Text = unit.LeftWing;
+                            FPC1tb.Text = unit.Center;
+                            FPRW1tb.Text = unit.RightWing;
+                            FPD1tb.Text = unit.LeftDefence;
+                            break;
+                        case 4:                                                 // Second Unit (Four-man powerplay)
+                            FPLW2tb.Text = unit.LeftWing;
+                            FPC2tb.Text = unit.Center;
+                            FPRW2tb.Text = unit.RightWing;
+                            FPD2tb.Text = unit.LeftDefence;
+                            break;
+                    }
+                }
+            }
+        }
+
         //------------------------------------------------------------------------------------------------------------------------------------
         //
         //--------------------------------------------  Buttons  --------------------------------------------
@@ -577,17 +628,6 @@ namespace Hockey_Lineup_Manager
         private void FPD2tb_DragDrop(object sender, DragEventArgs e)
         {
             FPD2tb.Text = (string)e.Data.GetData(DataFormats.Text);
-        }
-
-        private void PPform_Load(object sender, EventArgs e)
-        {
-            if (Screen.AllScreens.Length >= 1)
-            {
-                // Get the data of the second monitor
-                var monitor = Screen.AllScreens[2].WorkingArea;
-                // Change the wingow to the second monitor
-                Location = monitor.Location;
-            }
         }
     }
 }

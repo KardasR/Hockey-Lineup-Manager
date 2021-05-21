@@ -75,7 +75,7 @@ namespace Hockey_Lineup_Manager
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(212, 166);
+            this.label16.Location = new System.Drawing.Point(197, 166);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(23, 13);
             this.label16.TabIndex = 69;
@@ -103,7 +103,7 @@ namespace Hockey_Lineup_Manager
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(211, 98);
+            this.label1.Location = new System.Drawing.Point(196, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 13);
             this.label1.TabIndex = 65;
@@ -112,7 +112,7 @@ namespace Hockey_Lineup_Manager
             // PKLW1tb
             // 
             this.PKLW1tb.AllowDrop = true;
-            this.PKLW1tb.Location = new System.Drawing.Point(241, 95);
+            this.PKLW1tb.Location = new System.Drawing.Point(226, 95);
             this.PKLW1tb.Name = "PKLW1tb";
             this.PKLW1tb.Size = new System.Drawing.Size(100, 20);
             this.PKLW1tb.TabIndex = 2;
@@ -145,7 +145,7 @@ namespace Hockey_Lineup_Manager
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(212, 323);
+            this.label3.Location = new System.Drawing.Point(197, 323);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 81;
@@ -173,7 +173,7 @@ namespace Hockey_Lineup_Manager
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(211, 252);
+            this.label6.Location = new System.Drawing.Point(196, 252);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(24, 13);
             this.label6.TabIndex = 78;
@@ -182,7 +182,7 @@ namespace Hockey_Lineup_Manager
             // PKRD1tb
             // 
             this.PKRD1tb.AllowDrop = true;
-            this.PKRD1tb.Location = new System.Drawing.Point(241, 163);
+            this.PKRD1tb.Location = new System.Drawing.Point(226, 163);
             this.PKRD1tb.Name = "PKRD1tb";
             this.PKRD1tb.Size = new System.Drawing.Size(100, 20);
             this.PKRD1tb.TabIndex = 4;
@@ -193,7 +193,7 @@ namespace Hockey_Lineup_Manager
             // PKLW2tb
             // 
             this.PKLW2tb.AllowDrop = true;
-            this.PKLW2tb.Location = new System.Drawing.Point(241, 252);
+            this.PKLW2tb.Location = new System.Drawing.Point(226, 252);
             this.PKLW2tb.Name = "PKLW2tb";
             this.PKLW2tb.Size = new System.Drawing.Size(100, 20);
             this.PKLW2tb.TabIndex = 6;
@@ -226,7 +226,7 @@ namespace Hockey_Lineup_Manager
             // PKRD2tb
             // 
             this.PKRD2tb.AllowDrop = true;
-            this.PKRD2tb.Location = new System.Drawing.Point(241, 320);
+            this.PKRD2tb.Location = new System.Drawing.Point(226, 320);
             this.PKRD2tb.Name = "PKRD2tb";
             this.PKRD2tb.Size = new System.Drawing.Size(100, 20);
             this.PKRD2tb.TabIndex = 8;
@@ -248,7 +248,7 @@ namespace Hockey_Lineup_Manager
             // SaveLinesbtn
             // 
             this.SaveLinesbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveLinesbtn.Location = new System.Drawing.Point(215, 392);
+            this.SaveLinesbtn.Location = new System.Drawing.Point(199, 392);
             this.SaveLinesbtn.Name = "SaveLinesbtn";
             this.SaveLinesbtn.Size = new System.Drawing.Size(121, 44);
             this.SaveLinesbtn.TabIndex = 16;
@@ -259,7 +259,7 @@ namespace Hockey_Lineup_Manager
             // TPRD2tb
             // 
             this.TPRD2tb.AllowDrop = true;
-            this.TPRD2tb.Location = new System.Drawing.Point(241, 705);
+            this.TPRD2tb.Location = new System.Drawing.Point(226, 695);
             this.TPRD2tb.Name = "TPRD2tb";
             this.TPRD2tb.Size = new System.Drawing.Size(100, 20);
             this.TPRD2tb.TabIndex = 14;
@@ -270,7 +270,7 @@ namespace Hockey_Lineup_Manager
             // TPLD2tb
             // 
             this.TPLD2tb.AllowDrop = true;
-            this.TPLD2tb.Location = new System.Drawing.Point(40, 705);
+            this.TPLD2tb.Location = new System.Drawing.Point(40, 695);
             this.TPLD2tb.Name = "TPLD2tb";
             this.TPLD2tb.Size = new System.Drawing.Size(100, 20);
             this.TPLD2tb.TabIndex = 13;
@@ -281,7 +281,7 @@ namespace Hockey_Lineup_Manager
             // TPC2tb
             // 
             this.TPC2tb.AllowDrop = true;
-            this.TPC2tb.Location = new System.Drawing.Point(135, 637);
+            this.TPC2tb.Location = new System.Drawing.Point(135, 632);
             this.TPC2tb.Name = "TPC2tb";
             this.TPC2tb.Size = new System.Drawing.Size(100, 20);
             this.TPC2tb.TabIndex = 12;
@@ -292,7 +292,7 @@ namespace Hockey_Lineup_Manager
             // TPRD1tb
             // 
             this.TPRD1tb.AllowDrop = true;
-            this.TPRD1tb.Location = new System.Drawing.Point(241, 558);
+            this.TPRD1tb.Location = new System.Drawing.Point(226, 553);
             this.TPRD1tb.Name = "TPRD1tb";
             this.TPRD1tb.Size = new System.Drawing.Size(100, 20);
             this.TPRD1tb.TabIndex = 11;
@@ -303,7 +303,7 @@ namespace Hockey_Lineup_Manager
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(212, 708);
+            this.label7.Location = new System.Drawing.Point(197, 698);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(23, 13);
             this.label7.TabIndex = 99;
@@ -312,7 +312,7 @@ namespace Hockey_Lineup_Manager
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 708);
+            this.label8.Location = new System.Drawing.Point(13, 698);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(21, 13);
             this.label8.TabIndex = 98;
@@ -321,7 +321,7 @@ namespace Hockey_Lineup_Manager
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(115, 640);
+            this.label9.Location = new System.Drawing.Point(115, 635);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(14, 13);
             this.label9.TabIndex = 97;
@@ -330,7 +330,7 @@ namespace Hockey_Lineup_Manager
             // TPLD1tb
             // 
             this.TPLD1tb.AllowDrop = true;
-            this.TPLD1tb.Location = new System.Drawing.Point(40, 558);
+            this.TPLD1tb.Location = new System.Drawing.Point(40, 553);
             this.TPLD1tb.Name = "TPLD1tb";
             this.TPLD1tb.Size = new System.Drawing.Size(100, 20);
             this.TPLD1tb.TabIndex = 10;
@@ -352,7 +352,7 @@ namespace Hockey_Lineup_Manager
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(212, 561);
+            this.label11.Location = new System.Drawing.Point(197, 556);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(23, 13);
             this.label11.TabIndex = 92;
@@ -361,7 +361,7 @@ namespace Hockey_Lineup_Manager
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(13, 561);
+            this.label12.Location = new System.Drawing.Point(13, 556);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(21, 13);
             this.label12.TabIndex = 91;
@@ -380,7 +380,8 @@ namespace Hockey_Lineup_Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 746);
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ClientSize = new System.Drawing.Size(345, 734);
             this.Controls.Add(this.TPRD2tb);
             this.Controls.Add(this.TPLD2tb);
             this.Controls.Add(this.TPC2tb);
@@ -412,8 +413,8 @@ namespace Hockey_Lineup_Manager
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label21);
-            this.MaximumSize = new System.Drawing.Size(380, 790);
-            this.MinimumSize = new System.Drawing.Size(375, 780);
+            this.MaximumSize = new System.Drawing.Size(365, 775);
+            this.MinimumSize = new System.Drawing.Size(360, 770);
             this.Name = "PKform";
             this.Text = "PKform";
             this.Load += new System.EventHandler(this.PKform_Load);
