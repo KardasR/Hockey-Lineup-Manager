@@ -129,6 +129,9 @@ namespace Hockey_Lineup_Manager
             // LW1tb
             // 
             this.LW1tb.AllowDrop = true;
+            this.LW1tb.BackColor = System.Drawing.SystemColors.Window;
+            this.LW1tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LW1tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.LW1tb.Location = new System.Drawing.Point(44, 127);
             this.LW1tb.Name = "LW1tb";
             this.LW1tb.Size = new System.Drawing.Size(100, 20);
@@ -140,6 +143,9 @@ namespace Hockey_Lineup_Manager
             // C1tb
             // 
             this.C1tb.AllowDrop = true;
+            this.C1tb.BackColor = System.Drawing.SystemColors.Window;
+            this.C1tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C1tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.C1tb.Location = new System.Drawing.Point(226, 127);
             this.C1tb.Name = "C1tb";
             this.C1tb.Size = new System.Drawing.Size(100, 20);
@@ -152,6 +158,7 @@ namespace Hockey_Lineup_Manager
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(14, 130);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 13);
@@ -161,6 +168,7 @@ namespace Hockey_Lineup_Manager
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Location = new System.Drawing.Point(206, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(14, 13);
@@ -170,6 +178,9 @@ namespace Hockey_Lineup_Manager
             // RW1tb
             // 
             this.RW1tb.AllowDrop = true;
+            this.RW1tb.BackColor = System.Drawing.SystemColors.Window;
+            this.RW1tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RW1tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.RW1tb.Location = new System.Drawing.Point(406, 127);
             this.RW1tb.Name = "RW1tb";
             this.RW1tb.Size = new System.Drawing.Size(100, 20);
@@ -181,6 +192,7 @@ namespace Hockey_Lineup_Manager
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label3.Location = new System.Drawing.Point(374, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
@@ -190,6 +202,9 @@ namespace Hockey_Lineup_Manager
             // C2tb
             // 
             this.C2tb.AllowDrop = true;
+            this.C2tb.BackColor = System.Drawing.SystemColors.Window;
+            this.C2tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C2tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.C2tb.Location = new System.Drawing.Point(226, 182);
             this.C2tb.Name = "C2tb";
             this.C2tb.Size = new System.Drawing.Size(100, 20);
@@ -201,6 +216,7 @@ namespace Hockey_Lineup_Manager
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label4.Location = new System.Drawing.Point(206, 185);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(14, 13);
@@ -210,6 +226,9 @@ namespace Hockey_Lineup_Manager
             // RW2tb
             // 
             this.RW2tb.AllowDrop = true;
+            this.RW2tb.BackColor = System.Drawing.SystemColors.Window;
+            this.RW2tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RW2tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.RW2tb.Location = new System.Drawing.Point(406, 182);
             this.RW2tb.Name = "RW2tb";
             this.RW2tb.Size = new System.Drawing.Size(100, 20);
@@ -221,6 +240,9 @@ namespace Hockey_Lineup_Manager
             // LW2tb
             // 
             this.LW2tb.AllowDrop = true;
+            this.LW2tb.BackColor = System.Drawing.SystemColors.Window;
+            this.LW2tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LW2tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.LW2tb.Location = new System.Drawing.Point(44, 182);
             this.LW2tb.Name = "LW2tb";
             this.LW2tb.Size = new System.Drawing.Size(100, 20);
@@ -233,6 +255,7 @@ namespace Hockey_Lineup_Manager
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label5.Location = new System.Drawing.Point(14, 185);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(24, 13);
@@ -242,6 +265,7 @@ namespace Hockey_Lineup_Manager
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label6.Location = new System.Drawing.Point(374, 185);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 13);
@@ -251,6 +275,9 @@ namespace Hockey_Lineup_Manager
             // C4tb
             // 
             this.C4tb.AllowDrop = true;
+            this.C4tb.BackColor = System.Drawing.SystemColors.Window;
+            this.C4tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C4tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.C4tb.Location = new System.Drawing.Point(226, 292);
             this.C4tb.Name = "C4tb";
             this.C4tb.Size = new System.Drawing.Size(100, 20);
@@ -262,6 +289,9 @@ namespace Hockey_Lineup_Manager
             // C3tb
             // 
             this.C3tb.AllowDrop = true;
+            this.C3tb.BackColor = System.Drawing.SystemColors.Window;
+            this.C3tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C3tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.C3tb.Location = new System.Drawing.Point(226, 237);
             this.C3tb.Name = "C3tb";
             this.C3tb.Size = new System.Drawing.Size(100, 20);
@@ -273,6 +303,9 @@ namespace Hockey_Lineup_Manager
             // LW3tb
             // 
             this.LW3tb.AllowDrop = true;
+            this.LW3tb.BackColor = System.Drawing.SystemColors.Window;
+            this.LW3tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LW3tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.LW3tb.Location = new System.Drawing.Point(44, 237);
             this.LW3tb.Name = "LW3tb";
             this.LW3tb.Size = new System.Drawing.Size(100, 20);
@@ -284,6 +317,9 @@ namespace Hockey_Lineup_Manager
             // LW4tb
             // 
             this.LW4tb.AllowDrop = true;
+            this.LW4tb.BackColor = System.Drawing.SystemColors.Window;
+            this.LW4tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LW4tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.LW4tb.Location = new System.Drawing.Point(44, 292);
             this.LW4tb.Name = "LW4tb";
             this.LW4tb.Size = new System.Drawing.Size(100, 20);
@@ -295,6 +331,9 @@ namespace Hockey_Lineup_Manager
             // RW3tb
             // 
             this.RW3tb.AllowDrop = true;
+            this.RW3tb.BackColor = System.Drawing.SystemColors.Window;
+            this.RW3tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RW3tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.RW3tb.Location = new System.Drawing.Point(406, 237);
             this.RW3tb.Name = "RW3tb";
             this.RW3tb.Size = new System.Drawing.Size(100, 20);
@@ -306,6 +345,9 @@ namespace Hockey_Lineup_Manager
             // RW4tb
             // 
             this.RW4tb.AllowDrop = true;
+            this.RW4tb.BackColor = System.Drawing.SystemColors.Window;
+            this.RW4tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RW4tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.RW4tb.Location = new System.Drawing.Point(406, 292);
             this.RW4tb.Name = "RW4tb";
             this.RW4tb.Size = new System.Drawing.Size(100, 20);
@@ -317,6 +359,7 @@ namespace Hockey_Lineup_Manager
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label7.Location = new System.Drawing.Point(374, 240);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(26, 13);
@@ -326,6 +369,7 @@ namespace Hockey_Lineup_Manager
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label8.Location = new System.Drawing.Point(374, 295);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(26, 13);
@@ -335,6 +379,7 @@ namespace Hockey_Lineup_Manager
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label9.Location = new System.Drawing.Point(206, 240);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(14, 13);
@@ -344,6 +389,7 @@ namespace Hockey_Lineup_Manager
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label10.Location = new System.Drawing.Point(206, 295);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(14, 13);
@@ -354,6 +400,7 @@ namespace Hockey_Lineup_Manager
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label11.Location = new System.Drawing.Point(14, 240);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(24, 13);
@@ -364,6 +411,7 @@ namespace Hockey_Lineup_Manager
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label12.Location = new System.Drawing.Point(14, 295);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(24, 13);
@@ -373,6 +421,9 @@ namespace Hockey_Lineup_Manager
             // LD1tb
             // 
             this.LD1tb.AllowDrop = true;
+            this.LD1tb.BackColor = System.Drawing.SystemColors.Window;
+            this.LD1tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LD1tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.LD1tb.Location = new System.Drawing.Point(120, 420);
             this.LD1tb.Name = "LD1tb";
             this.LD1tb.Size = new System.Drawing.Size(100, 20);
@@ -384,6 +435,9 @@ namespace Hockey_Lineup_Manager
             // RD1tb
             // 
             this.RD1tb.AllowDrop = true;
+            this.RD1tb.BackColor = System.Drawing.SystemColors.Window;
+            this.RD1tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RD1tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.RD1tb.Location = new System.Drawing.Point(333, 420);
             this.RD1tb.Name = "RD1tb";
             this.RD1tb.Size = new System.Drawing.Size(100, 20);
@@ -395,6 +449,9 @@ namespace Hockey_Lineup_Manager
             // LD2tb
             // 
             this.LD2tb.AllowDrop = true;
+            this.LD2tb.BackColor = System.Drawing.SystemColors.Window;
+            this.LD2tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LD2tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.LD2tb.Location = new System.Drawing.Point(120, 473);
             this.LD2tb.Name = "LD2tb";
             this.LD2tb.Size = new System.Drawing.Size(100, 20);
@@ -406,6 +463,9 @@ namespace Hockey_Lineup_Manager
             // RD2tb
             // 
             this.RD2tb.AllowDrop = true;
+            this.RD2tb.BackColor = System.Drawing.SystemColors.Window;
+            this.RD2tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RD2tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.RD2tb.Location = new System.Drawing.Point(333, 473);
             this.RD2tb.Name = "RD2tb";
             this.RD2tb.Size = new System.Drawing.Size(100, 20);
@@ -417,6 +477,9 @@ namespace Hockey_Lineup_Manager
             // LD3tb
             // 
             this.LD3tb.AllowDrop = true;
+            this.LD3tb.BackColor = System.Drawing.SystemColors.Window;
+            this.LD3tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LD3tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.LD3tb.Location = new System.Drawing.Point(120, 526);
             this.LD3tb.Name = "LD3tb";
             this.LD3tb.Size = new System.Drawing.Size(100, 20);
@@ -428,6 +491,9 @@ namespace Hockey_Lineup_Manager
             // RD3tb
             // 
             this.RD3tb.AllowDrop = true;
+            this.RD3tb.BackColor = System.Drawing.SystemColors.Window;
+            this.RD3tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RD3tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.RD3tb.Location = new System.Drawing.Point(333, 526);
             this.RD3tb.Name = "RD3tb";
             this.RD3tb.Size = new System.Drawing.Size(100, 20);
@@ -439,6 +505,7 @@ namespace Hockey_Lineup_Manager
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label13.Location = new System.Drawing.Point(93, 423);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(21, 13);
@@ -448,6 +515,7 @@ namespace Hockey_Lineup_Manager
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label14.Location = new System.Drawing.Point(93, 476);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(21, 13);
@@ -457,6 +525,7 @@ namespace Hockey_Lineup_Manager
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label15.Location = new System.Drawing.Point(93, 529);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(21, 13);
@@ -466,6 +535,7 @@ namespace Hockey_Lineup_Manager
             // label16
             // 
             this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label16.Location = new System.Drawing.Point(304, 423);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(23, 13);
@@ -475,6 +545,7 @@ namespace Hockey_Lineup_Manager
             // label17
             // 
             this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label17.Location = new System.Drawing.Point(304, 476);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(23, 13);
@@ -484,6 +555,7 @@ namespace Hockey_Lineup_Manager
             // label18
             // 
             this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label18.Location = new System.Drawing.Point(304, 529);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(23, 13);
@@ -493,6 +565,9 @@ namespace Hockey_Lineup_Manager
             // G1tb
             // 
             this.G1tb.AllowDrop = true;
+            this.G1tb.BackColor = System.Drawing.SystemColors.Window;
+            this.G1tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G1tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.G1tb.Location = new System.Drawing.Point(226, 655);
             this.G1tb.Name = "G1tb";
             this.G1tb.Size = new System.Drawing.Size(100, 20);
@@ -504,6 +579,9 @@ namespace Hockey_Lineup_Manager
             // G2tb
             // 
             this.G2tb.AllowDrop = true;
+            this.G2tb.BackColor = System.Drawing.SystemColors.Window;
+            this.G2tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G2tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.G2tb.Location = new System.Drawing.Point(226, 708);
             this.G2tb.Name = "G2tb";
             this.G2tb.Size = new System.Drawing.Size(100, 20);
@@ -515,6 +593,7 @@ namespace Hockey_Lineup_Manager
             // label19
             // 
             this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label19.Location = new System.Drawing.Point(205, 658);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(15, 13);
@@ -524,6 +603,7 @@ namespace Hockey_Lineup_Manager
             // label20
             // 
             this.label20.AutoSize = true;
+            this.label20.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label20.Location = new System.Drawing.Point(205, 711);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(15, 13);
@@ -534,6 +614,7 @@ namespace Hockey_Lineup_Manager
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label21.Location = new System.Drawing.Point(190, 70);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(231, 37);
@@ -543,6 +624,9 @@ namespace Hockey_Lineup_Manager
             // LD4tb
             // 
             this.LD4tb.AllowDrop = true;
+            this.LD4tb.BackColor = System.Drawing.SystemColors.Window;
+            this.LD4tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LD4tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.LD4tb.Location = new System.Drawing.Point(120, 579);
             this.LD4tb.Name = "LD4tb";
             this.LD4tb.Size = new System.Drawing.Size(100, 20);
@@ -554,6 +638,9 @@ namespace Hockey_Lineup_Manager
             // RD4tb
             // 
             this.RD4tb.AllowDrop = true;
+            this.RD4tb.BackColor = System.Drawing.SystemColors.Window;
+            this.RD4tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RD4tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.RD4tb.Location = new System.Drawing.Point(333, 579);
             this.RD4tb.Name = "RD4tb";
             this.RD4tb.Size = new System.Drawing.Size(100, 20);
@@ -565,6 +652,9 @@ namespace Hockey_Lineup_Manager
             // RW5tb
             // 
             this.RW5tb.AllowDrop = true;
+            this.RW5tb.BackColor = System.Drawing.SystemColors.Window;
+            this.RW5tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RW5tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.RW5tb.Location = new System.Drawing.Point(406, 347);
             this.RW5tb.Name = "RW5tb";
             this.RW5tb.Size = new System.Drawing.Size(100, 20);
@@ -576,6 +666,9 @@ namespace Hockey_Lineup_Manager
             // LW5tb
             // 
             this.LW5tb.AllowDrop = true;
+            this.LW5tb.BackColor = System.Drawing.SystemColors.Window;
+            this.LW5tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LW5tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.LW5tb.Location = new System.Drawing.Point(44, 347);
             this.LW5tb.Name = "LW5tb";
             this.LW5tb.Size = new System.Drawing.Size(100, 20);
@@ -587,6 +680,9 @@ namespace Hockey_Lineup_Manager
             // C5tb
             // 
             this.C5tb.AllowDrop = true;
+            this.C5tb.BackColor = System.Drawing.SystemColors.Window;
+            this.C5tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C5tb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.C5tb.Location = new System.Drawing.Point(226, 347);
             this.C5tb.Name = "C5tb";
             this.C5tb.Size = new System.Drawing.Size(100, 20);
@@ -598,6 +694,7 @@ namespace Hockey_Lineup_Manager
             // label22
             // 
             this.label22.AutoSize = true;
+            this.label22.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label22.Location = new System.Drawing.Point(93, 582);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(21, 13);
@@ -607,6 +704,7 @@ namespace Hockey_Lineup_Manager
             // label23
             // 
             this.label23.AutoSize = true;
+            this.label23.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label23.Location = new System.Drawing.Point(304, 582);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(23, 13);
@@ -616,6 +714,7 @@ namespace Hockey_Lineup_Manager
             // label24
             // 
             this.label24.AutoSize = true;
+            this.label24.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label24.Location = new System.Drawing.Point(206, 350);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(14, 13);
@@ -626,6 +725,7 @@ namespace Hockey_Lineup_Manager
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label25.Location = new System.Drawing.Point(14, 350);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(24, 13);
@@ -635,6 +735,7 @@ namespace Hockey_Lineup_Manager
             // label26
             // 
             this.label26.AutoSize = true;
+            this.label26.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label26.Location = new System.Drawing.Point(374, 350);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(26, 13);
@@ -644,6 +745,7 @@ namespace Hockey_Lineup_Manager
             // PPbtn
             // 
             this.PPbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PPbtn.ForeColor = System.Drawing.SystemColors.MenuText;
             this.PPbtn.Location = new System.Drawing.Point(557, 130);
             this.PPbtn.Name = "PPbtn";
             this.PPbtn.Size = new System.Drawing.Size(129, 31);
@@ -655,6 +757,7 @@ namespace Hockey_Lineup_Manager
             // SaveLinesbtn
             // 
             this.SaveLinesbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveLinesbtn.ForeColor = System.Drawing.SystemColors.MenuText;
             this.SaveLinesbtn.Location = new System.Drawing.Point(577, 526);
             this.SaveLinesbtn.Name = "SaveLinesbtn";
             this.SaveLinesbtn.Size = new System.Drawing.Size(109, 37);
@@ -666,6 +769,7 @@ namespace Hockey_Lineup_Manager
             // LoadLinesbtn
             // 
             this.LoadLinesbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadLinesbtn.ForeColor = System.Drawing.SystemColors.MenuText;
             this.LoadLinesbtn.Location = new System.Drawing.Point(577, 481);
             this.LoadLinesbtn.Name = "LoadLinesbtn";
             this.LoadLinesbtn.Size = new System.Drawing.Size(109, 37);
@@ -709,7 +813,9 @@ namespace Hockey_Lineup_Manager
             // 
             // TeamNametb
             // 
+            this.TeamNametb.BackColor = System.Drawing.SystemColors.Window;
             this.TeamNametb.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TeamNametb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.TeamNametb.Location = new System.Drawing.Point(96, 13);
             this.TeamNametb.Name = "TeamNametb";
             this.TeamNametb.Size = new System.Drawing.Size(414, 44);
@@ -720,6 +826,7 @@ namespace Hockey_Lineup_Manager
             // AddYearbtn
             // 
             this.AddYearbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddYearbtn.ForeColor = System.Drawing.SystemColors.MenuText;
             this.AddYearbtn.Location = new System.Drawing.Point(577, 572);
             this.AddYearbtn.Name = "AddYearbtn";
             this.AddYearbtn.Size = new System.Drawing.Size(109, 37);
@@ -730,7 +837,9 @@ namespace Hockey_Lineup_Manager
             // 
             // TeamYearlb
             // 
+            this.TeamYearlb.BackColor = System.Drawing.SystemColors.Window;
             this.TeamYearlb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TeamYearlb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.TeamYearlb.FormattingEnabled = true;
             this.TeamYearlb.ItemHeight = 18;
             this.TeamYearlb.Items.AddRange(new object[] {
@@ -1019,6 +1128,7 @@ namespace Hockey_Lineup_Manager
             // PKbtn
             // 
             this.PKbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PKbtn.ForeColor = System.Drawing.SystemColors.MenuText;
             this.PKbtn.Location = new System.Drawing.Point(557, 177);
             this.PKbtn.Name = "PKbtn";
             this.PKbtn.Size = new System.Drawing.Size(129, 31);
@@ -1030,6 +1140,7 @@ namespace Hockey_Lineup_Manager
             // FFbtn
             // 
             this.FFbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FFbtn.ForeColor = System.Drawing.SystemColors.MenuText;
             this.FFbtn.Location = new System.Drawing.Point(557, 224);
             this.FFbtn.Name = "FFbtn";
             this.FFbtn.Size = new System.Drawing.Size(129, 31);
@@ -1041,6 +1152,7 @@ namespace Hockey_Lineup_Manager
             // TTbtn
             // 
             this.TTbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TTbtn.ForeColor = System.Drawing.SystemColors.MenuText;
             this.TTbtn.Location = new System.Drawing.Point(557, 271);
             this.TTbtn.Name = "TTbtn";
             this.TTbtn.Size = new System.Drawing.Size(129, 31);
@@ -1052,6 +1164,7 @@ namespace Hockey_Lineup_Manager
             // SOEAbtn
             // 
             this.SOEAbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SOEAbtn.ForeColor = System.Drawing.SystemColors.MenuText;
             this.SOEAbtn.Location = new System.Drawing.Point(557, 318);
             this.SOEAbtn.Name = "SOEAbtn";
             this.SOEAbtn.Size = new System.Drawing.Size(129, 31);
@@ -1080,15 +1193,18 @@ namespace Hockey_Lineup_Manager
             // 
             // Playofftb
             // 
+            this.Playofftb.BackColor = System.Drawing.SystemColors.Window;
+            this.Playofftb.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Playofftb.Location = new System.Drawing.Point(557, 44);
             this.Playofftb.Multiline = true;
             this.Playofftb.Name = "Playofftb";
-            this.Playofftb.Size = new System.Drawing.Size(129, 63);
+            this.Playofftb.Size = new System.Drawing.Size(129, 80);
             this.Playofftb.TabIndex = 60;
             // 
             // AHLbtn
             // 
             this.AHLbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AHLbtn.ForeColor = System.Drawing.SystemColors.MenuText;
             this.AHLbtn.Location = new System.Drawing.Point(557, 365);
             this.AHLbtn.Name = "AHLbtn";
             this.AHLbtn.Size = new System.Drawing.Size(129, 31);
@@ -1194,6 +1310,7 @@ namespace Hockey_Lineup_Manager
             this.Controls.Add(this.label1);
             this.Controls.Add(this.C1tb);
             this.Controls.Add(this.LW1tb);
+            this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(720, 785);
             this.MinimumSize = new System.Drawing.Size(715, 780);

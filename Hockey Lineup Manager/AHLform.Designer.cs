@@ -997,10 +997,10 @@ namespace Hockey_Lineup_Manager
             // 
             // Playofftb
             // 
-            this.Playofftb.Location = new System.Drawing.Point(32, 664);
+            this.Playofftb.Location = new System.Drawing.Point(32, 651);
             this.Playofftb.Multiline = true;
             this.Playofftb.Name = "Playofftb";
-            this.Playofftb.Size = new System.Drawing.Size(129, 63);
+            this.Playofftb.Size = new System.Drawing.Size(129, 84);
             this.Playofftb.TabIndex = 139;
             // 
             // Recordtb

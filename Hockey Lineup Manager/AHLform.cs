@@ -353,8 +353,8 @@ namespace Hockey_Lineup_Manager
             {
                 // Get the data of the second monitor
                 var monitor = Screen.AllScreens[2].WorkingArea;
-                // Change the wingow to the second monitor
-                Location = monitor.Location;
+                // Change the window to the second monitor and lower the form so it doesn't start ontop of the even strength one
+                Location = new Point(monitor.Location.X, monitor.Location.Y + 785);       // Lower the position of the form by the max Y of an even strength form.
             }
 
             NHLTeam nhlteam = (Methods.SelectCurrent() != null) ? JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent()) : new NHLTeam();

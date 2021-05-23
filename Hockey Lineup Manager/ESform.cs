@@ -125,11 +125,25 @@ namespace Hockey_Lineup_Manager
         private void LoadLinesbtn_Click(object sender, EventArgs e)
         {
             string nhlTeamName = TeamNametb.Text;
-            string fileContent = File.ReadAllText(Path.Combine("..\\..\\Rosters\\", (nhlTeamName + ".txt")));
-            Dictionary<string, NHLTeam> org = JsonConvert.DeserializeObject<Dictionary<string, NHLTeam>>(fileContent);
+            string filePath = "";
+
+            // Check if team name is default, bring up file dialog to let user select file.
+            if (nhlTeamName == "Team Name")
+            {
+                OpenFileDialog ofd = new OpenFileDialog();
+
+                if (ofd.ShowDialog() == DialogResult.OK)
+                    filePath = ofd.FileName;
+            }
+            
+            //string fileContent = File.ReadAllText(Path.Combine("..\\..\\Rosters\\", (nhlTeamName + ".txt")));               // Setup path of the file
+
+            string fileContent = filePath == "" ? File.ReadAllText(Path.Combine("..\\..\\Rosters\\", (nhlTeamName + ".txt"))) : File.ReadAllText(filePath);
+
+            Dictionary<string, NHLTeam> org = JsonConvert.DeserializeObject<Dictionary<string, NHLTeam>>(fileContent);      // Read the file and place data in dictionary
 
             // Find the team of the selected year
-            string selYr = TeamYearlb.SelectedItem.ToString();
+            string selYr = TeamYearlb.SelectedItem == null ? "2020-2021" : TeamYearlb.SelectedItem.ToString();
 
 
             // Iterate over each key to populate the year listbox and team dictionary
