@@ -95,6 +95,20 @@ namespace Hockey_Lineup_Manager
             Methods.Add(Methods.GetCurrentYear(), JsonConvert.SerializeObject(team));
         }
 
+        private void ClearLinesbtn_Click(object sender, EventArgs e)
+        {
+            // Clear Extra Attackers
+            EA1tb.Text = "";
+            EA2tb.Text = "";
+
+            // Clear Shootout
+            SO1tb.Text = "";
+            SO2tb.Text = "";
+            SO3tb.Text = "";
+            SO4tb.Text = "";
+            SO5tb.Text = "";
+        }
+
         //------------------------------------------------------------------------------------------------------------------------------------
         //
         //--------------------------------------------  Drag and Drop Functionallity  --------------------------------------------

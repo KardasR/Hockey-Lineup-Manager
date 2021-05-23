@@ -42,6 +42,9 @@ namespace Hockey_Lineup_Manager
         {
             // Parse the textbox for the selected season (Hopefully the latest) increase it and add it to the listbox.
             TeamYearlb.Items.Add(String.Format("{0}-{1}", int.Parse(TeamYearlb.SelectedItem.ToString().Substring(5)), int.Parse(TeamYearlb.SelectedItem.ToString().Substring(5)) + 1));                   // Add the new season string to the listbox
+            // Clear the textboxes of old data
+            Recordtb.Text = "";
+            Playofftb.Text = "";
         }
 
         /// <summary>
@@ -115,6 +118,87 @@ namespace Hockey_Lineup_Manager
             AHLform ahlform = new AHLform();
             Methods.SetCurrent(TeamYearlb.SelectedItem.ToString());
             ahlform.Show();
+        }
+
+        /// <summary>
+        /// Clear the textboxes in the current form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClearLinesbtn_Click(object sender, EventArgs e)
+        {
+            // Clear Left Wings
+            LW1tb.Text = "";
+            LW1OVRtb.Text = "";
+            LW2tb.Text = "";
+            LW2OVRtb.Text = "";
+            LW3tb.Text = "";
+            LW3OVRtb.Text = "";
+            LW4tb.Text = "";
+            LW4OVRtb.Text = "";
+            LW5tb.Text = "";
+            LW5OVRtb.Text = "";
+
+            // Clear Centers
+            C1tb.Text = "";
+            C1OVRtb.Text = "";
+            C2tb.Text = "";
+            C2OVRtb.Text = "";
+            C3tb.Text = "";
+            C3OVRtb.Text = "";
+            C4tb.Text = "";
+            C4OVRtb.Text = "";
+            C5tb.Text = "";
+            C5OVRtb.Text = "";
+
+            // Clear Right Wings
+            RW1tb.Text = "";
+            RW1OVRtb.Text = "";
+            RW2tb.Text = "";
+            RW2OVRtb.Text = "";
+            RW3tb.Text = "";
+            RW3OVRtb.Text = "";
+            RW4tb.Text = "";
+            RW4OVRtb.Text = "";
+            RW5tb.Text = "";
+            RW5OVRtb.Text = "";
+
+            // Clear Left Defence
+            LD1tb.Text = "";
+            LD1OVRtb.Text = "";
+            LD2tb.Text = "";
+            LD2OVRtb.Text = "";
+            LD3tb.Text = "";
+            LD3OVRtb.Text = "";
+            LD4tb.Text = "";
+            LD4OVRtb.Text = "";
+
+            // Clear Right Defence
+            RD1tb.Text = "";
+            RD1OVRtb.Text = "";
+            RD2tb.Text = "";
+            RD2OVRtb.Text = "";
+            RD3tb.Text = "";
+            RD3OVRtb.Text = "";
+            RD4tb.Text = "";
+            RD4OVRtb.Text = "";
+
+            // Goalies
+            G1tb.Text = "";
+            G1OVRtb.Text = "";
+            G2tb.Text = "";
+            G2OVRtb.Text = "";
+        }
+
+        /// <summary>
+        /// Allows the user to load lines when hitting enter in the textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TeamNametb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                LoadLinesbtn_Click(null, EventArgs.Empty);
         }
 
         /// <summary>

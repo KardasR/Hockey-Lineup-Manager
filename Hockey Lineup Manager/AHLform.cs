@@ -346,6 +346,73 @@ namespace Hockey_Lineup_Manager
             Methods.Add(Methods.GetCurrentYear(), JsonConvert.SerializeObject(nhlteam));
         }
 
+        private void ClearLinesbtn_Click(object sender, EventArgs e)
+        {
+            // Clear Left Wings
+            LW1tb.Text = "";
+            LW1OVRtb.Text = "";
+            LW2tb.Text = "";
+            LW2OVRtb.Text = "";
+            LW3tb.Text = "";
+            LW3OVRtb.Text = "";
+            LW4tb.Text = "";
+            LW4OVRtb.Text = "";
+            LW5tb.Text = "";
+            LW5OVRtb.Text = "";
+
+            // Clear Centers
+            C1tb.Text = "";
+            C1OVRtb.Text = "";
+            C2tb.Text = "";
+            C2OVRtb.Text = "";
+            C3tb.Text = "";
+            C3OVRtb.Text = "";
+            C4tb.Text = "";
+            C4OVRtb.Text = "";
+            C5tb.Text = "";
+            C5OVRtb.Text = "";
+
+            // Clear Right Wings
+            RW1tb.Text = "";
+            RW1OVRtb.Text = "";
+            RW2tb.Text = "";
+            RW2OVRtb.Text = "";
+            RW3tb.Text = "";
+            RW3OVRtb.Text = "";
+            RW4tb.Text = "";
+            RW4OVRtb.Text = "";
+            RW5tb.Text = "";
+            RW5OVRtb.Text = "";
+
+            // Clear Left Defence
+            LD1tb.Text = "";
+            LD1OVRtb.Text = "";
+            LD2tb.Text = "";
+            LD2OVRtb.Text = "";
+            LD3tb.Text = "";
+            LD3OVRtb.Text = "";
+            LD4tb.Text = "";
+            LD4OVRtb.Text = "";
+
+            // Clear Right Defence
+            RD1tb.Text = "";
+            RD1OVRtb.Text = "";
+            RD2tb.Text = "";
+            RD2OVRtb.Text = "";
+            RD3tb.Text = "";
+            RD3OVRtb.Text = "";
+            RD4tb.Text = "";
+            RD4OVRtb.Text = "";
+
+            // Goalies
+            G1tb.Text = "";
+            G1OVRtb.Text = "";
+            G2tb.Text = "";
+            G2OVRtb.Text = "";
+            G3tb.Text = "";
+            G3OVRtb.Text = "";
+        }
+
         private void AHLform_Load(object sender, EventArgs e)
         {
             // Put form on my second monitor

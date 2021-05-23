@@ -34,11 +34,11 @@ namespace Hockey_Lineup_Manager
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.TTC1tb = new System.Windows.Forms.TextBox();
-            this.TTLD1tb = new System.Windows.Forms.TextBox();
-            this.TTRD1tb = new System.Windows.Forms.TextBox();
+            this.TTW1tb = new System.Windows.Forms.TextBox();
+            this.TTD1tb = new System.Windows.Forms.TextBox();
             this.TTC2tb = new System.Windows.Forms.TextBox();
-            this.TTLD2tb = new System.Windows.Forms.TextBox();
-            this.TTRD2tb = new System.Windows.Forms.TextBox();
+            this.TTW2tb = new System.Windows.Forms.TextBox();
+            this.TTD2tb = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.LoadLinesbtn = new System.Windows.Forms.Button();
             this.SaveLinesbtn = new System.Windows.Forms.Button();
@@ -46,10 +46,11 @@ namespace Hockey_Lineup_Manager
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.TTRD3tb = new System.Windows.Forms.TextBox();
-            this.TTLD3tb = new System.Windows.Forms.TextBox();
+            this.TTD3tb = new System.Windows.Forms.TextBox();
+            this.TTW3tb = new System.Windows.Forms.TextBox();
             this.TTC3tb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.ClearLinesbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label16
@@ -99,27 +100,27 @@ namespace Hockey_Lineup_Manager
             this.TTC1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
             this.TTC1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TTC1tb_MouseDown);
             // 
-            // TTLD1tb
+            // TTW1tb
             // 
-            this.TTLD1tb.AllowDrop = true;
-            this.TTLD1tb.Location = new System.Drawing.Point(221, 104);
-            this.TTLD1tb.Name = "TTLD1tb";
-            this.TTLD1tb.Size = new System.Drawing.Size(100, 20);
-            this.TTLD1tb.TabIndex = 1;
-            this.TTLD1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.TTLD1tb_DragDrop);
-            this.TTLD1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
-            this.TTLD1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TTLD1tb_MouseDown);
+            this.TTW1tb.AllowDrop = true;
+            this.TTW1tb.Location = new System.Drawing.Point(221, 104);
+            this.TTW1tb.Name = "TTW1tb";
+            this.TTW1tb.Size = new System.Drawing.Size(100, 20);
+            this.TTW1tb.TabIndex = 1;
+            this.TTW1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.TTLD1tb_DragDrop);
+            this.TTW1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.TTW1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TTLD1tb_MouseDown);
             // 
-            // TTRD1tb
+            // TTD1tb
             // 
-            this.TTRD1tb.AllowDrop = true;
-            this.TTRD1tb.Location = new System.Drawing.Point(117, 181);
-            this.TTRD1tb.Name = "TTRD1tb";
-            this.TTRD1tb.Size = new System.Drawing.Size(100, 20);
-            this.TTRD1tb.TabIndex = 3;
-            this.TTRD1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.TTRD1tb_DragDrop);
-            this.TTRD1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
-            this.TTRD1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TTRD1tb_MouseDown);
+            this.TTD1tb.AllowDrop = true;
+            this.TTD1tb.Location = new System.Drawing.Point(117, 181);
+            this.TTD1tb.Name = "TTD1tb";
+            this.TTD1tb.Size = new System.Drawing.Size(100, 20);
+            this.TTD1tb.TabIndex = 3;
+            this.TTD1tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.TTRD1tb_DragDrop);
+            this.TTD1tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.TTD1tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TTRD1tb_MouseDown);
             // 
             // TTC2tb
             // 
@@ -132,27 +133,27 @@ namespace Hockey_Lineup_Manager
             this.TTC2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
             this.TTC2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TTC2tb_MouseDown);
             // 
-            // TTLD2tb
+            // TTW2tb
             // 
-            this.TTLD2tb.AllowDrop = true;
-            this.TTLD2tb.Location = new System.Drawing.Point(221, 325);
-            this.TTLD2tb.Name = "TTLD2tb";
-            this.TTLD2tb.Size = new System.Drawing.Size(100, 20);
-            this.TTLD2tb.TabIndex = 4;
-            this.TTLD2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.TTLD2tb_DragDrop);
-            this.TTLD2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
-            this.TTLD2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TTLD2tb_MouseDown);
+            this.TTW2tb.AllowDrop = true;
+            this.TTW2tb.Location = new System.Drawing.Point(221, 325);
+            this.TTW2tb.Name = "TTW2tb";
+            this.TTW2tb.Size = new System.Drawing.Size(100, 20);
+            this.TTW2tb.TabIndex = 4;
+            this.TTW2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.TTLD2tb_DragDrop);
+            this.TTW2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.TTW2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TTLD2tb_MouseDown);
             // 
-            // TTRD2tb
+            // TTD2tb
             // 
-            this.TTRD2tb.AllowDrop = true;
-            this.TTRD2tb.Location = new System.Drawing.Point(117, 402);
-            this.TTRD2tb.Name = "TTRD2tb";
-            this.TTRD2tb.Size = new System.Drawing.Size(100, 20);
-            this.TTRD2tb.TabIndex = 6;
-            this.TTRD2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.TTRD2tb_DragDrop);
-            this.TTRD2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
-            this.TTRD2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TTRD2tb_MouseDown);
+            this.TTD2tb.AllowDrop = true;
+            this.TTD2tb.Location = new System.Drawing.Point(117, 402);
+            this.TTD2tb.Name = "TTD2tb";
+            this.TTD2tb.Size = new System.Drawing.Size(100, 20);
+            this.TTD2tb.TabIndex = 6;
+            this.TTD2tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.TTRD2tb_DragDrop);
+            this.TTD2tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.TTD2tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TTRD2tb_MouseDown);
             // 
             // label21
             // 
@@ -167,7 +168,7 @@ namespace Hockey_Lineup_Manager
             // LoadLinesbtn
             // 
             this.LoadLinesbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoadLinesbtn.Location = new System.Drawing.Point(107, 243);
+            this.LoadLinesbtn.Location = new System.Drawing.Point(35, 243);
             this.LoadLinesbtn.Name = "LoadLinesbtn";
             this.LoadLinesbtn.Size = new System.Drawing.Size(123, 41);
             this.LoadLinesbtn.TabIndex = 10;
@@ -222,27 +223,27 @@ namespace Hockey_Lineup_Manager
             this.label6.TabIndex = 107;
             this.label6.Text = "D";
             // 
-            // TTRD3tb
+            // TTD3tb
             // 
-            this.TTRD3tb.AllowDrop = true;
-            this.TTRD3tb.Location = new System.Drawing.Point(117, 626);
-            this.TTRD3tb.Name = "TTRD3tb";
-            this.TTRD3tb.Size = new System.Drawing.Size(100, 20);
-            this.TTRD3tb.TabIndex = 9;
-            this.TTRD3tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.TTRD3tb_DragDrop);
-            this.TTRD3tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
-            this.TTRD3tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TTRD3tb_MouseDown);
+            this.TTD3tb.AllowDrop = true;
+            this.TTD3tb.Location = new System.Drawing.Point(117, 626);
+            this.TTD3tb.Name = "TTD3tb";
+            this.TTD3tb.Size = new System.Drawing.Size(100, 20);
+            this.TTD3tb.TabIndex = 9;
+            this.TTD3tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.TTRD3tb_DragDrop);
+            this.TTD3tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.TTD3tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TTRD3tb_MouseDown);
             // 
-            // TTLD3tb
+            // TTW3tb
             // 
-            this.TTLD3tb.AllowDrop = true;
-            this.TTLD3tb.Location = new System.Drawing.Point(221, 549);
-            this.TTLD3tb.Name = "TTLD3tb";
-            this.TTLD3tb.Size = new System.Drawing.Size(100, 20);
-            this.TTLD3tb.TabIndex = 7;
-            this.TTLD3tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.TTLD3tb_DragDrop);
-            this.TTLD3tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
-            this.TTLD3tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TTLD3tb_MouseDown);
+            this.TTW3tb.AllowDrop = true;
+            this.TTW3tb.Location = new System.Drawing.Point(221, 549);
+            this.TTW3tb.Name = "TTW3tb";
+            this.TTW3tb.Size = new System.Drawing.Size(100, 20);
+            this.TTW3tb.TabIndex = 7;
+            this.TTW3tb.DragDrop += new System.Windows.Forms.DragEventHandler(this.TTLD3tb_DragDrop);
+            this.TTW3tb.DragEnter += new System.Windows.Forms.DragEventHandler(this.CheckDataFormat);
+            this.TTW3tb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TTLD3tb_MouseDown);
             // 
             // TTC3tb
             // 
@@ -264,16 +265,28 @@ namespace Hockey_Lineup_Manager
             this.label7.TabIndex = 103;
             this.label7.Text = "C";
             // 
+            // ClearLinesbtn
+            // 
+            this.ClearLinesbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearLinesbtn.Location = new System.Drawing.Point(198, 244);
+            this.ClearLinesbtn.Name = "ClearLinesbtn";
+            this.ClearLinesbtn.Size = new System.Drawing.Size(123, 41);
+            this.ClearLinesbtn.TabIndex = 109;
+            this.ClearLinesbtn.Text = "Clear Lines";
+            this.ClearLinesbtn.UseVisualStyleBackColor = true;
+            this.ClearLinesbtn.Click += new System.EventHandler(this.ClearLinesbtn_Click);
+            // 
             // TTform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(339, 660);
+            this.Controls.Add(this.ClearLinesbtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.TTRD3tb);
-            this.Controls.Add(this.TTLD3tb);
+            this.Controls.Add(this.TTD3tb);
+            this.Controls.Add(this.TTW3tb);
             this.Controls.Add(this.TTC3tb);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
@@ -281,11 +294,11 @@ namespace Hockey_Lineup_Manager
             this.Controls.Add(this.SaveLinesbtn);
             this.Controls.Add(this.LoadLinesbtn);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.TTRD2tb);
-            this.Controls.Add(this.TTLD2tb);
+            this.Controls.Add(this.TTD2tb);
+            this.Controls.Add(this.TTW2tb);
             this.Controls.Add(this.TTC2tb);
-            this.Controls.Add(this.TTRD1tb);
-            this.Controls.Add(this.TTLD1tb);
+            this.Controls.Add(this.TTD1tb);
+            this.Controls.Add(this.TTW1tb);
             this.Controls.Add(this.TTC1tb);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label16);
@@ -308,11 +321,11 @@ namespace Hockey_Lineup_Manager
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TTC1tb;
-        private System.Windows.Forms.TextBox TTLD1tb;
-        private System.Windows.Forms.TextBox TTRD1tb;
+        private System.Windows.Forms.TextBox TTW1tb;
+        private System.Windows.Forms.TextBox TTD1tb;
         private System.Windows.Forms.TextBox TTC2tb;
-        private System.Windows.Forms.TextBox TTLD2tb;
-        private System.Windows.Forms.TextBox TTRD2tb;
+        private System.Windows.Forms.TextBox TTW2tb;
+        private System.Windows.Forms.TextBox TTD2tb;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button LoadLinesbtn;
         private System.Windows.Forms.Button SaveLinesbtn;
@@ -320,9 +333,10 @@ namespace Hockey_Lineup_Manager
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox TTRD3tb;
-        private System.Windows.Forms.TextBox TTLD3tb;
+        private System.Windows.Forms.TextBox TTD3tb;
+        private System.Windows.Forms.TextBox TTW3tb;
         private System.Windows.Forms.TextBox TTC3tb;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button ClearLinesbtn;
     }
 }

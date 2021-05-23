@@ -629,5 +629,35 @@ namespace Hockey_Lineup_Manager
         {
             FPD2tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
+
+        private void ClearLinesbtn_Click(object sender, EventArgs e)
+        {
+            // Clear Centers
+            PPC1tb.Text = "";
+            PPC2tb.Text = "";
+            FPC1tb.Text = "";
+            FPC2tb.Text = "";
+
+            // Clear Left Wingers
+            PPLW1tb.Text = "";
+            PPLW2tb.Text = "";
+            FPLW1tb.Text = "";
+            FPLW2tb.Text = "";
+
+            // Clear Right Wingers
+            PPRW1tb.Text = "";
+            PPRW2tb.Text = "";
+            FPRW1tb.Text = "";
+            FPRW2tb.Text = "";
+
+            // Clear Defence
+            PPLD1tb.Text = "";
+            PPLD2tb.Text = "";
+            PPRD1tb.Text = "";
+            PPRD2tb.Text = "";
+
+            FPD1tb.Text = "";
+            FPD2tb.Text = "";
+        }
     }
 }

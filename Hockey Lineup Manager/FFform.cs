@@ -465,5 +465,27 @@ namespace Hockey_Lineup_Manager
         {
             FourRD3tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
+
+        private void ClearLinesbtn_Click(object sender, EventArgs e)
+        {
+            // Clear Centers
+            FourC1tb.Text = "";
+            FourC2tb.Text = "";
+            FourC3tb.Text = "";
+
+            // Clear Wingers
+            FourLW1tb.Text = "";
+            FourLW2tb.Text = "";
+            FourLW3tb.Text = "";
+
+            // Clear Defence
+            FourLD1tb.Text = "";
+            FourLD2tb.Text = "";
+            FourLD3tb.Text = "";
+
+            FourRD1tb.Text = "";
+            FourRD2tb.Text = "";
+            FourRD3tb.Text = "";
+        }
     }
 }

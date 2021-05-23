@@ -40,18 +40,18 @@ namespace Hockey_Lineup_Manager
                     {
                         case 1:
                             TTC1tb.Text = unit.Center;
-                            TTLD1tb.Text = unit.Wing;
-                            TTRD1tb.Text = unit.Defence;
+                            TTW1tb.Text = unit.Wing;
+                            TTD1tb.Text = unit.Defence;
                             break;
                         case 2:
                             TTC2tb.Text = unit.Center;
-                            TTLD2tb.Text = unit.Wing;
-                            TTRD2tb.Text = unit.Defence;
+                            TTW2tb.Text = unit.Wing;
+                            TTD2tb.Text = unit.Defence;
                             break;
                         case 3:
                             TTC3tb.Text = unit.Center;
-                            TTLD3tb.Text = unit.Wing;
-                            TTRD3tb.Text = unit.Defence;
+                            TTW3tb.Text = unit.Wing;
+                            TTD3tb.Text = unit.Defence;
                             break;
                     }
                 }
@@ -81,18 +81,18 @@ namespace Hockey_Lineup_Manager
                 {
                     case 1:
                         TTC1tb.Text = unit.Center;
-                        TTLD1tb.Text = unit.Wing;
-                        TTRD1tb.Text = unit.Defence;
+                        TTW1tb.Text = unit.Wing;
+                        TTD1tb.Text = unit.Defence;
                         break;
                     case 2:
                         TTC2tb.Text = unit.Center;
-                        TTLD2tb.Text = unit.Wing;
-                        TTRD2tb.Text = unit.Defence;
+                        TTW2tb.Text = unit.Wing;
+                        TTD2tb.Text = unit.Defence;
                         break;
                     case 3:
                         TTC3tb.Text = unit.Center;
-                        TTLD3tb.Text = unit.Wing;
-                        TTRD3tb.Text = unit.Defence;
+                        TTW3tb.Text = unit.Wing;
+                        TTD3tb.Text = unit.Defence;
                         break;
                 }
             }
@@ -110,29 +110,47 @@ namespace Hockey_Lineup_Manager
             //--------------------------------------------  1st Unit  --------------------------------------------
             ThreeOnThreeLines ttl1 = new ThreeOnThreeLines();
             ttl1.Unit = 1;
-            ttl1.Wing = TTLD1tb.Text;
+            ttl1.Wing = TTW1tb.Text;
             ttl1.Center = TTC1tb.Text;
-            ttl1.Defence = TTRD1tb.Text;
+            ttl1.Defence = TTD1tb.Text;
 
             //--------------------------------------------  2nd Unit  --------------------------------------------
             ThreeOnThreeLines ttl2 = new ThreeOnThreeLines();
             ttl2.Unit = 2;
-            ttl2.Wing = TTLD2tb.Text;
+            ttl2.Wing = TTW2tb.Text;
             ttl2.Center = TTC2tb.Text;
-            ttl2.Defence = TTRD2tb.Text;
+            ttl2.Defence = TTD2tb.Text;
 
             //--------------------------------------------  3rd Unit  --------------------------------------------
             ThreeOnThreeLines ttl3 = new ThreeOnThreeLines();
             ttl3.Unit = 3;
-            ttl3.Wing = TTLD3tb.Text;
+            ttl3.Wing = TTW3tb.Text;
             ttl3.Center = TTC3tb.Text;
-            ttl3.Defence = TTRD3tb.Text;
+            ttl3.Defence = TTD3tb.Text;
 
             team.TTL[0] = ttl1;
             team.TTL[1] = ttl2;
             team.TTL[2] = ttl3;
 
             Methods.Add(Methods.GetCurrentYear(), JsonConvert.SerializeObject(team));              // Overwrite the currently selected team (only changing the three on three)
+        }
+
+        private void ClearLinesbtn_Click(object sender, EventArgs e)
+        {
+            // Clear Centers
+            TTC1tb.Text = "";
+            TTC2tb.Text = "";
+            TTC3tb.Text = "";
+
+            // Clear Wingers
+            TTW1tb.Text = "";
+            TTW2tb.Text = "";
+            TTW3tb.Text = "";
+
+            // Clear Defence
+            TTD1tb.Text = "";
+            TTD2tb.Text = "";
+            TTD3tb.Text = "";
         }
 
         //------------------------------------------------------------------------------------------------------------------------------------
@@ -190,7 +208,7 @@ namespace Hockey_Lineup_Manager
         {
             // When the user selects the textbox with the right mouse button, start the drag drop
             if (e.Button == MouseButtons.Right)
-                TTLD1tb.DoDragDrop(TTLD1tb.Text, DragDropEffects.Copy);
+                TTW1tb.DoDragDrop(TTW1tb.Text, DragDropEffects.Copy);
         }
 
         /// <summary>
@@ -200,7 +218,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void TTLD1tb_DragDrop(object sender, DragEventArgs e)
         {
-            TTLD1tb.Text = (string)e.Data.GetData(DataFormats.Text);
+            TTW1tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
 
 
@@ -216,7 +234,7 @@ namespace Hockey_Lineup_Manager
         {
             // When the user selects the textbox with the right mouse button, start the drag drop
             if (e.Button == MouseButtons.Right)
-                TTRD1tb.DoDragDrop(TTRD1tb.Text, DragDropEffects.Copy);
+                TTD1tb.DoDragDrop(TTD1tb.Text, DragDropEffects.Copy);
         }
 
         /// <summary>
@@ -226,7 +244,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void TTRD1tb_DragDrop(object sender, DragEventArgs e)
         {
-            TTRD1tb.Text = (string)e.Data.GetData(DataFormats.Text);
+            TTD1tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
 
 
@@ -270,7 +288,7 @@ namespace Hockey_Lineup_Manager
         {
             // When the user selects the textbox with the right mouse button, start the drag drop
             if (e.Button == MouseButtons.Right)
-                TTLD2tb.DoDragDrop(TTLD2tb.Text, DragDropEffects.Copy);
+                TTW2tb.DoDragDrop(TTW2tb.Text, DragDropEffects.Copy);
         }
 
         /// <summary>
@@ -280,7 +298,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void TTLD2tb_DragDrop(object sender, DragEventArgs e)
         {
-            TTLD2tb.Text = (string)e.Data.GetData(DataFormats.Text);
+            TTW2tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
 
 
@@ -296,7 +314,7 @@ namespace Hockey_Lineup_Manager
         {
             // When the user selects the textbox with the right mouse button, start the drag drop
             if (e.Button == MouseButtons.Right)
-                TTRD2tb.DoDragDrop(TTRD2tb.Text, DragDropEffects.Copy);
+                TTD2tb.DoDragDrop(TTD2tb.Text, DragDropEffects.Copy);
         }
 
         /// <summary>
@@ -306,7 +324,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void TTRD2tb_DragDrop(object sender, DragEventArgs e)
         {
-            TTRD2tb.Text = (string)e.Data.GetData(DataFormats.Text);
+            TTD2tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
 
         //--------------------------------------------  3rd Unit 3 on 3  --------------------------------------------
@@ -346,7 +364,7 @@ namespace Hockey_Lineup_Manager
         {
             // When the user selects the textbox with the right mouse button, start the drag drop
             if (e.Button == MouseButtons.Right)
-                TTLD3tb.DoDragDrop(TTLD3tb.Text, DragDropEffects.Copy);
+                TTW3tb.DoDragDrop(TTW3tb.Text, DragDropEffects.Copy);
         }
 
         /// <summary>
@@ -356,7 +374,7 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void TTLD3tb_DragDrop(object sender, DragEventArgs e)
         {
-            TTLD3tb.Text = (string)e.Data.GetData(DataFormats.Text);
+            TTW3tb.Text = (string)e.Data.GetData(DataFormats.Text);
         }
 
         //--------------------------------------------  Right Defence  --------------------------------------------
@@ -370,7 +388,7 @@ namespace Hockey_Lineup_Manager
         {
             // When the user selects the textbox with the right mouse button, start the drag drop
             if (e.Button == MouseButtons.Right)
-                TTLD3tb.DoDragDrop(TTLD3tb.Text, DragDropEffects.Copy);
+                TTW3tb.DoDragDrop(TTW3tb.Text, DragDropEffects.Copy);
         }
 
         /// <summary>
@@ -380,7 +398,6 @@ namespace Hockey_Lineup_Manager
         /// <param name="e"></param>
         private void TTRD3tb_DragDrop(object sender, DragEventArgs e)
         {
-            TTRD3tb.Text = (string)e.Data.GetData(DataFormats.Text);
-        }
-    }
+            TTD3tb.Text = (string)e.Data.GetData(DataFormats.Text);
+        }    }
 }

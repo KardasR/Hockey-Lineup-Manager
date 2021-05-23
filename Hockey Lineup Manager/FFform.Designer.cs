@@ -56,6 +56,7 @@ namespace Hockey_Lineup_Manager
             this.FourRD3tb = new System.Windows.Forms.TextBox();
             this.LoadLinesbtn = new System.Windows.Forms.Button();
             this.SaveLinesbtn = new System.Windows.Forms.Button();
+            this.ClearLinesbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -314,7 +315,7 @@ namespace Hockey_Lineup_Manager
             // LoadLinesbtn
             // 
             this.LoadLinesbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoadLinesbtn.Location = new System.Drawing.Point(125, 220);
+            this.LoadLinesbtn.Location = new System.Drawing.Point(45, 219);
             this.LoadLinesbtn.Name = "LoadLinesbtn";
             this.LoadLinesbtn.Size = new System.Drawing.Size(128, 50);
             this.LoadLinesbtn.TabIndex = 13;
@@ -333,12 +334,24 @@ namespace Hockey_Lineup_Manager
             this.SaveLinesbtn.UseVisualStyleBackColor = true;
             this.SaveLinesbtn.Click += new System.EventHandler(this.SaveLinesbtn_Click);
             // 
+            // ClearLinesbtn
+            // 
+            this.ClearLinesbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearLinesbtn.Location = new System.Drawing.Point(208, 219);
+            this.ClearLinesbtn.Name = "ClearLinesbtn";
+            this.ClearLinesbtn.Size = new System.Drawing.Size(128, 50);
+            this.ClearLinesbtn.TabIndex = 97;
+            this.ClearLinesbtn.Text = "Clear Lines";
+            this.ClearLinesbtn.UseVisualStyleBackColor = true;
+            this.ClearLinesbtn.Click += new System.EventHandler(this.ClearLinesbtn_Click);
+            // 
             // FFform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(356, 619);
+            this.Controls.Add(this.ClearLinesbtn);
             this.Controls.Add(this.SaveLinesbtn);
             this.Controls.Add(this.LoadLinesbtn);
             this.Controls.Add(this.FourRD3tb);
@@ -405,5 +418,6 @@ namespace Hockey_Lineup_Manager
         private System.Windows.Forms.TextBox FourRD3tb;
         private System.Windows.Forms.Button LoadLinesbtn;
         private System.Windows.Forms.Button SaveLinesbtn;
+        private System.Windows.Forms.Button ClearLinesbtn;
     }
 }
