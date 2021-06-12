@@ -1008,7 +1008,8 @@ namespace Hockey_Lineup_Manager
     }
     public class NHLTeam
     {
-        public string               Name;           // Name of team 
+        public string               Name;           // Name of team
+        public string               Path;           // Path of the team save file
         public bool                 League;         // Which league the team is in (1 = NHL, 0 = AHL)
         public string               Record;         // Record of the team
         public string               Playoff;        // How far the team made it in the playoffs and who eliminated them
