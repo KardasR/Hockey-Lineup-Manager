@@ -33,13 +33,12 @@ namespace Hockey_Lineup_Manager
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label1 = new System.Windows.Forms.Label();
             this.NewTeambtn = new System.Windows.Forms.Button();
-            this.TeamNametb = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // SelTeambtn
             // 
             this.SelTeambtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelTeambtn.Location = new System.Drawing.Point(76, 163);
+            this.SelTeambtn.Location = new System.Drawing.Point(76, 97);
             this.SelTeambtn.Name = "SelTeambtn";
             this.SelTeambtn.Size = new System.Drawing.Size(191, 101);
             this.SelTeambtn.TabIndex = 0;
@@ -64,7 +63,7 @@ namespace Hockey_Lineup_Manager
             // NewTeambtn
             // 
             this.NewTeambtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewTeambtn.Location = new System.Drawing.Point(324, 163);
+            this.NewTeambtn.Location = new System.Drawing.Point(324, 97);
             this.NewTeambtn.Name = "NewTeambtn";
             this.NewTeambtn.Size = new System.Drawing.Size(191, 101);
             this.NewTeambtn.TabIndex = 2;
@@ -72,22 +71,11 @@ namespace Hockey_Lineup_Manager
             this.NewTeambtn.UseVisualStyleBackColor = true;
             this.NewTeambtn.Click += new System.EventHandler(this.NewTeambtn_Click);
             // 
-            // TeamNametb
-            // 
-            this.TeamNametb.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TeamNametb.Location = new System.Drawing.Point(93, 90);
-            this.TeamNametb.Name = "TeamNametb";
-            this.TeamNametb.Size = new System.Drawing.Size(400, 44);
-            this.TeamNametb.TabIndex = 3;
-            this.TeamNametb.Text = "Team Name";
-            this.TeamNametb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 291);
-            this.Controls.Add(this.TeamNametb);
+            this.ClientSize = new System.Drawing.Size(590, 223);
             this.Controls.Add(this.NewTeambtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SelTeambtn);
@@ -105,6 +93,5 @@ namespace Hockey_Lineup_Manager
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button NewTeambtn;
-        private System.Windows.Forms.TextBox TeamNametb;
     }
 }

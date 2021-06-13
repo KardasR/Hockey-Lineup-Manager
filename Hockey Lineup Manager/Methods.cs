@@ -83,10 +83,14 @@ namespace Hockey_Lineup_Manager
             return false;
         }
 
-        public static string GiveHistory()
+        public static dynamic GiveHistory<T>()
         {
-            return JsonConvert.SerializeObject(Teams);
-            //return Teams;
+            if (typeof(T) == typeof(Dictionary<string, NHLTeam>))
+                return Teams;
+            else if (typeof(T) == typeof(string))
+                return JsonConvert.SerializeObject(Teams);
+            else
+                return false;
         }
     }
 }

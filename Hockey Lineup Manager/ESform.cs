@@ -35,7 +35,7 @@ namespace Hockey_Lineup_Manager
             TeamNametb.Text = nhlteam.Name;
             string selYr = "2020-2021";
 
-            Dictionary<string, NHLTeam> org = JsonConvert.DeserializeObject<Dictionary<string, NHLTeam>>(Methods.GiveHistory());
+            Dictionary<string, NHLTeam> org = JsonConvert.DeserializeObject<Dictionary<string, NHLTeam>>(Methods.GiveHistory<string>());
 
             // Iterate over each key to populate the year listbox and team dictionary
             foreach (var item in org)
@@ -570,7 +570,7 @@ namespace Hockey_Lineup_Manager
             using (StreamWriter file = File.CreateText(Path.Combine("..\\..\\Rosters\\", (team.Name + ".txt"))))
             {
                 JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, Methods.GiveHistory());
+                serializer.Serialize(file, Methods.GiveHistory<Dictionary<string, NHLTeam>>());
             }
         }
 

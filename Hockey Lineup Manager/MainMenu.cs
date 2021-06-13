@@ -37,13 +37,14 @@ namespace Hockey_Lineup_Manager
 
                     var fileStream = openFileDialog.OpenFile();
 
-                    using (StreamReader reader = new StreamReader(fileStream))
-                    {
-                        fileContent = reader.ReadToEnd();
-                    }
+                    fileContent = File.ReadAllText(filePath);
+                    //using (StreamReader reader = new StreamReader(fileStream))
+                    //{
+                    //    fileContent = reader.ReadToEnd();
+                    //}
                 }
             }
-
+            //org = JsonConvert.Des
             Dictionary<string, NHLTeam> org = JsonConvert.DeserializeObject<Dictionary<string, NHLTeam>>(fileContent);      // Read the file and place data in dictionary
 
             foreach (var item in org)
@@ -52,8 +53,6 @@ namespace Hockey_Lineup_Manager
                 if (!Methods.SetCurrent(item.Key))
                     Methods.Add(item.Key, JsonConvert.SerializeObject(item.Value));
             }
-
-            TeamNametb.Text = org["2020-2021"].Name;
 
             ESform esform = new ESform();
             esform.Show();
