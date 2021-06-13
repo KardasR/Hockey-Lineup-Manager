@@ -83,10 +83,10 @@ namespace Hockey_Lineup_Manager
             return false;
         }
 
-        public static Dictionary<string, NHLTeam> GiveHistory()
+        public static string GiveHistory()
         {
-            //return JsonConvert.SerializeObject(Teams);
-            return Teams;
+            return JsonConvert.SerializeObject(Teams);
+            //return Teams;
         }
     }
 }

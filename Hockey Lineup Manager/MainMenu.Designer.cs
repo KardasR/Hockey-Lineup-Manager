@@ -29,33 +29,82 @@ namespace Hockey_Lineup_Manager
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.SelTeambtn = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label1 = new System.Windows.Forms.Label();
+            this.NewTeambtn = new System.Windows.Forms.Button();
+            this.TeamNametb = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // SelTeambtn
             // 
-            this.button1.Location = new System.Drawing.Point(292, 211);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(259, 106);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.SelTeambtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelTeambtn.Location = new System.Drawing.Point(76, 163);
+            this.SelTeambtn.Name = "SelTeambtn";
+            this.SelTeambtn.Size = new System.Drawing.Size(191, 101);
+            this.SelTeambtn.TabIndex = 0;
+            this.SelTeambtn.Text = "Select Team";
+            this.SelTeambtn.UseVisualStyleBackColor = true;
+            this.SelTeambtn.Click += new System.EventHandler(this.SelTeambtn_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(69, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(446, 42);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Hockey Lineup Manager";
+            // 
+            // NewTeambtn
+            // 
+            this.NewTeambtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewTeambtn.Location = new System.Drawing.Point(324, 163);
+            this.NewTeambtn.Name = "NewTeambtn";
+            this.NewTeambtn.Size = new System.Drawing.Size(191, 101);
+            this.NewTeambtn.TabIndex = 2;
+            this.NewTeambtn.Text = "New Team";
+            this.NewTeambtn.UseVisualStyleBackColor = true;
+            this.NewTeambtn.Click += new System.EventHandler(this.NewTeambtn_Click);
+            // 
+            // TeamNametb
+            // 
+            this.TeamNametb.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TeamNametb.Location = new System.Drawing.Point(93, 90);
+            this.TeamNametb.Name = "TeamNametb";
+            this.TeamNametb.Size = new System.Drawing.Size(400, 44);
+            this.TeamNametb.TabIndex = 3;
+            this.TeamNametb.Text = "Team Name";
+            this.TeamNametb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(590, 291);
+            this.Controls.Add(this.TeamNametb);
+            this.Controls.Add(this.NewTeambtn);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.SelTeambtn);
             this.Name = "MainMenu";
-            this.Text = "MainMenu";
+            this.Text = "Main Menu";
+            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button SelTeambtn;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button NewTeambtn;
+        private System.Windows.Forms.TextBox TeamNametb;
     }
 }

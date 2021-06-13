@@ -16,7 +16,7 @@ namespace Hockey_Lineup_Manager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ESform());
+            Application.Run(new MainMenu());
         }
     }
 }

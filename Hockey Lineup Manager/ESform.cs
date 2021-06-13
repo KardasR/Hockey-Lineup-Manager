@@ -29,6 +29,34 @@ namespace Hockey_Lineup_Manager
                 // Change the wingow to the second monitor
                 Location = monitor.Location;
             }
+
+            NHLTeam nhlteam = (Methods.SelectCurrent() != null) ? JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent()) : new NHLTeam();
+
+            TeamNametb.Text = nhlteam.Name;
+            string selYr = "2020-2021";
+
+            Dictionary<string, NHLTeam> org = JsonConvert.DeserializeObject<Dictionary<string, NHLTeam>>(Methods.GiveHistory());
+
+            // Iterate over each key to populate the year listbox and team dictionary
+            foreach (var item in org)
+            {
+                // Check if year is not already in the year listbox before adding
+                if (TeamYearlb.FindString(item.Key) == ListBox.NoMatches)
+                    TeamYearlb.Items.Add(item.Key);
+
+                // Check if year is not already in the dictionary before adding the team
+                if (!Methods.SetCurrent(item.Key))
+                    Methods.Add(item.Key, JsonConvert.SerializeObject(item.Value));
+            }
+
+            // Load in the team for the selected year
+            Methods.SetCurrent(selYr);
+            nhlteam = (Methods.SelectCurrent() != null) ? JsonConvert.DeserializeObject<NHLTeam>(Methods.SelectCurrent()) : new NHLTeam();
+
+            TeamNametb.Text = nhlteam.Name;
+
+            NHLrb.Checked = true;
+            AHLrb.Checked = false;
         }
 
         //--------------------------------------------  Buttons  --------------------------------------------
@@ -210,16 +238,7 @@ namespace Hockey_Lineup_Manager
         {
             string nhlTeamName = TeamNametb.Text;
             string filePath = "";
-
-            // Check if team name is default, bring up file dialog to let user select file.
-            if (nhlTeamName == "Team Name")
-            {
-                OpenFileDialog ofd = new OpenFileDialog();
-
-                if (ofd.ShowDialog() == DialogResult.OK)
-                    filePath = ofd.FileName;
-            }
-            
+                        
             //string fileContent = File.ReadAllText(Path.Combine("..\\..\\Rosters\\", (nhlTeamName + ".txt")));               // Setup path of the file
 
             string fileContent = filePath == "" ? File.ReadAllText(Path.Combine("..\\..\\Rosters\\", (nhlTeamName + ".txt"))) : File.ReadAllText(filePath);

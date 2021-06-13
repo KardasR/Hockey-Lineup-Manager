@@ -61,6 +61,12 @@
     <Compile Include="FFform.Designer.cs">
       <DependentUpon>FFform.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Methods.cs" />
     <Compile Include="ESform.cs">
       <SubType>Form</SubType>
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ESform.resx">
       <DependentUpon>ESform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PPform.resx">
       <DependentUpon>PPform.cs</DependentUpon>
